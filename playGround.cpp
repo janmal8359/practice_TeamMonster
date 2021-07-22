@@ -9,6 +9,7 @@ playGround::playGround()
 
 playGround::~playGround()
 {
+	//주석처리를 하자. 어서 빨리 하자. 
 }
 
 //업데이트 테스트 아아아아!
