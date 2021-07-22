@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "playGround.h"
 
+#define STR 128
+
 
 playGround::playGround()
 {
@@ -14,6 +16,7 @@ playGround::~playGround()
 
 //업데이트 테스트 아아아아!
 //커밋 테스트
+// git desttop Test
 
 //초기화는 여기에다 해라!!!
 HRESULT playGround::init()
