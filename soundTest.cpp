@@ -37,10 +37,10 @@ HRESULT soundTest::init()
 	IMAGEMANAGER->addImage("timeTop", "resources/bmp/playTimeBarFront.bmp", 446, 3, true, RGB(255, 0, 255));
 
 	// 노래 이름
-	_music[0] = "첫 줄";
+	_music[0] = "Ado";
 	_music[1] = "우리 사랑한 동안";
 	_music[2] = "한여름밤의 꿀";
-	_music[3] = "Ado";
+	_music[3] = "첫 줄";
 	_music[4] = "butter";
 
 	// index
