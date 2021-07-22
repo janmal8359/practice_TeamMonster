@@ -19,6 +19,8 @@ playGround::~playGround()
 HRESULT playGround::init()
 {
 	gameNode::init(true);
+
+	// 주석 이한별 입니다
 	SCENEMANAGER->addScene("스타씬", new soundTest);
 	SCENEMANAGER->changeScene("스타씬");
 
