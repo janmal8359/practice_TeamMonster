@@ -24,6 +24,8 @@ soundTest::~soundTest()
 // gitDesktop Test
 // test
 
+// 한별아 안녕
+
 HRESULT soundTest::init()
 {
 	// 노래 추가
