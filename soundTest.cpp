@@ -21,9 +21,6 @@ soundTest::~soundTest()
 // 시간바 클릭 시 해당 지점으로 이동 == 
 // 한 곡 재생 끝나면 다음 곡 자동 재생 == 
 
-// gitDesktop Test
-// test
-
 HRESULT soundTest::init()
 {
 	// 노래 추가
