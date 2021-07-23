@@ -45,6 +45,9 @@ HRESULT soundTest::init()
 	_music[3] = "Ado";
 	_music[4] = "butter";
 
+	_music[4] = "qwe";
+	_music[3] = "abc";
+
 	// index
 	_listNum = 0;
 	_nextNum = _listNum + 1;
