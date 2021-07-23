@@ -133,7 +133,7 @@
       <Filter>2DGameFramework\Manager</Filter>
     </ClInclude>
     <ClInclude Include="ImageAnimation.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>playGround</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -204,7 +204,7 @@
       <Filter>2DGameFramework\Manager</Filter>
     </ClCompile>
     <ClCompile Include="ImageAnimation.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>playGround</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
