@@ -22,6 +22,7 @@ soundTest::~soundTest()
 // 한 곡 재생 끝나면 다음 곡 자동 재생 == 
 
 // gitDesktop Test
+// test
 
 HRESULT soundTest::init()
 {
