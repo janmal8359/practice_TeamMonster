@@ -21,9 +21,6 @@ soundTest::~soundTest()
 // 시간바 클릭 시 해당 지점으로 이동 == 
 // 한 곡 재생 끝나면 다음 곡 자동 재생 == 
 
-// gitDesktop Test
-// test
-
 HRESULT soundTest::init()
 {
 	// 노래 추가
@@ -50,6 +47,9 @@ HRESULT soundTest::init()
 	_music[2] = "한여름밤의 꿀";
 	_music[3] = "Ado";
 	_music[4] = "butter";
+
+	_music[4] = "qwe";
+	_music[3] = "abc";
 
 	// index
 	_listNum = 0;
