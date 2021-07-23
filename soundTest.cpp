@@ -21,12 +21,10 @@ soundTest::~soundTest()
 // 시간바 클릭 시 해당 지점으로 이동 == 
 // 한 곡 재생 끝나면 다음 곡 자동 재생 == 
 
-// git Desktop Test
-
 HRESULT soundTest::init()
 {
 	// 노래 추가
-	SOUNDMANAGER->addSound("사랑한 후에", "resources/mp3/첫 줄 - 신용재.mp3", true, false);
+	SOUNDMANAGER->addSound("첫 줄", "resources/mp3/첫 줄 - 신용재.mp3", true, false);
 	SOUNDMANAGER->addSound("우리 사랑한 동안", "resources/mp3/우리 사랑한 동안 - 임한별.mp3", true, false);
 	SOUNDMANAGER->addSound("한여름밤의 꿀", "resources/mp3/한여름밤의 꿀 - SanE.mp3", true, false);
 	SOUNDMANAGER->addSound("Ado", "resources/mp3/Ado - Raon Lee.mp3", true, false);
@@ -44,6 +42,9 @@ HRESULT soundTest::init()
 	_music[2] = "한여름밤의 꿀";
 	_music[3] = "Ado";
 	_music[4] = "butter";
+
+	_music[4] = "abd";
+	_music[3] = "qwe";
 
 	// index
 	_listNum = 0;
