@@ -4,6 +4,7 @@
 class ImageAnimation : public gameNode
 {
 private:
+	image* dragon;
 	image* idle;
 	image* jump;
 	image* move;
