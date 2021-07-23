@@ -26,7 +26,7 @@ soundTest::~soundTest()
 HRESULT soundTest::init()
 {
 	// 노래 추가
-	SOUNDMANAGER->addSound("첫 줄", "resources/mp3/첫 줄 - 신용재.mp3", true, false);
+	SOUNDMANAGER->addSound("사랑한 후에", "resources/mp3/첫 줄 - 신용재.mp3", true, false);
 	SOUNDMANAGER->addSound("우리 사랑한 동안", "resources/mp3/우리 사랑한 동안 - 임한별.mp3", true, false);
 	SOUNDMANAGER->addSound("한여름밤의 꿀", "resources/mp3/한여름밤의 꿀 - SanE.mp3", true, false);
 	SOUNDMANAGER->addSound("Ado", "resources/mp3/Ado - Raon Lee.mp3", true, false);
