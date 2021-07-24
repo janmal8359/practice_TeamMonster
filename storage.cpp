@@ -100,13 +100,10 @@ HRESULT storage::init()
 #pragma region ENEMYIMAGE
 
 
-#pragma region SCHOOLBOYIMAGE
-
-
-#pragma endregion SCHOOLBOYIMAGE
+#pragma region SCHOOLBOYIMAGE 
 
 	//IMAGEMANAGER->addImage("volumeBack", "resources/bmp/volumeBarBack.bmp", 381, 4, true, RGB(255, 0, 255)); 예시
-	
+
 	//SCHOOLBOYIMAGE
 
 	IMAGEMANAGER->addFrameImage("backdown", "Resource/IMG/character/enemy/scoolBoy/backdown.bmp", 7695, 438, 27, 2, true, RGB(255, 0, 255));		//넘어졌을때
@@ -139,6 +136,10 @@ HRESULT storage::init()
 
 
 	//Resource/IMG/character/enemy/
+
+#pragma endregion SCHOOLBOYIMAGE
+
+	
 
 #pragma region SCHOOLGIRL
 
