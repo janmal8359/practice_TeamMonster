@@ -252,10 +252,10 @@ HRESULT storage::init()
 	//È¯°æ// ½ºÅ×ÀÌÁö °æ·Î
 	//Resource/SFX/environment
 
-	//º¥Ä¡ ºÎ½¤Áü
+	//º¥Ä¡ ºÎ¼Å
 	SOUNDMANAGER->addSound("benchBreak", "Resource/SFX/environment/environment_bench_break.wav", true, false);
 
-	//È­ÇÐ½Ç Ã¥»ó ºÎ½¤Áü
+	//È­ÇÐ½Ç Ã¥»ó ºÎ¼Å
 	SOUNDMANAGER->addSound("chemistryTableBreak", "Resource/SFX/environment/environment_chemistry_table_break.wav", true, false);
 
 	//³ª¹« ºÎ¼Å
