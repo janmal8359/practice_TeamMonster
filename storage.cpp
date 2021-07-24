@@ -57,7 +57,51 @@ HRESULT storage::init()
 
 	//UI
 	//Resource/IMG/ui
+	
+		//보스 HP 뒤
+		IMAGEMANAGER->addImage("bossHPBack", "Resource/IMG/ui/battle/boss_HP_back.bmp", 689, 120, true, RGB(255, 0, 255));
 
+		//보스 HP 프레임
+		IMAGEMANAGER->addImage("bossHPFrame", "Resource/IMG/ui/battle/boss_HP_frame.bmp", 898, 120, true, RGB(255, 0, 255));
+
+		//보스 HP 앞
+		IMAGEMANAGER->addImage("bossHPFront", "Resource/IMG/ui/battle/boss_HP_front.bmp", 689, 120, true, RGB(255, 0, 255));
+
+		//코인
+		IMAGEMANAGER->addImage("coin", "Resource/IMG/ui/battle/coin.bmp", 36, 36, true, RGB(255, 0, 255));
+
+		//HP 한칸
+		IMAGEMANAGER->addImage("HP", "Resource/IMG/ui/battle/HP_Point.bmp", 25, 23, true, RGB(255, 0, 255));
+
+		//스테이지 화면 락 아래
+		IMAGEMANAGER->addImage("stageChainBottom", "Resource/IMG/ui/battle/Stage_UI_Chain_Bottom.bmp", 1600, 43, true, RGB(255, 0, 255));
+
+		//스테이지 화면 락 왼쪽
+		IMAGEMANAGER->addImage("stageChainLeft", "Resource/IMG/ui/battle/Stage_UI_Chain_Left.bmp", 42, 900, true, RGB(255, 0, 255));
+
+		//스테이지 화면 락 오른쪽
+		IMAGEMANAGER->addImage("stageChainRight", "Resource/IMG/ui/battle/Stage_UI_Chain_Right.bmp", 41, 900, true, RGB(255, 0, 255));
+
+		//스테이지 화면 락 위
+		IMAGEMANAGER->addImage("stageChainTop", "Resource/IMG/ui/battle/Stage_UI_Chain_Top.bmp", 1600, 43, true, RGB(255, 0, 255));
+
+		//스테이지 잠금시 자물쇠
+		IMAGEMANAGER->addImage("lockAppear", "Resource/IMG/ui/battle/Stage_UI_Lock_Appear.bmp", 650, 116, true, RGB(255, 0, 255));
+
+		//스테이지 잠금시 자물쇠 깨짐
+		IMAGEMANAGER->addImage("lockDamage1", "Resource/IMG/ui/battle/Stage_UI_Lock_Damage1.bmp", 650, 116, true, RGB(255, 0, 255));
+
+		//스테이지 잠금시 자물쇠 더 깨짐
+		IMAGEMANAGER->addImage("lockDamage2", "Resource/IMG/ui/battle/Stage_UI_Lock_Damage2.bmp", 650, 116, true, RGB(255, 0, 255));
+
+		//스테이지 잠금시 자물쇠 진짜 깨짐
+		IMAGEMANAGER->addImage("lockDisappear", "Resource/IMG/ui/battle/Stage_UI_Lock_Disappear.bmp", 840, 130, true, RGB(255, 0, 255));
+
+		//하트 UI <- 게임 오버됐을 때 나오는거 같은데,.
+		IMAGEMANAGER->addImage("UIHeart", "Resource/IMG/ui/battle/UI_heart.bmp", 6400, 3600, true, RGB(255, 0, 255));
+
+		//캐릭터
+		IMAGEMANAGER->addImage("UIHeart", "Resource/IMG/ui/battle/UI_Kyoko_Portrait.bmp", 6400, 3600, true, RGB(255, 0, 255));
 	}*/
 
 #pragma endregion IMGPATH
