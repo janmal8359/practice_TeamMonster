@@ -27,10 +27,10 @@ HRESULT playGround::init()
 	gameNode::init(true);
 
 	// 주석 이한별 입니다
-	SCENEMANAGER->addScene("스타씬", new soundTest);
-	SCENEMANAGER->changeScene("스타씬");
+	//SCENEMANAGER->addScene("스타씬", new soundTest);
+	//SCENEMANAGER->changeScene("스타씬");
 
-	SOUNDMANAGER->init();
+	//SOUNDMANAGER->init();
 
 	//ㅇㅇㅇㅇㅇㅇㅇ 주요 인물 ㅇㅇㅇㅇㅇㅇㅇ//
 	//*{
@@ -193,65 +193,6 @@ HRESULT playGround::init()
 
 	//}*/
 
-#pragma endregion IMGPATH
-
-#pragma region SFXPATH
-
-	//ㅇㅇㅇㅇㅇㅇㅇ 음원 ㅇㅇㅇㅇㅇㅇㅇ//
-	//*{
-
-	//플레이어 음원 경로
-	//Resource/SFX/Player/
-
-	//환경// 스테이지 경로
-	//Resource/SFX/environment
-
-	//보스 효과음? 경로
-	//Resource/SFX/global
-
-	//메뉴음원
-	//Resource/SFX/menu/
-
-	//무기음원
-	//Resource/SFX/weapons/
-
-	//줍는 픽업음원
-	//Resource/SFX/pickup/
-
-	//}*/
-
-#pragma endregion SFXPATH
-
-	//========================이미지 소스======================
-#pragma region IMAGESOURCES
-//플레이어 이미지
-#pragma region PLAYERIMAGE
-
-#pragma endregion PLAYERIMAGE
-
-#pragma endregion IMAGESOURCES
-
-
-
-
-
-	  /////////////////사운드 소스///////////////
-#pragma region SFXSOURCE
-//플레이어 사운드
-#pragma region PLAYERSFX
-
-
-
-#pragma endregion PLAYERSFX
-
-
-#pragma endregion SFXSOURCE
-
-
-
-
-
-
 	return S_OK;
 }
 
@@ -266,8 +207,8 @@ void playGround::update()
 {
 	gameNode::update();
 
-	SCENEMANAGER->update();
-	SOUNDMANAGER->update();
+	//SCENEMANAGER->update();
+	//SOUNDMANAGER->update();
 }
 
 //여기다 그려줘라!!!
@@ -276,10 +217,10 @@ void playGround::render()
 	PatBlt(getMemDC(), 0, 0, WINSIZEX, WINSIZEY, BLACKNESS);
 	//==============위에는 제발 건드리지 마라 ============
 	
-	IMAGEMANAGER->render("배경", getMemDC(), 0, 0);
+	//IMAGEMANAGER->render("배경", getMemDC(), 0, 0);
 
 
-	SCENEMANAGER->render();
+	//SCENEMANAGER->render();
 
 	//TIMEMANAGER->render(getMemDC());
 

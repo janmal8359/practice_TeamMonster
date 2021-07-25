@@ -26,6 +26,7 @@ soundTest::~soundTest()
 
 HRESULT soundTest::init()
 {
+	/*
 	// 노래 추가
 	SOUNDMANAGER->addSound("첫 줄", "resources/mp3/첫 줄 - 신용재.mp3", true, false);
 	SOUNDMANAGER->addSound("우리 사랑한 동안", "resources/mp3/우리 사랑한 동안 - 임한별.mp3", true, false);
@@ -73,6 +74,55 @@ HRESULT soundTest::init()
 	_timeBar = new progressBar;
 	_timeBar->init(65, 600, 446, 3, "timeBack", "timeTop");
 
+	//ㅇㅇㅇㅇㅇㅇㅇ 음원 ㅇㅇㅇㅇㅇㅇㅇ//
+	//*{
+	*/
+
+#pragma region SFXPATH
+
+	//플레이어 음원 경로
+	//Resource/SFX/Player/
+
+	//환경// 스테이지 경로
+	//Resource/SFX/environment
+
+	//보스 효과음? 경로
+	//Resource/SFX/global
+	//보스 클리어
+	SOUNDMANAGER->addSound("bossFinal", "Resource/SFX/global/boss_finalhit.wav", true, true);
+	//보스 시작
+	SOUNDMANAGER->addSound("bossIntro", "Resource/SFX/global/boss_intro_placard", true, true);
+	//메뉴음원
+	//Resource/SFX/menu/
+
+	//무기음원
+	//Resource/SFX/weapons/
+
+	//줍는 픽업음원
+	//Resource/SFX/pickup/
+	//??
+	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/cannot_pickup.wav", true, true);
+	//??
+	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/interface_item_pickup_confirm.wav", true, true);
+	//??
+	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/interface_item_pickup_intro.wav", true, true);
+	//??
+	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/interface_item_pickup_outro.wav", true, true);
+	//??
+	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_bill.wav", true, true);
+	//??
+	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_cat_01.wav", true, true);
+	//??
+	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_cat_02.wav", true, true);
+	//??
+	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_cat_03.wav", true, true);
+	//머니 습득
+	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_coin.wav", true, true);
+	//음식 습득
+	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_food.wav", true, true);
+	//??
+	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_med_01.wav", true, true);
+	//}*/
 
 	return S_OK;
 }
@@ -83,6 +133,7 @@ void soundTest::release()
 
 void soundTest::update()
 {
+	/*
 	// 버튼 클릭
 	collision();
 	
@@ -105,10 +156,12 @@ void soundTest::update()
 	_totalTime = SOUNDMANAGER->getTotalTime(_music[_listNum]);
 	SOUNDMANAGER->setVolume(_music[_listNum], _volume);
 	if (_isPlay) _currentTime = SOUNDMANAGER->getCurrentTime(_music[_listNum]);
+	*/
 }
 
 void soundTest::render()
 {
+	/*
 	_volumeBar->render();
 	_timeBar->render();
 	renderImage();
@@ -156,8 +209,9 @@ void soundTest::render()
 		wsprintf(str, "%d", _totalTime);
 		TextOut(getMemDC(), 10, 110, str, strlen(str));
 	}
+	*/
 }
-
+/*
 void soundTest::setImage()
 {
 	IMAGEMANAGER->addImage("배경", "resources/bmp/background.bmp", WINSIZEX, WINSIZEY, true, RGB(255, 0, 255));
@@ -553,3 +607,4 @@ void soundTest::nextMusic()
 		}
 	}
 }
+*/
