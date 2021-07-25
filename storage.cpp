@@ -91,8 +91,8 @@ HRESULT storage::init()
 
 	//========================이미지 소스======================
 #pragma region IMAGESOURCES
-
-//플레이어 이미지
+	IMAGEMANAGER->addImage("SHADOW", "Resource/IMG/character/shadow.bmp", 128, 38, true, RGB(255, 0, 255));
+//플레이어 이미지=========================(완)
 #pragma region PLAYERIMAGE
 
 	//사다리
@@ -209,10 +209,7 @@ HRESULT storage::init()
 
 #pragma endregion PLAYERIMAGE
 
-#pragma region ENEMYIMAGE
-
-#pragma endregion ENEMYIMAGE
-
+//NPC 이미지=============================(완)
 #pragma region NPCIMAGE
 	//남자1
 	IMAGEMANAGER->addFrameImage("BOY1", "Resource/IMG/character/npc/boy1.bmp", 396, 480, 4, 2, true, RGB(255, 0, 255));
@@ -229,9 +226,14 @@ HRESULT storage::init()
 	//여자2 반응
 	IMAGEMANAGER->addFrameImage("GIRL2", "Resource/IMG/character/npc/girl2_react.bmp", 360, 504, 3, 2, true, RGB(255, 0, 255));
 
-
-
 #pragma endregion NPCIMAGE
+
+//적군이미지=============================
+#pragma region ENEMYIMAGE
+
+#pragma endregion ENEMYIMAGE
+
+
 
 
 #pragma endregion IMAGESOURCES
@@ -242,10 +244,106 @@ HRESULT storage::init()
 
 	  /////////////////사운드 소스///////////////
 #pragma region SFXSOURCE
-//플레이어 사운드
+//플레이어 사운드============================(완)
 #pragma region PLAYERSFX
+	//무릎끓기
+	SOUNDMANAGER->addSound("PLAYER_knee", "Resource/SFX/Player/DD2_knee.wav", false, false);
+
+	//죽어서 떨어지는소리1
+	SOUNDMANAGER->addSound("PLAYER_death", "Resource/SFX/Player/player_death_pitfall.wav", false, false);
 
 
+	//걷는소리1
+	SOUNDMANAGER->addSound("PLAYER_footStep1", "Resource/SFX/Player/player_footsteps_run_01.wav", false, false);
+	//걷는소리2
+	SOUNDMANAGER->addSound("PLAYER_footStep2", "Resource/SFX/Player/player_footsteps_run_02.wav", false, false);
+	//걷는소리3
+	SOUNDMANAGER->addSound("PLAYER_footStep3", "Resource/SFX/Player/player_footsteps_run_03.wav", false, false);
+
+
+
+	//맞고쓰러지는소리
+	SOUNDMANAGER->addSound("PLAYER_knockDown_01", "Resource/SFX/Player/gethit_knockdown_01.wav", false, false);
+
+	//막기
+	SOUNDMANAGER->addSound("PLAYER_block", "Resource/SFX/Player/player_block.wav", false, false);
+	//맞았을떄 막기
+	SOUNDMANAGER->addSound("PLAYER_getHitBlock", "Resource/SFX/Player/player_gethit_blocked.wav", false, false);
+
+
+	//오르는소리1
+	SOUNDMANAGER->addSound("PLAYER_climb1", "Resource/SFX/Player/player_climb_01.wav", false, false);
+	//오르는소리2
+	SOUNDMANAGER->addSound("PLAYER_climb2", "Resource/SFX/Player/player_climb_02.wav", false, false);
+
+	//사다리내려와서 땅에닿았을떄
+	SOUNDMANAGER->addSound("PLAYER_climb_Down_Ledge", "Resource/SFX/Player/player_climb_down_ledge.wav", false, false);
+	//사다리내려와서 올라갔았을떄
+	SOUNDMANAGER->addSound("PLAYER_climb_Up_Ledge", "Resource/SFX/Player/player_climb_up_ledge.wav", false, false);
+
+	//벽잡기
+	SOUNDMANAGER->addSound("PLAYER_grabWall", "Resource/SFX/Player/player_grab_wall.wav", false, false);
+
+
+	//글로발잡기
+	SOUNDMANAGER->addSound("PLAYER_global_Catch", "Resource/SFX/Player/player_global_catch.wav", false, false);
+	//잡기
+	SOUNDMANAGER->addSound("PLAYER_grab", "Resource/SFX/Player/player_grab.wav", false, false);
+
+
+	//스턴
+	SOUNDMANAGER->addSound("PLAYER_dizzy", "Resource/SFX/Player/player_global_dizzy.wav", false, false);
+	//해제
+	SOUNDMANAGER->addSound("PLAYER_parry", "Resource/SFX/Player/player_global_parry.wav", false, false);
+
+
+
+	//무거운무기들었을때
+	SOUNDMANAGER->addSound("PLAYER_pickUpHeavy", "Resource/SFX/Player/player_global_pickup_weapon_heavy.wav", false, false);
+	//가벼운무기들었을때
+	SOUNDMANAGER->addSound("PLAYER_pickUpLight", "Resource/SFX/Player/player_global_pickup_weapon_light.wav", false, false);
+	//무거운무기던졌었을때
+	SOUNDMANAGER->addSound("PLAYER_throwHeavy", "Resource/SFX/Player/player_global_throw_weapon_heavy.wav", false, false);
+	//가벼운무기던졌을때
+	SOUNDMANAGER->addSound("PLAYER_throwLight", "Resource/SFX/Player/player_global_throw_weapon_light.wav", false, false);
+
+
+	//점프
+	SOUNDMANAGER->addSound("PLAYER_jump", "Resource/SFX/Player/player_jump.wav", false, false);
+	//점프킥
+	SOUNDMANAGER->addSound("PLAYER_jumpKick", "Resource/SFX/Player/player_jump_kick.wav", false, false);
+	//점프펀치
+	SOUNDMANAGER->addSound("PLAYER_jumpPunch", "Resource/SFX/Player/player_jump_punch.wav", false, false);
+	//회전킥
+	SOUNDMANAGER->addSound("PLAYER_rollKick", "Resource/SFX/Player/player_kyoko_roundhouse.wav", false, false);
+
+
+	//착지
+	SOUNDMANAGER->addSound("PLAYER_land", "Resource/SFX/Player/player_land.wav", false, false);
+
+
+
+	//스킬떨어지는
+	SOUNDMANAGER->addSound("PLAYER_powerBomb_falling", "Resource/SFX/Player/player_misako_powerbomb_falling.wav", false, false);
+	//스킬착지
+	SOUNDMANAGER->addSound("PLAYER_powerBomb_landing", "Resource/SFX/Player/player_misako_powerbomb_landing.wav.wav", false, false);
+	//스킬시작
+	SOUNDMANAGER->addSound("PLAYER_powerBomb_StartUp", "Resource/SFX/Player/player_misako_powerbomb_startup.wav.wav", false, false);
+
+
+
+
+
+
+	//펀치1
+	SOUNDMANAGER->addSound("PLAYER_punch1", "Resource/SFX/Player/player_punch_01.wav", false, false);
+	//펀치2
+	SOUNDMANAGER->addSound("PLAYER_punch2", "Resource/SFX/Player/player_punch_02.wav", false, false);
+	//펀치3
+	SOUNDMANAGER->addSound("PLAYER_punch3", "Resource/SFX/Player/player_punch_03.wav", false, false);
+
+	//던지기
+	SOUNDMANAGER->addSound("PLAYER_throw", "Resource/SFX/Player/player_throw.wav", false, false);
 
 #pragma endregion PLAYERSFX
 
