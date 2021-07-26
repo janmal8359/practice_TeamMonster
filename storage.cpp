@@ -94,42 +94,43 @@ HRESULT storage::init()
 
 	//무기 타격음
 
-	SOUNDMANAGER->addSound("야구방망이1",		"Resource/SFX/weapons/weapon_baseball_bat_hit.wav", true, false);			//야구방망이  둥
-	SOUNDMANAGER->addSound("야구방망이2",		"Resource/SFX/weapons/weapon_baseball_impact.wav", true, false);			//야구방망이2 탁 
+	SOUNDMANAGER->addSound("WEAPONS_bassball1_bat",		"Resource/SFX/weapons/weapon_baseball_bat_hit.wav", true, false);			//야구방망이  둥
+	SOUNDMANAGER->addSound("WEAPONS_bassball2_bat",		"Resource/SFX/weapons/weapon_baseball_impact.wav", true, false);			//야구방망이2 탁 
 	
-	SOUNDMANAGER->addSound("벤치1",				"Resource/SFX/weapons/weapon_bench_break.wav", true, false);				//벤치 부셔지는소리
-	SOUNDMANAGER->addSound("벤치2",				"Resource/SFX/weapons/weapon_bench_impact.wav", true, false);				//벤치 임팩트
+	SOUNDMANAGER->addSound("WEAPONS_bench1",			"Resource/SFX/weapons/weapon_bench_break.wav", true, false);				//벤치 부셔지는소리
+	SOUNDMANAGER->addSound("WEAPONS_bench2",			"Resource/SFX/weapons/weapon_bench_impact.wav", true, false);				//벤치 임팩트
 	
-	SOUNDMANAGER->addSound("자전거1",			"Resource/SFX/weapons/weapon_bicycle_impact.wav", true, false);				//자전거
-	SOUNDMANAGER->addSound("부메랑",				"Resource/SFX/weapons/weapon_boomerang_throw.wav", true, false);			//부메랑
-	SOUNDMANAGER->addSound("체인",				"Resource/SFX/weapons/weapon_chain_swing.wav", true, false);				//체인
-	SOUNDMANAGER->addSound("피구공",				"Resource/SFX/weapons/weapon_dodgeball_impact.wav", true, false);			//피구공
-	SOUNDMANAGER->addSound("물고기1",			"Resource/SFX/weapons/weapon_fish_explode.wav", true, false);				//물고기1
-	SOUNDMANAGER->addSound("물고기2",			"Resource/SFX/weapons/weapon_fish_impact.wav", true, false);				//물고기2
-	SOUNDMANAGER->addSound("프라이펜",			"Resource/SFX/weapons/weapon_frying_pan_impact2.wav", true, false);			//프라이펜
+	SOUNDMANAGER->addSound("WEAPONS_bicycle",			"Resource/SFX/weapons/weapon_bicycle_impact.wav", true, false);				//자전거
+	SOUNDMANAGER->addSound("WEAPONS_boomerang",			"Resource/SFX/weapons/weapon_boomerang_throw.wav", true, false);			//부메랑
+	SOUNDMANAGER->addSound("WEAPONS_chain",				"Resource/SFX/weapons/weapon_chain_swing.wav", true, false);				//체인
+	SOUNDMANAGER->addSound("WEAPONS_dodgeball",			"Resource/SFX/weapons/weapon_dodgeball_impact.wav", true, false);			//피구공
+	SOUNDMANAGER->addSound("WEAPONS_fish1",				"Resource/SFX/weapons/weapon_fish_explode.wav", true, false);				//물고기1
+	SOUNDMANAGER->addSound("WEAPONS_fish2",				"Resource/SFX/weapons/weapon_fish_impact.wav", true, false);				//물고기2
+	SOUNDMANAGER->addSound("WEAPONS_frying_pan",		"Resource/SFX/weapons/weapon_frying_pan_impact2.wav", true, false);			//프라이펜
 	
-	SOUNDMANAGER->addSound("기타1",				"Resource/SFX/weapons/weapon_guitar_impact_01.wav", true, false);			//기타1
-	SOUNDMANAGER->addSound("기타2",				"Resource/SFX/weapons/weapon_guitar_impact_02.wav", true, false);			//기타2
-	SOUNDMANAGER->addSound("기타3",				"Resource/SFX/weapons/weapon_guitar_impact_03.wav", true, false);			//기타3
-	SOUNDMANAGER->addSound("기타4",				"Resource/SFX/weapons/weapon_guitar_impact_04.wav", true, false);			//기타4
+	SOUNDMANAGER->addSound("WEAPONS_guitar1",			"Resource/SFX/weapons/weapon_guitar_impact_01.wav", true, false);			//기타1
+	SOUNDMANAGER->addSound("WEAPONS_guitar2",			"Resource/SFX/weapons/weapon_guitar_impact_02.wav", true, false);			//기타2
+	SOUNDMANAGER->addSound("WEAPONS_guitar3",			"Resource/SFX/weapons/weapon_guitar_impact_03.wav", true, false);			//기타3
+	SOUNDMANAGER->addSound("WEAPONS_guitar4",			"Resource/SFX/weapons/weapon_guitar_impact_04.wav", true, false);			//기타4
 	
-	SOUNDMANAGER->addSound("라이트세이버1",		"Resource/SFX/weapons/weapon_light_saber_impact_01.wav", true, false);		//라이트세이버1
-	SOUNDMANAGER->addSound("라이트세이버2",		"Resource/SFX/weapons/weapon_light_saber_impact_02.wav", true, false);		//라이트세이버2
-	SOUNDMANAGER->addSound("라이트세이버3",		"Resource/SFX/weapons/weapon_light_saber_impact_03.wav", true, false);		//라이트세이버3
+	SOUNDMANAGER->addSound("WEAPONS_lightSaber1",		"Resource/SFX/weapons/weapon_light_saber_impact_01.wav", true, false);		//라이트세이버1
+	SOUNDMANAGER->addSound("WEAPONS_lightSaber2",		"Resource/SFX/weapons/weapon_light_saber_impact_02.wav", true, false);		//라이트세이버2
+	SOUNDMANAGER->addSound("WEAPONS_lightSaber3",		"Resource/SFX/weapons/weapon_light_saber_impact_03.wav", true, false);		//라이트세이버3
 	
-	SOUNDMANAGER->addSound("라이트세이버스윙1",	"Resource/SFX/weapons/weapon_light_saber_swing_01.wav", true, false);		//라이트세이버스윙1
-	SOUNDMANAGER->addSound("라이트세이버스윙2",	"Resource/SFX/weapons/weapon_light_saber_swing_02.wav", true, false);		//라이트세이버스윙2
-	SOUNDMANAGER->addSound("라이트세이버스윙3",	"Resource/SFX/weapons/weapon_light_saber_swing_03.wav", true, false);		//라이트세이버스윙3
-	SOUNDMANAGER->addSound("라이트세이버스윙4",	"Resource/SFX/weapons/weapon_light_saber_swing_04.wav", true, false);		//라이트세이버스윙4
+	SOUNDMANAGER->addSound("WEAPONS_lightSaverSwing1",	"Resource/SFX/weapons/weapon_light_saber_swing_01.wav", true, false);		//라이트세이버스윙1
+	SOUNDMANAGER->addSound("WEAPONS_lightSaverSwing2",	"Resource/SFX/weapons/weapon_light_saber_swing_02.wav", true, false);		//라이트세이버스윙2
+	SOUNDMANAGER->addSound("WEAPONS_lightSaverSwing3",	"Resource/SFX/weapons/weapon_light_saber_swing_03.wav", true, false);		//라이트세이버스윙3
+	SOUNDMANAGER->addSound("WEAPONS_lightSaverSwing4",	"Resource/SFX/weapons/weapon_light_saber_swing_04.wav", true, false);		//라이트세이버스윙4
 
-	SOUNDMANAGER->addSound("금속의자",			"Resource/SFX/weapons/weapon_metal_chair_impact.wav", true, false);			//금속의자
-	SOUNDMANAGER->addSound("삽",					"Resource/SFX/weapons/weapon_shovel_impact.wav", true, false);				//삽
-	SOUNDMANAGER->addSound("별지팡이",			"Resource/SFX/weapons/weapon_star_baton_impact.wav", true, false);			//별지팡이
-	SOUNDMANAGER->addSound("나무판자",			"Resource/SFX/weapons/weapon_wood_plank_impact.wav", true, false);			//나무판자
-	SOUNDMANAGER->addSound("렌치",				"Resource/SFX/weapons/weapon_wrench_impact.wav", true, false);				//렌치
+	SOUNDMANAGER->addSound("WEAPONS_chair",				"Resource/SFX/weapons/weapon_metal_chair_impact.wav", true, false);			//금속의자
+	SOUNDMANAGER->addSound("WEAPONS_shovel",			"Resource/SFX/weapons/weapon_shovel_impact.wav", true, false);				//삽
+	SOUNDMANAGER->addSound("WEAPONS_starBaton",			"Resource/SFX/weapons/weapon_star_baton_impact.wav", true, false);			//별지팡이
+	SOUNDMANAGER->addSound("WEAPONS_woodPlank",			"Resource/SFX/weapons/weapon_wood_plank_impact.wav", true, false);			//나무판자
+	SOUNDMANAGER->addSound("WEAPONS_wrench",			"Resource/SFX/weapons/weapon_wrench_impact.wav", true, false);				//렌치
 
 #pragma endregion WEAPONS
-	//모든 피격
+	
+																																	//모든 피격
 	IMAGEMANAGER->addFrameImage("attack", "Resource/IMG/effect/attack.bmp", 612, 196, 3, 1, true, RGB(255, 0, 255));
 	//애너미 항복
 	IMAGEMANAGER->addFrameImage("beg", "Resource/IMG/effect/beg.bmp", 268, 127, 2, 1, true, RGB(255, 0, 255));
@@ -487,32 +488,32 @@ HRESULT storage::init()
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_backdown", "Resource/IMG/character/enemy/scoolBoy/backdown.bmp", 7695, 438, 27, 2, true, RGB(255, 0, 255));			//넘어졌을때
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_begging", "Resource/IMG/character/enemy/scoolBoy/begging.bmp", 216, 354, 2, 2, true, RGB(255, 0, 255));				//항복
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_block", "Resource/IMG/character/enemy/scoolBoy/block.bmp", 459, 438, 3, 2, true, RGB(255, 0, 255));					//막기
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_ComboAttack1", "Resource/IMG/character/enemy/scoolBoy/ComboAttack1.bmp", 2352, 426, 7, 2, true, RGB(255, 0, 255));	//공격1
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_ComboAttack2", "Resource/IMG/character/enemy/scoolBoy/ComboAttack2.bmp", 1757, 444, 7, 2, true, RGB(255, 0, 255));	//공격2
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_ComboAttack3", "Resource/IMG/character/enemy/scoolBoy/ComboAttack3.bmp", 1890, 558, 9, 2, true, RGB(255, 0, 255));	//공격3
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_comboAttack1", "Resource/IMG/character/enemy/scoolBoy/ComboAttack1.bmp", 2352, 426, 7, 2, true, RGB(255, 0, 255));	//공격1
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_comboAttack2", "Resource/IMG/character/enemy/scoolBoy/ComboAttack2.bmp", 1757, 444, 7, 2, true, RGB(255, 0, 255));	//공격2
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_comboAttack3", "Resource/IMG/character/enemy/scoolBoy/ComboAttack3.bmp", 1890, 558, 9, 2, true, RGB(255, 0, 255));	//공격3
 								 
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_gethit", "Resource/IMG/character/enemy/scoolBoy/gethit.bmp", 1728, 450, 9, 2, true, RGB(255, 0, 255));				//맞는 동작
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_HeldHit", "Resource/IMG/character/enemy/scoolBoy/HeldHit.bmp", 576, 372, 3, 2, true, RGB(255, 0, 255));				//잡히고 맞는 동작
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_HeldRelease", "Resource/IMG/character/enemy/scoolBoy/HeldRelease.bmp", 660, 480, 4, 2, true, RGB(255, 0, 255));		//잡히고 푼 동작
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_heldHit", "Resource/IMG/character/enemy/scoolBoy/HeldHit.bmp", 576, 372, 3, 2, true, RGB(255, 0, 255));				//잡히고 맞는 동작
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_heldRelease", "Resource/IMG/character/enemy/scoolBoy/HeldRelease.bmp", 660, 480, 4, 2, true, RGB(255, 0, 255));		//잡히고 푼 동작
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_idle", "Resource/IMG/character/enemy/scoolBoy/idle.bmp", 1224, 432, 8, 2, true, RGB(255, 0, 255));					//기본
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_jump", "Resource/IMG/character/enemy/scoolBoy/jump.bmp", 423, 486, 3, 2, true, RGB(255, 0, 255));					//점프
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_jumpAttack", "Resource/IMG/character/enemy/scoolBoy/jumpAttack.bmp", 1224, 468, 6, 2, true, RGB(255, 0, 255));		//점프 공격
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_ladder", "Resource/IMG/character/enemy/scoolBoy/ladder.bmp", 738, 264, 6, 1, true, RGB(255, 0, 255));				//기어올라가는동작
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_run", "Resource/IMG/character/enemy/scoolBoy/run.bmp", 1920, 390, 10, 2, true, RGB(255, 0, 255));					//달리기
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_Stun", "Resource/IMG/character/enemy/scoolBoy/Stun.bmp", 633, 408, 4, 2, true, RGB(255, 0, 255));					//스턴
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_stun", "Resource/IMG/character/enemy/scoolBoy/Stun.bmp", 633, 408, 4, 2, true, RGB(255, 0, 255));					//스턴
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_transition", "Resource/IMG/character/enemy/scoolBoy/transition.bmp", 405, 183, 3, 1, true, RGB(255, 0, 255));		//기어올라온 후
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_upercut", "Resource/IMG/character/enemy/scoolBoy/upercut.bmp", 1386, 502, 7, 2, true, RGB(255, 0, 255));				//어퍼컷
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_Walk", "Resource/IMG/character/enemy/scoolBoy/Walk.bmp", 1620, 444, 12, 2, true, RGB(255, 0, 255));					//걷기
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_WAttack", "Resource/IMG/character/enemy/scoolBoy/WAttack.bmp", 1830, 660, 5, 2, true, RGB(255, 0, 255));				//무기 휘둘기
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_walk", "Resource/IMG/character/enemy/scoolBoy/Walk.bmp", 1620, 444, 12, 2, true, RGB(255, 0, 255));					//걷기
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_wAttack", "Resource/IMG/character/enemy/scoolBoy/WAttack.bmp", 1830, 660, 5, 2, true, RGB(255, 0, 255));				//무기 휘둘기
 								 
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_weapon_swing", "Resource/IMG/character/enemy/scoolBoy/weapon_swing.bmp", 5415, 438, 19, 2, true, RGB(255, 0, 255));//무기 맞는 동작
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_weaponSwing", "Resource/IMG/character/enemy/scoolBoy/weapon_swing.bmp", 5415, 438, 19, 2, true, RGB(255, 0, 255));//무기 맞는 동작
 	IMAGEMANAGER->addFrameImage("SCHOOLBOY_weaponHit", "Resource/IMG/character/enemy/scoolBoy/weaponHit.bmp", 5415, 438, 19, 2, true, RGB(255, 0, 255));		//무기 맞은 동작
 								 
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_WIdle", "Resource/IMG/character/enemy/scoolBoy/WIdle.bmp", 1224, 552, 8, 2, true, RGB(255, 0, 255));					//무기 든 상태
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_WJump", "Resource/IMG/character/enemy/scoolBoy/WJump.bmp", 432, 468, 3, 2, true, RGB(255, 0, 255));					//무기 점프
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_WRun", "Resource/IMG/character/enemy/scoolBoy/WRun.bmp", 2250, 516, 10, 2, true, RGB(255, 0, 255));					//무기 런
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_WThrow", "Resource/IMG/character/enemy/scoolBoy/WThrow.bmp", 1752, 564, 8, 2, true, RGB(255, 0, 255));				//무기 던지기
-	IMAGEMANAGER->addFrameImage("SCHOOLBOY_WWalk", "Resource/IMG/character/enemy/scoolBoy/WWalk.bmp", 1572, 556, 12, 2, true, RGB(255, 0, 255));				//무기 들고 걷기
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_wIdle", "Resource/IMG/character/enemy/scoolBoy/WIdle.bmp", 1224, 552, 8, 2, true, RGB(255, 0, 255));					//무기 든 상태
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_wJump", "Resource/IMG/character/enemy/scoolBoy/WJump.bmp", 432, 468, 3, 2, true, RGB(255, 0, 255));					//무기 점프
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_wRun", "Resource/IMG/character/enemy/scoolBoy/WRun.bmp", 2250, 516, 10, 2, true, RGB(255, 0, 255));					//무기 런
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_wThrow", "Resource/IMG/character/enemy/scoolBoy/WThrow.bmp", 1752, 564, 8, 2, true, RGB(255, 0, 255));				//무기 던지기
+	IMAGEMANAGER->addFrameImage("SCHOOLBOY_wWalk", "Resource/IMG/character/enemy/scoolBoy/WWalk.bmp", 1572, 556, 12, 2, true, RGB(255, 0, 255));				//무기 들고 걷기
 
 
 
@@ -528,13 +529,13 @@ HRESULT storage::init()
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_backdown", "Resource/IMG/character/enemy/schoolGirl/backdown.bmp", 6939, 376, 27, 2, true, RGB(255, 0, 255));			//넘어졌다 일어남
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_begging", "Resource/IMG/character/enemy/schoolGirl/begging.bmp", 378, 336, 3, 2, true, RGB(255, 0, 255));				//항복
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_block", "Resource/IMG/character/enemy/schoolGirl/block.bmp", 351, 338, 3, 2, true, RGB(255, 0, 255));					//막기
-	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_ComboAttack1", "Resource/IMG/character/enemy/schoolGirl/ComboAttack1.bmp", 1239, 354, 7, 2, true, RGB(255, 0, 255));	//콤보 어택1
-	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_ComboAttack2", "Resource/IMG/character/enemy/schoolGirl/ComboAttack2.bmp", 2208, 354, 8, 2, true, RGB(255, 0, 255));	//콤보 어택2
-	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_ComboAttack3", "Resource/IMG/character/enemy/schoolGirl/ComboAttack3.bmp", 2412, 414, 12, 2, true, RGB(255, 0, 255));	//콤보 어택3
+	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_comboAttack1", "Resource/IMG/character/enemy/schoolGirl/ComboAttack1.bmp", 1239, 354, 7, 2, true, RGB(255, 0, 255));	//콤보 어택1
+	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_comboAttack2", "Resource/IMG/character/enemy/schoolGirl/ComboAttack2.bmp", 2208, 354, 8, 2, true, RGB(255, 0, 255));	//콤보 어택2
+	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_comboAttack3", "Resource/IMG/character/enemy/schoolGirl/ComboAttack3.bmp", 2412, 414, 12, 2, true, RGB(255, 0, 255));	//콤보 어택3
 	
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_gethit", "Resource/IMG/character/enemy/schoolGirl/gethit.bmp", 1431, 360, 9, 2, true, RGB(255, 0, 255));				//피격당함
-	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_HeldHit", "Resource/IMG/character/enemy/schoolGirl/HeldHit.bmp", 576, 336, 4, 2, true, RGB(255, 0, 255));				//잡힌후 피격당함
-	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_HeldRelease", "Resource/IMG/character/enemy/schoolGirl/HeldRelease.bmp", 528, 360, 4, 2, true, RGB(255, 0, 255));		//잡힌거 해제
+	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_heldHit", "Resource/IMG/character/enemy/schoolGirl/HeldHit.bmp", 576, 336, 4, 2, true, RGB(255, 0, 255));				//잡힌후 피격당함
+	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_heldRelease", "Resource/IMG/character/enemy/schoolGirl/HeldRelease.bmp", 528, 360, 4, 2, true, RGB(255, 0, 255));		//잡힌거 해제
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_idle", "Resource/IMG/character/enemy/schoolGirl/idle.bmp", 1170, 354, 10, 2, true, RGB(255, 0, 255));					//기본
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_jump", "Resource/IMG/character/enemy/schoolGirl/jump.bmp", 342, 366, 3, 2, true, RGB(255, 0, 255));						//점프
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_jumpAttack", "Resource/IMG/character/enemy/schoolGirl/jumpAttack.bmp", 1197, 354, 7, 2, true, RGB(255, 0, 255));		//점프 공격
@@ -543,16 +544,16 @@ HRESULT storage::init()
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_stun", "Resource/IMG/character/enemy/schoolGirl/stun.bmp", 456, 324, 4, 2, true, RGB(255, 0, 255));						//스턴
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_transition", "Resource/IMG/character/enemy/schoolGirl/transition.bmp", 387, 168, 3, 1, true, RGB(255, 0, 255));			//기어올라 온 후
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_walk", "Resource/IMG/character/enemy/schoolGirl/walk.bmp", 1296, 372, 12, 2, true, RGB(255, 0, 255));					//걷기
-	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_WAttack", "Resource/IMG/character/enemy/schoolGirl/WAttack.bmp", 1580, 558, 5, 2, true, RGB(255, 0, 255));				//무기 어택
+	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_wAttack", "Resource/IMG/character/enemy/schoolGirl/WAttack.bmp", 1580, 558, 5, 2, true, RGB(255, 0, 255));				//무기 어택
 	
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_weapon_swing", "Resource/IMG/character/enemy/schoolGirl/weapon_swing.bmp", 4369, 336, 17, 2, true, RGB(255, 0, 255));	//무기 스윙 피격당할시
 	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_weaponHit", "Resource/IMG/character/enemy/schoolGirl/weaponHit.bmp", 4369, 336, 17, 2, true, RGB(255, 0, 255));			//무기 피격당할시
 	
-	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_WIdle", "Resource/IMG/character/enemy/schoolGirl/WIdle.bmp", 1950, 408, 10, 2, true, RGB(255, 0, 255));					//무기 기본
-	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_WJump", "Resource/IMG/character/enemy/schoolGirl/WJump.bmp", 429, 450, 3, 2, true, RGB(255, 0, 255));					//무기 점프
-	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_WRun", "Resource/IMG/character/enemy/schoolGirl/WRun.bmp", 1880, 458, 10, 2, true, RGB(255, 0, 255));					//무기 달리기
-	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_WThrow", "Resource/IMG/character/enemy/schoolGirl/WThrow.bmp", 1488, 540, 8, 2, true, RGB(255, 0, 255));				//무기 던지기
-	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_WWalk", "Resource/IMG/character/enemy/schoolGirl/WWalk.bmp", 2232, 502, 12, 2, true, RGB(255, 0, 255));					//무기 걷기
+	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_wIdle", "Resource/IMG/character/enemy/schoolGirl/WIdle.bmp", 1950, 408, 10, 2, true, RGB(255, 0, 255));					//무기 기본
+	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_wJump", "Resource/IMG/character/enemy/schoolGirl/WJump.bmp", 429, 450, 3, 2, true, RGB(255, 0, 255));					//무기 점프
+	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_wRun", "Resource/IMG/character/enemy/schoolGirl/WRun.bmp", 1880, 458, 10, 2, true, RGB(255, 0, 255));					//무기 달리기
+	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_wThrow", "Resource/IMG/character/enemy/schoolGirl/WThrow.bmp", 1488, 540, 8, 2, true, RGB(255, 0, 255));				//무기 던지기
+	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_wWalk", "Resource/IMG/character/enemy/schoolGirl/WWalk.bmp", 2232, 502, 12, 2, true, RGB(255, 0, 255));					//무기 걷기
 	
 #pragma endregion SCHOOLGIRL
 
