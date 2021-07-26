@@ -182,6 +182,11 @@ HRESULT soundTest::init()
 	IMAGEMANAGER->addImage("volumeFront", "resources/bmp/volumeBarFront.bmp", 381, 4, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addImage("timeBack", "resources/bmp/playTimeBarBack.bmp", 446, 3, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addImage("timeTop", "resources/bmp/playTimeBarFront.bmp", 446, 3, true, RGB(255, 0, 255));
+	
+
+	/////깃헙 테스트 아아아아아ㅏ아아아아ㅏㅇ
+	///////아아아아아아ㅏ아아 바뀌나요
+
 
 	image* img = IMAGEMANAGER->addImage("volumeBack", "resources/bmp/volumeBarBack.bmp", 381, 4, true, RGB(255, 0, 255));
 
