@@ -100,28 +100,28 @@ HRESULT soundTest::init()
 
 	//줍는 픽업음원
 	//Resource/SFX/pickup/
+	//습득 불가
+	SOUNDMANAGER->addSound("cannot", "Resource/SFX/pickup/cannot_pickup.wav", true, true);
 	//??
-	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/cannot_pickup.wav", true, true);
+	SOUNDMANAGER->addSound("confirm", "Resource/SFX/pickup/interface_item_pickup_confirm.wav", true, true);
+	//도전 과제 아이템 획득
+	SOUNDMANAGER->addSound("intro", "Resource/SFX/pickup/interface_item_pickup_intro.wav", true, true);
+	//획득
+	SOUNDMANAGER->addSound("outro", "Resource/SFX/pickup/interface_item_pickup_outro.wav", true, true);
+	//청구서 습득
+	SOUNDMANAGER->addSound("bill", "Resource/SFX/pickup/pickup_bill.wav", true, true);
 	//??
-	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/interface_item_pickup_confirm.wav", true, true);
+	SOUNDMANAGER->addSound("cat1", "Resource/SFX/pickup/pickup_cat_01.wav", true, true);
 	//??
-	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/interface_item_pickup_intro.wav", true, true);
+	SOUNDMANAGER->addSound("cat2", "Resource/SFX/pickup/pickup_cat_02.wav", true, true);
 	//??
-	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/interface_item_pickup_outro.wav", true, true);
-	//??
-	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_bill.wav", true, true);
-	//??
-	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_cat_01.wav", true, true);
-	//??
-	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_cat_02.wav", true, true);
-	//??
-	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_cat_03.wav", true, true);
+	SOUNDMANAGER->addSound("cat3", "Resource/SFX/pickup/pickup_cat_03.wav", true, true);
 	//머니 습득
-	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_coin.wav", true, true);
+	SOUNDMANAGER->addSound("coin", "Resource/SFX/pickup/pickup_coin.wav", true, true);
 	//음식 습득
-	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_food.wav", true, true);
-	//??
-	SOUNDMANAGER->addSound("에이빠인", "Resource/SFX/pickup/pickup_med_01.wav", true, true);
+	SOUNDMANAGER->addSound("food", "Resource/SFX/pickup/pickup_food.wav", true, true);
+	//약 습득
+	SOUNDMANAGER->addSound("med", "Resource/SFX/pickup/pickup_med_01.wav", true, true);
 	//}*/
 
 	return S_OK;
