@@ -26,11 +26,7 @@ HRESULT playGround::init()
 {
 	gameNode::init(true);
 
-	// 주석 이한별 입니다
-	SCENEMANAGER->addScene("스타씬", new soundTest);
-	SCENEMANAGER->changeScene("스타씬");
 
-	SOUNDMANAGER->init();
 	return S_OK;
 }
 
@@ -45,8 +41,8 @@ void playGround::update()
 {
 	gameNode::update();
 
-	SCENEMANAGER->update();
-	SOUNDMANAGER->update();
+	//SCENEMANAGER->update();
+	//SOUNDMANAGER->update();
 }
 
 //여기다 그려줘라!!!
@@ -55,10 +51,10 @@ void playGround::render()
 	PatBlt(getMemDC(), 0, 0, WINSIZEX, WINSIZEY, BLACKNESS);
 	//==============위에는 제발 건드리지 마라 ============
 	
-	IMAGEMANAGER->render("배경", getMemDC(), 0, 0);
+	//IMAGEMANAGER->render("배경", getMemDC(), 0, 0);
 
 
-	SCENEMANAGER->render();
+	//SCENEMANAGER->render();
 
 	//TIMEMANAGER->render(getMemDC());
 
