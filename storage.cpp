@@ -129,15 +129,15 @@ HRESULT storage::init()
 	SOUNDMANAGER->addSound("렌치",				"Resource/SFX/weapons/weapon_wrench_impact.wav", true, false);				//렌치
 
 #pragma endregion WEAPONS
-	//모든 피격
+	//모든 피격 기본 배경
 	IMAGEMANAGER->addFrameImage("EFFECT_attack", "Resource/IMG/effect/attack.bmp", 612, 196, 3, 1, true, RGB(255, 0, 255));
 	//애너미 항복
 	IMAGEMANAGER->addFrameImage("EFFECT_beg", "Resource/IMG/effect/beg.bmp", 268, 127, 2, 1, true, RGB(255, 0, 255));
-	//저스트 가드
+	//플레이어 타격
 	IMAGEMANAGER->addFrameImage("EFFECT_blueAttack", "Resource/IMG/effect/blueAttack.bmp", 720, 80, 9, 1, true, RGB(255, 0, 255));
 	//보스 대시시작점
 	IMAGEMANAGER->addFrameImage("EFFECT_BossDash", "Resource/IMG/effect/Boss dash.bmp", 12480, 900, 10, 1, true, RGB(255, 0, 255));
-	//??
+	//플레이어 방어
 	IMAGEMANAGER->addFrameImage("EFFECT_BossHowling", "Resource/IMG/effect/Boss howling.bmp", 1821, 165, 8, 1, true, RGB(255, 0, 255));
 	//보스 방어
 	IMAGEMANAGER->addFrameImage("EFFECT_BossHowling2", "Resource/IMG/effect/Boss howling2.bmp", 416, 208, 2, 1, true, RGB(255, 0, 255));
@@ -149,29 +149,29 @@ HRESULT storage::init()
 	IMAGEMANAGER->addFrameImage("EFFECT_BossPhase1", "Resource/IMG/effect/Boss phase1.bmp", 299, 82, 3, 1, true, RGB(255, 0, 255));
 	//보스 숄더어택 피격
 	IMAGEMANAGER->addFrameImage("EFFECT_BossSmash", "Resource/IMG/effect/Boss smash.bmp", 960, 89, 10, 1, true, RGB(255, 0, 255));
-	//??
+	//보스가 일어설 때
 	IMAGEMANAGER->addFrameImage("EFFECT_BossStand", "Resource/IMG/effect/Boss stand.bmp", 607, 55, 8, 1, true, RGB(255, 0, 255));
 	//바닥균열 1번
 	IMAGEMANAGER->addFrameImage("EFFECT_BossStand2", "Resource/IMG/effect/Boss stand2.bmp", 3390, 144, 7, 1, true, RGB(255, 0, 255));
 	//기둥 파괴(점프)
 	IMAGEMANAGER->addFrameImage("EFFECT_boss_effect5", "Resource/IMG/effect/boss_effect5.bmp", 800, 90, 7, 1, true, RGB(255, 0, 255));
-	//??
+	//화면 깨짐
 	IMAGEMANAGER->addFrameImage("EFFECT_crush", "Resource/IMG/effect/crush.bmp", 190, 193, 1, 1, true, RGB(255, 0, 255));
 	//기둥 파괴(숄더)
 	IMAGEMANAGER->addFrameImage("EFFECT_dashAttackEffect", "Resource/IMG/effect/dashAttackEffect.bmp", 400, 45, 7, 1, true, RGB(255, 0, 255));
 	//저스트 가드
 	IMAGEMANAGER->addFrameImage("EFFECT_effecBlue", "Resource/IMG/effect/effec_blue.bmp", 720, 80, 9, 1, true, RGB(255, 0, 255));
-	//??
+	//방망이 타격
 	IMAGEMANAGER->addFrameImage("EFFECT_effectSpark", "Resource/IMG/effect/effect_spark.bmp", 512, 128, 4, 1, true, RGB(255, 0, 255));
-	//??
+	//애너미 타격1
 	IMAGEMANAGER->addFrameImage("EFFECT_effectStar", "Resource/IMG/effect/effect_star.bmp", 900, 60, 15, 1, true, RGB(255, 0, 255));
-	//??
+	//보스 숄더어택 피격(중첩)
 	IMAGEMANAGER->addFrameImage("EFFECT_etBoomBig", "Resource/IMG/effect/et_boom_big.bmp", 960, 89, 10, 1, true, RGB(255, 0, 255));
-	//??
+	//보스 타격
 	IMAGEMANAGER->addFrameImage("EFFECT_explosion", "Resource/IMG/effect/explosion.bmp", 1701, 247, 7, 1, true, RGB(255, 0, 255));
-	//??(보스 대시시작점 중첩)
+	//보스 대시시작점(중첩)
 	IMAGEMANAGER->addFrameImage("EFFECT_explosion1", "Resource/IMG/effect/explosion1.bmp", 12480, 900, 10, 1, true, RGB(255, 0, 255));
-	//??
+	//보스 타격(중첩)
 	IMAGEMANAGER->addFrameImage("EFFECT_explosion2", "Resource/IMG/effect/explosion2.bmp", 1701, 247, 7, 1, true, RGB(255, 0, 255));
 	//바닥균열 2번
 	IMAGEMANAGER->addFrameImage("EFFECT_groundbreak", "Resource/IMG/effect/groundbreak.bmp", 256, 128, 1, 1, true, RGB(255, 0, 255));
@@ -187,9 +187,9 @@ HRESULT storage::init()
 	IMAGEMANAGER->addFrameImage("EFFECT_runR", "Resource/IMG/effect/runR.bmp", 2544, 123, 12, 1, true, RGB(255, 0, 255));
 	//동맹교섭
 	IMAGEMANAGER->addFrameImage("EFFECT_shake", "Resource/IMG/effect/shake.bmp", 268, 127, 2, 1, true, RGB(255, 0, 255));
-	//??
+	//방망이 타격(중첩)
 	IMAGEMANAGER->addFrameImage("EFFECT_spark", "Resource/IMG/effect/spark.bmp", 512, 128, 4, 1, true, RGB(255, 0, 255));
-	//??
+	//애너미 타격2
 	IMAGEMANAGER->addFrameImage("EFFECT_star", "Resource/IMG/effect/star.bmp", 1350, 90, 15, 1, true, RGB(255, 0, 255));
 	//기절
 	IMAGEMANAGER->addFrameImage("EFFECT_stun", "Resource/IMG/effect/stun.bmp", 420, 54, 6, 1, true, RGB(255, 0, 255));
@@ -257,14 +257,15 @@ HRESULT storage::init()
 
 	//스테이지
 	//Resource/IMG/stage
+	//보스 등장 전 스테이지
 	IMAGEMANAGER->addImage("STAGE_boss1", "Resource/IMG/stage/boss1.bmp", 3116, 1215, true, RGB(255, 0, 255));
-
+	//보스 등장 후 스테이지
 	IMAGEMANAGER->addImage("STAGE_boss2", "Resource/IMG/stage/boss2.bmp", 3116, 1215, true, RGB(255, 0, 255));
-
+	//게임 시작 교실
 	IMAGEMANAGER->addImage("STAGE_easy", "Resource/IMG/stage/easy.bmp", 2028, 678, true, RGB(255, 0, 255));
-
+	//수영장
 	IMAGEMANAGER->addImage("STAGE_hard", "Resource/IMG/stage/hard.bmp", 2328, 1428, true, RGB(255, 0, 255));
-
+	//편의점
 	IMAGEMANAGER->addImage("STAGE_normal", "Resource/IMG/stage/normal.bmp", 2865, 837, true, RGB(255, 0, 255));
 
 #pragma endregion SFXPATH
@@ -899,19 +900,19 @@ HRESULT storage::init()
 	//Resource/SFX/pickup/
 	//습득 불가
 	SOUNDMANAGER->addSound("PICKUP_cannot", "Resource/SFX/pickup/cannot_pickup.wav", true, true);
-	//??
+	//도전 고제 아이템 발견
 	SOUNDMANAGER->addSound("PICKUP_confirm", "Resource/SFX/pickup/interface_item_pickup_confirm.wav", true, true);
 	//도전 과제 아이템 획득
 	SOUNDMANAGER->addSound("PICKUP_intro", "Resource/SFX/pickup/interface_item_pickup_intro.wav", true, true);
-	//인트로 끝
+	//아이템 인트로 끝
 	SOUNDMANAGER->addSound("PICKUP_outro", "Resource/SFX/pickup/interface_item_pickup_outro.wav", true, true);
 	//청구서 습득
 	SOUNDMANAGER->addSound("PICKUP_bill", "Resource/SFX/pickup/pickup_bill.wav", true, true);
-	//??
+	//다마고치 펫1
 	SOUNDMANAGER->addSound("PICKUP_cat1", "Resource/SFX/pickup/pickup_cat_01.wav", true, true);
-	//??
+	//다마고치 펫2
 	SOUNDMANAGER->addSound("PICKUP_cat2", "Resource/SFX/pickup/pickup_cat_02.wav", true, true);
-	//??
+	//다마고치 펫3
 	SOUNDMANAGER->addSound("PICKUP_cat3", "Resource/SFX/pickup/pickup_cat_03.wav", true, true);
 	//머니 습득
 	SOUNDMANAGER->addSound("PICKUP_coin", "Resource/SFX/pickup/pickup_coin.wav", true, true);
