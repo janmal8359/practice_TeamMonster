@@ -29,7 +29,6 @@ HRESULT playGround::init()
 	_st = new storage;
 	_st->init();
 
-	_bg = IMAGEMANAGER->findImage("STAGE_backGround");
 	
 
 	return S_OK;
@@ -58,8 +57,10 @@ void playGround::render()
 	
 	//IMAGEMANAGER->render("¹è°æ", getMemDC(), 0, 0);
 
-	IMAGEMANAGER->render("STAGE_backGround", getMemDC(), 0, 0);
-	_bg->render(getMemDC());
+	//IMAGEMANAGER->render("STAGE_backGround", getMemDC(), 0, 0);
+
+	IMAGEMANAGER->findImage("STAGE_backGround")->render(getMemDC(), 0, 0);
+
 	//SCENEMANAGER->render();
 
 	//TIMEMANAGER->render(getMemDC());

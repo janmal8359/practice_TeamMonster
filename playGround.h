@@ -7,7 +7,6 @@ class playGround : public gameNode
 {
 private:
 	storage* _st;
-	image* _bg;
 
 
 public:
