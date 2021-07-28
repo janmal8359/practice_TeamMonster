@@ -42,33 +42,32 @@ void enemyManager::setMinion()
 	
 	for (int i = 0; i < 3; i++)
 	{
-
 		switch (num)
 		{
-		case 0:
+		case 0://ÆÄ¶õ»ö
 		{
 			enemy* bug;
 			bug = new minion;
-			bug->init(WINSIZEX / 2 , 500, 0);
+			bug->init(WINSIZEX / 2 - 200 , 590, 0);
 			_vMinion.push_back(bug);
 		}
 
 		break;
-		case 1:
+		case 1://Èò»ö
 		{
 			enemy* bug;
 			bug = new minion;
-			bug->init(WINSIZEX / 2, 400, 1);
+			bug->init(WINSIZEX / 2, 450, 1);
 			_vMinion.push_back(bug);
 		}
 
 		break;
 
-		case 2:
+		case 2://³ì»ö
 		{
 			enemy* bug;
 			bug = new minion;
-			bug->init(WINSIZEX / 2, 300, 2);
+			bug->init(WINSIZEX / 2 + 200, 310, 2);
 			_vMinion.push_back(bug);
 		}
 

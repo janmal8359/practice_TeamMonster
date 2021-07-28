@@ -43,7 +43,7 @@ HRESULT enemy::init(float x, float y, int eType)
 
 	_x = x;
 	_y = y;
-	_speed = 5;
+	_speed = 2;
 	_rc = RectMakeCenter(_x, _y, 128, 128);
 
 	return S_OK;
@@ -66,7 +66,7 @@ void enemy::render()
 void enemy::move()
 {
 
-	if (_rc.left > 100 && !_turn)
+	if (_rc.left > 70 && !_turn)
 	{
 		_currentFrameY = 0;
 
@@ -85,11 +85,11 @@ void enemy::move()
 		}
 
 	}
-	else if (_rc.left <= 100)
+	else if (_rc.left <= 70)
 	{
 		_turn = true;
 	}
-	else if (_rc.right > WINSIZEX - 100 && _turn)
+	if (_rc.right < WINSIZEX - 150 && _turn)
 	{
 		_currentFrameY = 1;
 
@@ -106,6 +106,10 @@ void enemy::move()
 
 			_count = 0;
 		}
+	}
+	else if (_rc.left <= WINSIZEX - 150)
+	{
+		_turn = false;
 	}
 
 	_rc = RectMakeCenter(_x, _y, 128, 128);
