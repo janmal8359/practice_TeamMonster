@@ -2,12 +2,13 @@
 #include "gameNode.h"
 #include "soundTest.h"
 #include "storage.h"
+#include "enemyManager.h"
 
 class playGround : public gameNode
 {
 private:
 	storage* _st;
-
+	enemyManager* _en;
 
 public:
 	playGround();

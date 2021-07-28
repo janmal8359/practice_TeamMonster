@@ -9,15 +9,18 @@ enum ENEMYTYPE
 	C
 };
 
-class enemy : public storage
+class enemy : public gameNode
 {
 private:
-	storage* _em;
+	image* _enemy;
 	float _x, _y;
 	int _speed;
 	RECT _rc;
 	
-	bool _trun;
+	int _currentFrameX, _currentFrameY;
+	int _count;
+
+	bool _turn;
 
 	ENEMYTYPE _eType;
 
@@ -32,6 +35,7 @@ public:
 	virtual void render();			
 
 	void move();
+	void draw();
 
 	inline RECT getRect() { return _rc; }
 	int getEnemyType() { return _eType; }

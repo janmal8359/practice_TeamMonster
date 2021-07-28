@@ -144,6 +144,12 @@
     <ClInclude Include="enemy.h">
       <Filter>playGround\enemyManager</Filter>
     </ClInclude>
+    <ClInclude Include="minion.h">
+      <Filter>playGround\enemyManager</Filter>
+    </ClInclude>
+    <ClInclude Include="enemyManager.h">
+      <Filter>playGround\enemyManager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -219,6 +225,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="enemy.cpp">
+      <Filter>playGround\enemyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="minion.cpp">
+      <Filter>playGround\enemyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="enemyManager.cpp">
       <Filter>playGround\enemyManager</Filter>
     </ClCompile>
   </ItemGroup>
