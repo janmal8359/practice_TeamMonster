@@ -1,5 +1,11 @@
 #pragma once
-class enemy
+#include "storage.h"
+
+class enemy : public storage
 {
+
+public:
+	enemy();
+	~enemy();
 };
 

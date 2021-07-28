@@ -1,10 +1,13 @@
 #pragma once
 #include "gameNode.h"
 #include "soundTest.h"
+#include "storage.h"
 
 class playGround : public gameNode
 {
 private:
+	storage* _st;
+	image* _bg;
 
 
 public:
