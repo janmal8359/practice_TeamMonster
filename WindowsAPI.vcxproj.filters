@@ -138,6 +138,9 @@
     <ClInclude Include="storage.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="ui.h">
+      <Filter>playGround</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -211,6 +214,9 @@
     </ClCompile>
     <ClCompile Include="storage.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ui.cpp">
+      <Filter>playGround</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

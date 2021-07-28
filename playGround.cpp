@@ -11,10 +11,7 @@ playGround::playGround()
 
 playGround::~playGround()
 {
-	//주석처리를 하자. 어서 빨리 하자. 
-	//    adwdvvvsc
-	// git Desktop push
-	// dsfwfdsf
+	
 }
 
 //업데이트 테스트 아아아아!
@@ -24,7 +21,17 @@ playGround::~playGround()
 //초기화는 여기에다 해라!!!
 HRESULT playGround::init()
 {
+
 	gameNode::init(true);
+
+	_st = new storage;
+
+	_st->init();
+
+
+	SCENEMANAGER->addScene("UI", new ui);
+	SCENEMANAGER->changeScene("UI");
+
 
 
 	return S_OK;
@@ -41,8 +48,9 @@ void playGround::update()
 {
 	gameNode::update();
 
-	//SCENEMANAGER->update();
+	SCENEMANAGER->update();
 	//SOUNDMANAGER->update();
+
 }
 
 //여기다 그려줘라!!!
@@ -51,10 +59,8 @@ void playGround::render()
 	PatBlt(getMemDC(), 0, 0, WINSIZEX, WINSIZEY, BLACKNESS);
 	//==============위에는 제발 건드리지 마라 ============
 	
-	//IMAGEMANAGER->render("배경", getMemDC(), 0, 0);
 
-
-	//SCENEMANAGER->render();
+	SCENEMANAGER->render();
 
 	//TIMEMANAGER->render(getMemDC());
 
