@@ -25,3 +25,38 @@ public:
 	void render();
 };
 
+
+/*#pragma once
+#include "gameNode.h"
+
+struct titlePlayer
+{
+	RECT rc;
+	int currentX, currentY;
+	bool isArrive;
+};
+
+class title : public gameNode
+{
+private:
+	titlePlayer _tPlayer[8];
+	//RECT _player[8];
+
+	float _time;
+	//int _x, _y;
+
+	bool _isTitle;
+	bool _isFinish;
+
+
+public:
+	title();
+	~title();
+
+	HRESULT init();
+	void release();
+	void update();
+	void render();
+};
+
+*/

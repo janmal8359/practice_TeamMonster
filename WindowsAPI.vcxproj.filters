@@ -55,6 +55,12 @@
     <Filter Include="playGround\titleScene">
       <UniqueIdentifier>{05cd2278-9e44-496c-97c3-3ff77ca8d247}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\gameManager">
+      <UniqueIdentifier>{c05a629c-2741-45a1-9b82-140234d8eaee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="playGround\playScene">
+      <UniqueIdentifier>{d025831d-2711-4f5a-ac48-588ab35bbe2c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -144,6 +150,12 @@
     <ClInclude Include="title.h">
       <Filter>playGround\titleScene</Filter>
     </ClInclude>
+    <ClInclude Include="gameManager.h">
+      <Filter>playGround\gameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="playScene.h">
+      <Filter>playGround\playScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -220,6 +232,12 @@
     </ClCompile>
     <ClCompile Include="title.cpp">
       <Filter>playGround\titleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="gameManager.cpp">
+      <Filter>playGround\gameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="playScene.cpp">
+      <Filter>playGround\playScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

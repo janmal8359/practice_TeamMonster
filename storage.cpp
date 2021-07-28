@@ -1039,6 +1039,7 @@ HRESULT storage::init()
 	// 타이틀 이미지
 	IMAGEMANAGER->addImage("title0", "resources/ponpoko/Title.bmp", 1280, 964, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addImage("title1", "resources/ponpoko/Title2.bmp", 1280, 964, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("background", "resources/ponpoko/background.bmp", 1280, 964, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addFrameImage("titlePlayer", "resources/ponpoko/titlePlayer.bmp", 162, 108, 3, 2, true, RGB(255, 0, 255));
 
 #pragma endregion nuguri
