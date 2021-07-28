@@ -219,6 +219,11 @@ HRESULT storage::init()
 	//새우튀김
 	IMAGEMANAGER->addImage("ITEM_tempura", "Resource/IMG/item/tempura.bmp", 58, 60, true, RGB(255, 0, 255));
 
+	//========================================================너구리===================================================================
+	//Resource/IMG/item/
+	//사과
+	IMAGEMANAGER->addImage("ITEM_apple", "Resource/IMG/item/apple.bmp", 68, 72, true, RGB(255, 0, 255));
+
 	//오브젝트
 	//Resource/IMG/object
 	//사과
