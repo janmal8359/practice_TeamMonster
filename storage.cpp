@@ -259,11 +259,11 @@ HRESULT storage::init()
 	//========================================================너구리===================================================================
 	//Resource/IMG/object/
 	//압정
-	IMAGEMANAGER->addImage("OBJECT_trape", "Resource/IMG/object/trape.bmp", 7, 7, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("OBJECT_trape", "Resource/IMG/object/trape.bmp", 28, 28, true, RGB(255, 0, 255));
 	//랜덤 항아리
-	IMAGEMANAGER->addImage("OBJECT_random", "Resource/IMG/object/randomItem.bmp", 18, 18, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("OBJECT_random", "Resource/IMG/object/randomItem.bmp", 72, 72, true, RGB(255, 0, 255));
 	//가짜 항아리
-	IMAGEMANAGER->addImage("OBJECT_fake", "Resource/IMG/object/fakeItem.bmp", 18, 18, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("OBJECT_fake", "Resource/IMG/object/fakeItem.bmp", 72, 72, true, RGB(255, 0, 255));
 	//}*/
 
 
@@ -620,13 +620,13 @@ HRESULT storage::init()
 	//===============================================================너구리==========================================================================
 	//Resource/IMG/character/enemy/
 	//적(파란색)
-	IMAGEMANAGER->addFrameImage("ENEMY_enemy1", "Resource/IMG/character/enemy/enemy1.bmp", 32, 32, 2, 2, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addFrameImage("ENEMY_enemy1", "Resource/IMG/character/enemy/enemy1.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
 	//적(흰색)
-	IMAGEMANAGER->addFrameImage("ENEMY_enemy2", "Resource/IMG/character/enemy/enemy2.bmp", 32, 32, 2, 2, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addFrameImage("ENEMY_enemy2", "Resource/IMG/character/enemy/enemy2.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
 	//적(녹색)
-	IMAGEMANAGER->addFrameImage("ENEMY_enemy3", "Resource/IMG/character/enemy/enemy3.bmp", 32, 32, 2, 2, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addFrameImage("ENEMY_enemy3", "Resource/IMG/character/enemy/enemy3.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
 	//뱀
-	IMAGEMANAGER->addFrameImage("ENEMY_snake", "Resource/IMG/character/enemy/snake.bmp", 36, 32, 2, 2, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addFrameImage("ENEMY_snake", "Resource/IMG/character/enemy/snake.bmp", 144, 128, 2, 2, true, RGB(255, 0, 255));
 
 
 #pragma endregion ENEMY
