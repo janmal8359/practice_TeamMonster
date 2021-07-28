@@ -283,6 +283,13 @@ HRESULT storage::init()
 	//편의점
 	IMAGEMANAGER->addImage("STAGE_normal", "Resource/IMG/stage/normal.bmp", 2865, 837, true, RGB(255, 0, 255));
 
+	//===============================================================너구리==========================================================================
+	//Resource/IMG/stage/
+	//스테이지
+	IMAGEMANAGER->addImage("STAGE_backGround", "Resource/IMG/stage/backGround.bmp", 1280, 964, true, RGB(255, 0, 255));
+	//픽셀 스테이지
+	IMAGEMANAGER->addImage("STAGE_pixel", "Resource/IMG/stage/backGroundPixel.bmp", 1280, 964, true, RGB(255, 0, 255));
+
 #pragma endregion SFXPATH
 
 	//========================이미지 소스======================

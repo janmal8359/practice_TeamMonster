@@ -52,6 +52,9 @@
     <Filter Include="playGround\starScene">
       <UniqueIdentifier>{e4fd4adf-fc0e-43e3-b335-e93483334a49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\enemyManager">
+      <UniqueIdentifier>{5acf62a1-973d-4e4b-a812-d6ea74f074b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -138,6 +141,9 @@
     <ClInclude Include="storage.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>playGround\enemyManager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -211,6 +217,9 @@
     </ClCompile>
     <ClCompile Include="storage.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy.cpp">
+      <Filter>playGround\enemyManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
