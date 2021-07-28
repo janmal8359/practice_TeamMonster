@@ -616,6 +616,8 @@ HRESULT storage::init()
 #pragma endregion SCHOOLGIRL
 
 #pragma region ENEMY
+
+	//===============================================================너구리==========================================================================
 	//Resource/IMG/character/enemy/
 	//적(파란색)
 	IMAGEMANAGER->addFrameImage("ENEMY_enemy1", "Resource/IMG/character/enemy/enemy1.bmp", 32, 32, 2, 2, true, RGB(255, 0, 255));
