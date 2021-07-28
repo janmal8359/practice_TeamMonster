@@ -18,6 +18,9 @@ HRESULT enemy::init(float x, float y, int eType)
 {
 	gameNode::init(true);
 
+	_st = new storage;
+	_st->init();
+
 	_eType = (ENEMYTYPE)eType;
 	_turn = false;
 	_currentFrameX = _currentFrameY = 0;
@@ -25,17 +28,17 @@ HRESULT enemy::init(float x, float y, int eType)
 
 	if (_eType == A)
 	{
-		IMAGEMANAGER->findImage("ENEMY_enemy1");
+		_enemy = IMAGEMANAGER->findImage("ENEMY_enemy1");
 	}
 
 	if (_eType == B)
 	{
-		IMAGEMANAGER->findImage("ENEMY_enemy2");
+		_enemy = IMAGEMANAGER->findImage("ENEMY_enemy2");
 	}
 
 	if (_eType == C)
 	{
-		IMAGEMANAGER->findImage("ENEMY_enemy3");
+		_enemy = IMAGEMANAGER->findImage("ENEMY_enemy3");
 	}
 
 	_x = x;
@@ -63,7 +66,7 @@ void enemy::render()
 void enemy::move()
 {
 
-	if (_rc.right < WINSIZEX - 100 && !_turn)
+	if (_rc.left > 100 && !_turn)
 	{
 		_currentFrameY = 0;
 
@@ -82,11 +85,11 @@ void enemy::move()
 		}
 
 	}
-	else if (_rc.right == WINSIZEX - 100)
+	else if (_rc.left <= 100)
 	{
 		_turn = true;
 	}
-	else if (_rc.left < 100 && _turn)
+	else if (_rc.right > WINSIZEX - 100 && _turn)
 	{
 		_currentFrameY = 1;
 
@@ -104,6 +107,8 @@ void enemy::move()
 			_count = 0;
 		}
 	}
+
+	_rc = RectMakeCenter(_x, _y, 128, 128);
 }
 
 void enemy::draw()

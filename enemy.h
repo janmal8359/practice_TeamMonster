@@ -13,6 +13,8 @@ class enemy : public gameNode
 {
 private:
 	image* _enemy;
+	storage* _st;
+
 	float _x, _y;
 	int _speed;
 	RECT _rc;

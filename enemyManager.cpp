@@ -38,17 +38,18 @@ void enemyManager::render()
 
 void enemyManager::setMinion()
 {
-	int num = RND->getInt(3);
-
+	int num = 0;
+	
 	for (int i = 0; i < 3; i++)
 	{
+
 		switch (num)
 		{
 		case 0:
 		{
 			enemy* bug;
 			bug = new minion;
-			bug->init(WINSIZEX / 2 , 300, 1);
+			bug->init(WINSIZEX / 2 , 500, 0);
 			_vMinion.push_back(bug);
 		}
 
@@ -57,7 +58,7 @@ void enemyManager::setMinion()
 		{
 			enemy* bug;
 			bug = new minion;
-			bug->init(WINSIZEX / 2, 200, 2);
+			bug->init(WINSIZEX / 2, 400, 1);
 			_vMinion.push_back(bug);
 		}
 
@@ -67,12 +68,13 @@ void enemyManager::setMinion()
 		{
 			enemy* bug;
 			bug = new minion;
-			bug->init(WINSIZEX / 2, 100, 3);
+			bug->init(WINSIZEX / 2, 300, 2);
 			_vMinion.push_back(bug);
 		}
 
 		break;
 		}
+		num++;
 	}
 }
 
