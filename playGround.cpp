@@ -26,6 +26,12 @@ HRESULT playGround::init()
 {
 	gameNode::init(true);
 
+	_ponpoko = new ponpoko;
+	_ponpoko->init();
+
+	//_st = new storage;
+	//_st->init();
+
 
 	return S_OK;
 }
@@ -51,12 +57,7 @@ void playGround::render()
 	PatBlt(getMemDC(), 0, 0, WINSIZEX, WINSIZEY, BLACKNESS);
 	//==============위에는 제발 건드리지 마라 ============
 	
-	//IMAGEMANAGER->render("배경", getMemDC(), 0, 0);
-
-
-	//SCENEMANAGER->render();
-
-	//TIMEMANAGER->render(getMemDC());
+	_ponpoko->render();
 
 	//=============== 밑에도 건들지마라 ================
 	_backBuffer->render(getHDC(), 0, 0);

@@ -52,6 +52,9 @@
     <Filter Include="playGround\starScene">
       <UniqueIdentifier>{e4fd4adf-fc0e-43e3-b335-e93483334a49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\player">
+      <UniqueIdentifier>{9ec219f5-37b2-4586-9d6e-e2549615fe55}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -138,6 +141,21 @@
     <ClInclude Include="storage.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="ponpoko.h">
+      <Filter>playGround\player</Filter>
+    </ClInclude>
+    <ClInclude Include="stateManager.h">
+      <Filter>playGround\player</Filter>
+    </ClInclude>
+    <ClInclude Include="jump.h">
+      <Filter>playGround\player</Filter>
+    </ClInclude>
+    <ClInclude Include="run.h">
+      <Filter>playGround\player</Filter>
+    </ClInclude>
+    <ClInclude Include="idle.h">
+      <Filter>playGround\player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -211,6 +229,21 @@
     </ClCompile>
     <ClCompile Include="storage.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ponpoko.cpp">
+      <Filter>playGround\player</Filter>
+    </ClCompile>
+    <ClCompile Include="stateManager.cpp">
+      <Filter>playGround\player</Filter>
+    </ClCompile>
+    <ClCompile Include="jump.cpp">
+      <Filter>playGround\player</Filter>
+    </ClCompile>
+    <ClCompile Include="run.cpp">
+      <Filter>playGround\player</Filter>
+    </ClCompile>
+    <ClCompile Include="idle.cpp">
+      <Filter>playGround\player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
