@@ -61,17 +61,12 @@ void title::update()
 			{
 				_time = TIMEMANAGER->getWorldTime();
 
-				for (int i = 0; i < 8; i++)
+				if (_x == 1 && !_isFinish)
 				{
-					if (_index[i] == 1 && !_isFinish)
-					{
-						_index[i] = 0;
-					}
-
-					else _index[i]++;
-
+					_x = 0;
 				}
 
+				else _x++;
 			}
 		}
 		else
@@ -84,15 +79,17 @@ void title::update()
 
 				if (_y == 1)
 				{
+					_x = 2;
 					_y = 0;
 				}
 
-				else _y++;
+				else
+				{
+					_x = 0;
+					_y++;
+				}
 			}
 		}
-
-
-
 	}
 }
 
@@ -108,8 +105,8 @@ void title::render()
 
 		for (int i = 0; i < 8; i++)
 		{
-			if (!_isFinish) IMAGEMANAGER->findImage("titlePlayer")->frameRender(getMemDC(), _player[i].left, _player[i].top, _index[i], 0);
-			else IMAGEMANAGER->findImage("titlePlayer")->frameRender(getMemDC(), _player[i].left, _player[i].top, 2, _y);
+			IMAGEMANAGER->findImage("titlePlayer")->frameRender(getMemDC(), _player[i].left, _player[i].top, _x, _y);
+			//else IMAGEMANAGER->findImage("titlePlayer")->frameRender(getMemDC(), _player[i].left, _player[i].top, _x, _y);
 		}
 	}
 }

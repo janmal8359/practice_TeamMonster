@@ -4,13 +4,14 @@
 class title : public gameNode
 {
 private:
-	bool _isTitle;
+	RECT _player[8];
+
 	float _time;
 
-	RECT _player[8];
 	int _index[8];
-	int _y;
+	int _x, _y;
 
+	bool _isTitle;
 	bool _isFinish;
 
 
@@ -22,8 +23,5 @@ public:
 	void release();
 	void update();
 	void render();
-
-
-
 };
 
