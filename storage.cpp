@@ -11,7 +11,17 @@ storage::~storage()
 
 HRESULT storage::init()
 {
+	//¹è°æ
 	IMAGEMANAGER->addImage("STAGE_backGround", "resources/IMG/stage/backGround.bmp", 1280, 964, true, RGB(255, 0, 255));
+	//Àû(ÆÄ¶õ»ö)
+	IMAGEMANAGER->addFrameImage("ENEMY_enemy1", "Resources/IMG/character/enemy/enemy1.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
+	//Àû(Èò»ö)
+	IMAGEMANAGER->addFrameImage("ENEMY_enemy2", "Resources/IMG/character/enemy/enemy2.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
+	//Àû(³ì»ö)
+	IMAGEMANAGER->addFrameImage("ENEMY_enemy3", "Resources/IMG/character/enemy/enemy3.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
+	//¹ì
+	IMAGEMANAGER->addFrameImage("ENEMY_snake", "Resources/IMG/character/enemy/snake.bmp", 144, 128, 2, 2, true, RGB(255, 0, 255));
+
 
 //#pragma region IMGPATH
 
