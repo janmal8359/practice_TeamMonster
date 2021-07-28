@@ -52,6 +52,9 @@
     <Filter Include="playGround\starScene">
       <UniqueIdentifier>{e4fd4adf-fc0e-43e3-b335-e93483334a49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\titleScene">
+      <UniqueIdentifier>{05cd2278-9e44-496c-97c3-3ff77ca8d247}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -138,6 +141,9 @@
     <ClInclude Include="storage.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="title.h">
+      <Filter>playGround\titleScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -211,6 +217,9 @@
     </ClCompile>
     <ClCompile Include="storage.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="title.cpp">
+      <Filter>playGround\titleScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

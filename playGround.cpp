@@ -26,6 +26,12 @@ HRESULT playGround::init()
 {
 	gameNode::init(true);
 
+	st = new storage;
+	st->init();
+
+	SCENEMANAGER->addScene("너구리 타이틀", new title);
+	SCENEMANAGER->changeScene("너구리 타이틀");
+
 
 	return S_OK;
 }
@@ -41,8 +47,7 @@ void playGround::update()
 {
 	gameNode::update();
 
-	//SCENEMANAGER->update();
-	//SOUNDMANAGER->update();
+	SCENEMANAGER->update();
 }
 
 //여기다 그려줘라!!!
@@ -51,10 +56,7 @@ void playGround::render()
 	PatBlt(getMemDC(), 0, 0, WINSIZEX, WINSIZEY, BLACKNESS);
 	//==============위에는 제발 건드리지 마라 ============
 	
-	//IMAGEMANAGER->render("배경", getMemDC(), 0, 0);
-
-
-	//SCENEMANAGER->render();
+	SCENEMANAGER->render();
 
 	//TIMEMANAGER->render(getMemDC());
 

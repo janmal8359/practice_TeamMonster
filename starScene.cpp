@@ -30,7 +30,7 @@ void starScene::update()
 
 void starScene::render()
 {
-	IMAGEMANAGER->findImage("배경")->render(getMemDC());
+	//IMAGEMANAGER->findImage("배경")->render(getMemDC());
 
 	_battle->render();
 }
