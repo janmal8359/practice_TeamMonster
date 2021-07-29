@@ -17,6 +17,7 @@ HRESULT storage::init()
 	IMAGEMANAGER->addImage("life", "life.bmp", 50, 50, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addImage("fruit", "fruit.bmp", 50, 50, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addImage("ladder", "ladder.bmp", 38, 173, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("randomItem", "randomItem.bmp", 50, 50, true, RGB(255, 0, 255));
 
 ////#pragma region IMGPATH
 //
