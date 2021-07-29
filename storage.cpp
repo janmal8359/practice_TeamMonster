@@ -11,7 +11,19 @@ storage::~storage()
 
 HRESULT storage::init()
 {
-#pragma region IMGPATH
+	//배경
+	IMAGEMANAGER->addImage("STAGE_backGround", "resources/IMG/stage/backGround.bmp", 1280, 964, true, RGB(255, 0, 255));
+	//적(파란색)
+	IMAGEMANAGER->addFrameImage("ENEMY_enemy1", "Resources/IMG/character/enemy/enemy1.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
+	//적(흰색)
+	IMAGEMANAGER->addFrameImage("ENEMY_enemy2", "Resources/IMG/character/enemy/enemy2.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
+	//적(녹색)
+	IMAGEMANAGER->addFrameImage("ENEMY_enemy3", "Resources/IMG/character/enemy/enemy3.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
+	//뱀
+	IMAGEMANAGER->addFrameImage("ENEMY_snake", "Resources/IMG/character/enemy/snake.bmp", 144, 128, 2, 2, true, RGB(255, 0, 255));
+
+
+//#pragma region IMGPATH
 
 	//ㅇㅇㅇㅇㅇㅇㅇ 주요 인물 ㅇㅇㅇㅇㅇㅇㅇ//
 	/*{
@@ -60,9 +72,9 @@ HRESULT storage::init()
 	
 	}*/
 
-#pragma endregion IMGPATH
+//#pragma endregion IMGPATH
 
-#pragma region SFXPATH
+//#pragma region SFXPATH
 
 	//ㅇㅇㅇㅇㅇㅇㅇ 음원 ㅇㅇㅇㅇㅇㅇㅇ//
 	/*{
@@ -219,42 +231,50 @@ HRESULT storage::init()
 //	//새우튀김
 //	IMAGEMANAGER->addImage("ITEM_tempura", "Resource/IMG/item/tempura.bmp", 58, 60, true, RGB(255, 0, 255));
 //
-//	//오브젝트
-//	//Resource/IMG/object
+//	//Resources/IMG/item/
 //	//사과
-//	IMAGEMANAGER->addImage("OBJECT_apple", "Resource/IMG/object/apple.bmp", 100, 100, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addImage("ITEM_apple", "Resource/IMG/item/apple.bmp", 68, 72, true, RGB(255, 0, 255));
+//
+//	//오브젝트
+//	//Resources/IMG/object
+//	//사과
+//	IMAGEMANAGER->addImage("OBJECT_apple", "Resources/IMG/object/apple.bmp", 100, 100, true, RGB(255, 0, 255));
 //	//국수
-//	IMAGEMANAGER->addImage("OBJECT_chili", "Resource/IMG/object/chili.bmp", 100, 100, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addImage("OBJECT_chili", "Resources/IMG/object/chili.bmp", 100, 100, true, RGB(255, 0, 255));
 //	//치킨
-//	IMAGEMANAGER->addImage("OBJECT_hen", "Resource/IMG/object/hen.bmp", 100, 100, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addImage("OBJECT_hen", "Resources/IMG/object/hen.bmp", 100, 100, true, RGB(255, 0, 255));
 //	//책상
-//	IMAGEMANAGER->addImage("OBJECT_desk", "Resource/IMG/object/desk.bmp", 147, 162, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addImage("OBJECT_desk", "Resources/IMG/object/desk.bmp", 147, 162, true, RGB(255, 0, 255));
 //	//교사 책상
-//	IMAGEMANAGER->addImage("OBJECT_teachers_desk", "Resource/IMG/object/teachers_desk.bmp", 83, 34, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addImage("OBJECT_teachers_desk", "Resources/IMG/object/teachers_desk.bmp", 83, 34, true, RGB(255, 0, 255));
 //	//테이블
-//	IMAGEMANAGER->addImage("OBJECT_table", "Resource/IMG/object/table.bmp", 339, 162, true, RGB(255, 0, 255));
-//	//울타리
-//	IMAGEMANAGER->addImage("OBJECT_fence", "Resource/IMG/object/fence.bmp", 476, 71, true, RGB(255, 0, 255));
-//	//기둥 파편1
-//	IMAGEMANAGER->addImage("OBJECT_particle1", "Resource/IMG/object/pillar_particle_1.bmp", 64, 64, true, RGB(255, 0, 255));
-//	//기둥 파편2																					 
-//	IMAGEMANAGER->addImage("OBJECT_particle2", "Resource/IMG/object/pillar_particle_2.bmp", 64, 64, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addImage("OBJECT_table", "Resources/IMG/object/table.bmp", 339, 162, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addImage("OBJECT_particle2", "Resources/IMG/object/pillar_particle_2.bmp", 64, 64, true, RGB(255, 0, 255));
 //	//기둥 파편3																					
-//	IMAGEMANAGER->addImage("OBJECT_particle3", "Resource/IMG/object/pillar_particle_3.bmp", 64, 64, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addImage("OBJECT_particle3", "Resources/IMG/object/pillar_particle_3.bmp", 64, 64, true, RGB(255, 0, 255));
 //	//동전
-//	IMAGEMANAGER->addFrameImage("OBJECT_gold", "Resource/IMG/object/gold_coin_spin.bmp", 512, 512, 4, 4, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addFrameImage("OBJECT_gold", "Resources/IMG/object/gold_coin_spin.bmp", 512, 512, 4, 4, true, RGB(255, 0, 255));
 //	//지폐
-//	IMAGEMANAGER->addFrameImage("OBJECT_money", "Resource/IMG/object/money_green.bmp", 576, 432, 4, 4, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addFrameImage("OBJECT_money", "Resources/IMG/object/money_green.bmp", 576, 432, 4, 4, true, RGB(255, 0, 255));
 //	//후방 기둥
-//	IMAGEMANAGER->addFrameImage("OBJECT_backPillar", "Resource/IMG/object/pillar.bmp", 390, 678, 2, 1, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addFrameImage("OBJECT_backPillar", "Resources/IMG/object/pillar.bmp", 390, 678, 2, 1, true, RGB(255, 0, 255));
 //	//전방 기둥
-//	IMAGEMANAGER->addFrameImage("OBJECT_firstPillar", "Resource/IMG/object/pillar_big.bmp", 390, 957, 2, 1, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addFrameImage("OBJECT_firstPillar", "Resources/IMG/object/pillar_big.bmp", 390, 957, 2, 1, true, RGB(255, 0, 255));
 //	//소울
-//	IMAGEMANAGER->addFrameImage("OBJECT_pet", "Resource/IMG/object/pet.bmp", 576, 96, 6, 1, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addFrameImage("OBJECT_pet", "Resources/IMG/object/pet.bmp", 576, 96, 6, 1, true, RGB(255, 0, 255));
 //	//방망이
-//	IMAGEMANAGER->addFrameImage("OBJECT_bat", "Resource/IMG/object/bat.bmp", 179, 104, 1, 2, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addFrameImage("OBJECT_bat", "Resources/IMG/object/bat.bmp", 179, 104, 1, 2, true, RGB(255, 0, 255));
 //	//자판기
 //	IMAGEMANAGER->addFrameImage("OBJECT_vendingMachine", "Resource/IMG/object/vendingMachine.bmp", 525, 260, 2, 1, true, RGB(255, 0, 255));
+//	
+//	//========================================================너구리===================================================================
+//	//Resource/IMG/object/
+//	//압정
+//	IMAGEMANAGER->addImage("OBJECT_trape", "Resource/IMG/object/trape.bmp", 28, 28, true, RGB(255, 0, 255));
+//	//랜덤 항아리
+//	IMAGEMANAGER->addImage("OBJECT_random", "Resource/IMG/object/randomItem.bmp", 72, 72, true, RGB(255, 0, 255));
+//	//가짜 항아리
+//	IMAGEMANAGER->addImage("OBJECT_fake", "Resource/IMG/object/fakeItem.bmp", 72, 72, true, RGB(255, 0, 255));
 //	//}*/
 //
 //
@@ -273,6 +293,13 @@ HRESULT storage::init()
 //	IMAGEMANAGER->addImage("STAGE_hard", "Resource/IMG/stage/hard.bmp", 2328, 1428, true, RGB(255, 0, 255));
 //	//편의점
 //	IMAGEMANAGER->addImage("STAGE_normal", "Resource/IMG/stage/normal.bmp", 2865, 837, true, RGB(255, 0, 255));
+//
+//	//===============================================================너구리==========================================================================
+//	//Resource/IMG/stage/
+//	//스테이지
+//IMAGEMANAGER->addImage("STAGE_backGround", "Resource/IMG/stage/backGround.bmp", 1280, 964, true, RGB(255, 0, 255));
+//	//픽셀 스테이지
+//	IMAGEMANAGER->addImage("STAGE_pixel", "Resource/IMG/stage/backGroundPixel.bmp", 1280, 964, true, RGB(255, 0, 255));
 //
 //#pragma endregion SFXPATH
 //
@@ -605,6 +632,22 @@ HRESULT storage::init()
 //	IMAGEMANAGER->addFrameImage("SCHOOLGIRL_wWalk", "Resource/IMG/character/enemy/schoolGirl/WWalk.bmp", 2232, 502, 12, 2, true, RGB(255, 0, 255));					//무기 걷기
 //	
 //#pragma endregion SCHOOLGIRL
+//
+//#pragma region ENEMY
+//
+//	//===============================================================너구리==========================================================================
+//	//Resource/IMG/character/enemy/
+//	//적(파란색)
+//	IMAGEMANAGER->addFrameImage("ENEMY_enemy1", "Resource/IMG/character/enemy/enemy1.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
+//	//적(흰색)
+//	IMAGEMANAGER->addFrameImage("ENEMY_enemy2", "Resource/IMG/character/enemy/enemy2.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
+//	//적(녹색)
+//	IMAGEMANAGER->addFrameImage("ENEMY_enemy3", "Resource/IMG/character/enemy/enemy3.bmp", 128, 128, 2, 2, true, RGB(255, 0, 255));
+//	//뱀
+//	IMAGEMANAGER->addFrameImage("ENEMY_snake", "Resource/IMG/character/enemy/snake.bmp", 144, 128, 2, 2, true, RGB(255, 0, 255));
+//
+//
+//#pragma endregion ENEMY
 //
 //#pragma endregion ENEMYIMAGE
 //
