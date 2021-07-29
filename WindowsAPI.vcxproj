@@ -169,6 +169,7 @@
     <ClInclude Include="sceneManager.h" />
     <ClInclude Include="ship.h" />
     <ClInclude Include="singletonBase.h" />
+    <ClInclude Include="snake.h" />
     <ClInclude Include="soundManager.h" />
     <ClInclude Include="soundTest.h" />
     <ClInclude Include="starScene.h" />
@@ -203,6 +204,7 @@
     <ClCompile Include="progressBar.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="ship.cpp" />
+    <ClCompile Include="snake.cpp" />
     <ClCompile Include="soundManager.cpp" />
     <ClCompile Include="soundTest.cpp" />
     <ClCompile Include="starScene.cpp" />

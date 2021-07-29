@@ -150,6 +150,9 @@
     <ClInclude Include="enemyManager.h">
       <Filter>playGround\enemyManager</Filter>
     </ClInclude>
+    <ClInclude Include="snake.h">
+      <Filter>playGround\enemyManager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -231,6 +234,9 @@
       <Filter>playGround\enemyManager</Filter>
     </ClCompile>
     <ClCompile Include="enemyManager.cpp">
+      <Filter>playGround\enemyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="snake.cpp">
       <Filter>playGround\enemyManager</Filter>
     </ClCompile>
   </ItemGroup>

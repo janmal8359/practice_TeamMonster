@@ -18,11 +18,8 @@ HRESULT enemy::init(float x, float y, int eType)
 {
 	gameNode::init(true);
 
-	_st = new storage;
-	_st->init();
-
 	_eType = (ENEMYTYPE)eType;
-	_turn = false;
+	_isTurn = false;
 	_currentFrameX = _currentFrameY = 0;
 	_count = 0;
 
@@ -43,8 +40,8 @@ HRESULT enemy::init(float x, float y, int eType)
 
 	_x = x;
 	_y = y;
-	_speed = 2;
-	_rc = RectMakeCenter(_x, _y, 128, 128);
+	_speed = 1.5;
+	_rc = RectMakeCenter(_x, _y, _enemy->getFrameWidth(), _enemy->getFrameHeight());
 
 	return S_OK;
 }
@@ -66,7 +63,7 @@ void enemy::render()
 void enemy::move()
 {
 
-	if (_rc.left > 70 && !_turn)
+	if (_rc.left > 70 && !_isTurn)
 	{
 		_currentFrameY = 0;
 
@@ -87,9 +84,9 @@ void enemy::move()
 	}
 	else if (_rc.left <= 70)
 	{
-		_turn = true;
+		_isTurn = true;
 	}
-	if (_rc.right < WINSIZEX - 150 && _turn)
+	if (_rc.right < WINSIZEX - 150 && _isTurn)
 	{
 		_currentFrameY = 1;
 
@@ -109,10 +106,10 @@ void enemy::move()
 	}
 	else if (_rc.left <= WINSIZEX - 150)
 	{
-		_turn = false;
+		_isTurn = false;
 	}
 
-	_rc = RectMakeCenter(_x, _y, 128, 128);
+	_rc = RectMakeCenter(_x, _y, _enemy->getFrameWidth(), _enemy->getFrameHeight());
 }
 
 void enemy::draw()

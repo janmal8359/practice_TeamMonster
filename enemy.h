@@ -1,6 +1,5 @@
 #pragma once
 #include "gameNode.h"
-#include "storage.h"
 
 enum ENEMYTYPE
 {
@@ -13,16 +12,15 @@ class enemy : public gameNode
 {
 private:
 	image* _enemy;
-	storage* _st;
-
 	float _x, _y;
-	int _speed;
+	float _speed;
 	RECT _rc;
-	
+
+
 	int _currentFrameX, _currentFrameY;
 	int _count;
 
-	bool _turn;
+	bool _isTurn;
 
 	ENEMYTYPE _eType;
 

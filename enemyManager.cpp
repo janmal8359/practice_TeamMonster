@@ -11,6 +11,10 @@ enemyManager::~enemyManager()
 
 HRESULT enemyManager::init()
 {
+
+	_snk = new snake;
+	_snk->init();
+
 	return S_OK;
 }
 
@@ -25,7 +29,7 @@ void enemyManager::update()
 		(*_viMinion)->update();
 	}
 
-	collision();
+	enemyCollision();
 }
 
 void enemyManager::render()
@@ -34,6 +38,7 @@ void enemyManager::render()
 	{
 		(*_viMinion)->render();
 	}
+
 }
 
 void enemyManager::setMinion()
@@ -48,7 +53,7 @@ void enemyManager::setMinion()
 		{
 			enemy* bug;
 			bug = new minion;
-			bug->init(WINSIZEX / 2 - 200 , 590, 0);
+			bug->init(WINSIZEX / 2 - 200 , 555, 0);
 			_vMinion.push_back(bug);
 		}
 
@@ -57,7 +62,7 @@ void enemyManager::setMinion()
 		{
 			enemy* bug;
 			bug = new minion;
-			bug->init(WINSIZEX / 2, 450, 1);
+			bug->init(WINSIZEX / 2, 830, 1);
 			_vMinion.push_back(bug);
 		}
 
@@ -67,7 +72,7 @@ void enemyManager::setMinion()
 		{
 			enemy* bug;
 			bug = new minion;
-			bug->init(WINSIZEX / 2 + 200, 310, 2);
+			bug->init(WINSIZEX / 2 + 200, 280, 2);
 			_vMinion.push_back(bug);
 		}
 
@@ -77,6 +82,16 @@ void enemyManager::setMinion()
 	}
 }
 
-void enemyManager::collision()
+void enemyManager::setSnake()
 {
 }
+
+void enemyManager::enemyCollision()
+{
+}
+
+void enemyManager::snakeCollision()
+{
+}
+
+

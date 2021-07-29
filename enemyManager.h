@@ -1,6 +1,7 @@
 #pragma once
 #include "gameNode.h"
 #include "minion.h"
+#include "snake.h"
 #include <vector>
 
 class enemyManager : public gameNode
@@ -13,6 +14,8 @@ private:
 	vEnemy		_vMinion;
 	viEnemy		_viMinion;
 
+	snake* _snk;
+
 public:
 	enemyManager();
 	~enemyManager();
@@ -23,8 +26,10 @@ public:
 	void render();
 
 	void setMinion();
+	void setSnake();
 
-	void collision();
+	void enemyCollision();
+	void snakeCollision();
 
 	vector<enemy*> getVMinion() { return _vMinion; }
 	vector<enemy*>::iterator getVIMinion() { return _viMinion; }

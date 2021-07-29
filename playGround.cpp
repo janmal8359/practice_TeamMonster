@@ -33,7 +33,6 @@ HRESULT playGround::init()
 	_en->init();
 	_en->setMinion();
 
-
 	return S_OK;
 }
 
@@ -49,6 +48,7 @@ void playGround::update()
 	gameNode::update();
 
 	_en->update();
+
 	//SCENEMANAGER->update();
 	//SOUNDMANAGER->update();
 }
@@ -65,6 +65,7 @@ void playGround::render()
 	//IMAGEMANAGER->render("STAGE_backGround", getMemDC(), 0, 0);
 
 	IMAGEMANAGER->findImage("STAGE_backGround")->render(getMemDC(), 0, 0);
+
 	_en->render();
 	//SCENEMANAGER->render();
 
