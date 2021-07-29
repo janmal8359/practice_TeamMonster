@@ -21,7 +21,7 @@ HRESULT ponpoko::init()
 	_idle = new idle;
 	_idle->init(); 
 
-	_stateManager = _idle;
+	_stateManager = _run;
 	_stateManager->init();
 
 	//_rc = RectMakeCenter(_x, _y, _image->getFrameWidth(), _image->getFrameHeight());

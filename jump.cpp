@@ -12,11 +12,12 @@ HRESULT jump::init()
 	_aniL->setFPS(1);
 
 	_aniR = new animation;
-	_aniL->init(_img->getWidth(), _img->getHeight(), _img->getWidth() / 2, _img->getHeight() / 2);
+	_aniR->init(_img->getWidth(), _img->getHeight(), _img->getWidth() / 2, _img->getHeight() / 2);
 	_aniR->setPlayFrame(2, 3, false, true);
 	_aniR->setFPS(1);
 
-	_ySpeed = 5;
+	_xSpeed = 0;
+	_ySpeed = 0.05f;
 	_isJump = false;
 
 
@@ -49,17 +50,19 @@ void jump::move()
 	//점프 구현
 	if (_isJump) {
 		if (_dir == LEFT) _aniL->resume();
+	
 		if (_dir == RIGHT) _aniR->resume();
-
+		
 		_y -= _ySpeed;
 		_ySpeed -= _g;
 		//_y -= 5;
-
 	}
 	else if (!_isJump) {
 		_aniL->stop();
 		_aniR->stop();
-		_ySpeed = 5;
+
+		_xSpeed = 0;
+		_ySpeed = 0.05f;
 
 		_p->setRun();
 	}
@@ -70,7 +73,8 @@ void jump::move()
 
 		if (KEYMANAGER->isStayKeyDown(VK_LEFT)) {
 			_dir = LEFT;
-			//_x += 5;
+		
+			_xSpeed = 5;
 		}
 
 	}
@@ -78,7 +82,7 @@ void jump::move()
 	if (!KEYMANAGER->isStayKeyDown(VK_LEFT) || _dir == RIGHT) {
 		if (KEYMANAGER->isStayKeyDown(VK_RIGHT)) {
 			_dir = RIGHT;
-		//	_x -= 5;
+			_xSpeed = 0;
 		}
 	}
 }

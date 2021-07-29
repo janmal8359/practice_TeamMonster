@@ -40,16 +40,20 @@ void pixelCol::update()
 			g = GetGValue(color);
 			b = GetBValue(color);
 
-			if ((r == 0 && g == 0 && b == 255))
+			if (!(r == 255 && g == 0 && b == 255))
 			{
 				_y = i - (_rc.bottom - _rc.top) / 2;
 				break;
 			}
-			else _y += 0.2f;
-		}
+			else
+			{
+				_y += 0.2f;
+				_isJump = true;
+			}
+		} 
 	}
 	else if (_isJump) {
-		for (int i = _y; i <= _probeY; ++i)
+		for (int i = _probeY - 1; i <= _probeY+1; ++i)
 		{
 			COLORREF color = GetPixel(_ground->getMemDC(), _x, i);
 
@@ -57,7 +61,7 @@ void pixelCol::update()
 			g = GetGValue(color);
 			b = GetBValue(color);
 
-			if ((r == 0 && g == 0 && b == 255))
+			if (!(r == 255 && g == 0 && b == 255))
 			{
 				_y = i - (_rc.bottom - _rc.top / 2);
 				_isJump = false;

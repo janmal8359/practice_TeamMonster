@@ -18,9 +18,9 @@ HRESULT run::init()
 	_aniR->setPlayFrame(7, 13, false, true);
 	_aniR->setFPS(1);
 
-//	_x = 200;
-//	_y = 700;
-//	_rc = RectMakeCenter(_x, _y, _img->getWidth(), _img->getHeight());
+	_x = 200;
+	_y = 700;
+	_rc = RectMakeCenter(_x, _y, _img->getWidth(), _img->getHeight());
 
 	return S_OK;
 }
@@ -49,10 +49,11 @@ void run::render()
 void run::move()
 {
 	// 점프 상태로 변경
-	if (KEYMANAGER->isStayKeyDown(VK_UP) && !_isJump) {
+	if (KEYMANAGER->isOnceKeyDown(VK_UP) && !_isJump) {
 		_aniL->stop();
 		_aniR->stop();
 
+		_isJump = true;
 		_p->setJump();
 	}
 
