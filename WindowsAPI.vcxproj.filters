@@ -187,7 +187,10 @@
       <Filter>playGround\titleScene</Filter>
     </ClInclude>
     <ClInclude Include="playScene.h">
+    </ClInclude>
       <Filter>playGround\playScene</Filter>
+    <ClInclude Include="pixelCol.h">
+      <Filter>playGround\player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -301,6 +304,9 @@
     </ClCompile>
     <ClCompile Include="playScene.cpp">
       <Filter>playGround\playScene</Filter>
+    </ClCompile>
+    <ClCompile Include="pixelCol.cpp">
+      <Filter>playGround\player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

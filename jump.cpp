@@ -12,10 +12,12 @@ HRESULT jump::init()
 	_aniL->setFPS(1);
 
 	_aniR = new animation;
-	_aniL->init(_img->getWidth(), _img->getHeight(), _img->getWidth() / 2, _img->getHeight() / 2);
+	_aniR->init(_img->getWidth(), _img->getHeight(), _img->getWidth() / 2, _img->getHeight() / 2);
 	_aniR->setPlayFrame(2, 3, false, true);
 	_aniR->setFPS(1);
 
+	_xSpeed = 0;
+	_ySpeed = 0.05f;
 	_isJump = false;
 
 
@@ -33,29 +35,36 @@ void jump::update()
 	_aniL->frameUpdate(TIMEMANAGER->getElapsedTime() * 20);
 	_aniR->frameUpdate(TIMEMANAGER->getElapsedTime() * 20);
 
-	_rc = RectMakeCenter(_x, _y, _img->getFrameWidth(), _img->getFrameHeight());
+	_rc = RectMakeCenter(_x, _y, _img->getWidth()/2, _img->getHeight()/2);
 
 }
 
 void jump::render()
 {
-	if (_dir == LEFT)   _img->render(getMemDC(), _rc.left, _rc.top);
-	if (_dir == RIGHT)  _img->render(getMemDC(), _rc.left, _rc.top);
+	if (_dir == LEFT)   _img->aniRender(getMemDC(), _rc.left, _rc.top, _aniL);
+	if (_dir == RIGHT)  _img->aniRender(getMemDC(), _rc.left, _rc.top, _aniR);
 }
 
 void jump::move()
 {
-
-	// 점프 구현
+	//점프 구현
 	if (_isJump) {
-	//	if (_dir == LEFT) 
-	//	if (_dir == RIGHT) 
+		if (_dir == LEFT) _aniL->resume();
+	
+		if (_dir == RIGHT) _aniR->resume();
+		
+		_y -= _ySpeed;
+		_ySpeed -= _g;
+		//_y -= 5;
 	}
 	else if (!_isJump) {
-	
-	
+		_aniL->stop();
+		_aniR->stop();
 
-		//_s->setIdle();
+		_xSpeed = 0;
+		_ySpeed = 0.05f;
+
+		_p->setRun();
 	}
 
 
@@ -63,17 +72,17 @@ void jump::move()
 	if (!KEYMANAGER->isStayKeyDown(VK_RIGHT) || _dir == LEFT) {
 
 		if (KEYMANAGER->isStayKeyDown(VK_LEFT)) {
-			_img->setFrameY(0);
 			_dir = LEFT;
 		
+			_xSpeed = 5;
 		}
 
 	}
 
 	if (!KEYMANAGER->isStayKeyDown(VK_LEFT) || _dir == RIGHT) {
 		if (KEYMANAGER->isStayKeyDown(VK_RIGHT)) {
-			_img->setFrameY(1);
 			_dir = RIGHT;
+			_xSpeed = 0;
 		}
 	}
 }

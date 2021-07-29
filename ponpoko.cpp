@@ -9,19 +9,19 @@ HRESULT ponpoko::init()
 	IMAGEMANAGER->addFrameImage("ponpoko_jump", "IMG/jump.bmp", 140, 140, 2, 2, true, RGB(255, 0, 255));
 
 	
-/*	_run = new run;
+	_run = new run;
 	_run->init();
 
 	_jump = new jump;
 	_jump->init();
 
-	_climb = new climb;
-	_climb->init();*/
+	//_climb = new climb;
+	//_climb->init();
 	
 	_idle = new idle;
 	_idle->init(); 
 
-	_stateManager = _idle;
+	_stateManager = _run;
 	_stateManager->init();
 
 	//_rc = RectMakeCenter(_x, _y, _image->getFrameWidth(), _image->getFrameHeight());
@@ -31,10 +31,12 @@ HRESULT ponpoko::init()
 
 void ponpoko::release()
 {
+	gameNode::release();
 }
 
 void ponpoko::update()
 {
+	gameNode::update();
 	_stateManager->update();
 }
 

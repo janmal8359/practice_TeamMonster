@@ -1,8 +1,9 @@
 #pragma once
 #include "gameNode.h"
 
-#define JUMPPOWER 12.0f;
-#define GRAVITY 0.08f;
+#define ACCEL 0.06f
+#define JUMPPOWER 0.06f
+#define GRAVITY 0.08f
 
 class ponpoko;
 
@@ -21,6 +22,8 @@ protected:
 	int _dir;
 	bool _isPonkokoMoveX, _isPonkokoMoveY;
 
+	float _xSpeed = ACCEL;
+	float _ySpeed, _g = GRAVITY;
 	bool _isJump;
 	bool _isHit;
 
@@ -57,5 +60,9 @@ public:
 
 	virtual int getDir() { return _dir; }
 	virtual void setDir(int dir) { _dir = dir; }
+	
+	//มกวม
+	virtual float getYSpeed() { return _ySpeed; };
+	virtual void setYSpeed(float ySpeed) { _ySpeed = ySpeed; }
 };
 
