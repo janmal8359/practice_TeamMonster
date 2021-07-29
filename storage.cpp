@@ -23,6 +23,14 @@ HRESULT storage::init()
 	IMAGEMANAGER->addFrameImage("ENEMY_snake", "Resources/IMG/character/enemy/snake.bmp", 144, 128, 2, 2, true, RGB(255, 0, 255));
 
 
+	IMAGEMANAGER->addImage("BG", "bgf.bmp", WINSIZEX, WINSIZEY, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("thorn", "thorn.bmp", 25, 25, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("life", "life.bmp", 50, 50, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("fruit", "fruit.bmp", 50, 50, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("ladder", "ladder.bmp", 38, 173, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("randomItem", "randomItem.bmp", 50, 50, true, RGB(255, 0, 255));
+
+
 //#pragma region IMGPATH
 
 	//ししししししし 爽推 昔弘 ししししししし//
@@ -308,6 +316,280 @@ HRESULT storage::init()
 //
 ////巴傾戚嬢 戚耕走
 //#pragma region PLAYERIMAGE
+
+////#pragma region IMGPATH
+//
+//
+//	
+//
+//	//ししししししし 爽推 昔弘 ししししししし//
+//	/*{
+//
+//	//巴傾戚嬢 戚耕走 井稽
+//	//Resource/IMG/character/player/imageName.bmp
+//
+//	//旋浦 戚耕走 井稽
+//	//Resource/IMG/character/enemy/
+//
+//	//NPC 戚耕走 井稽
+//	//Resource/IMG/character/npc/
+//
+//	}*/
+//
+//	//ししししししし 反引  ししししししし//
+//	/*{
+//
+//	//反引
+//	//Resource/IMG/effect
+//
+//	}*/
+//
+//
+//
+//	//ししししししし 焼戚奴 & 神崎詮闘 ししししししし//
+//	/*{
+//	*
+//	//焼戚奴
+//	//Resource/IMG/item
+//
+//	//神崎詮闘
+//	//Resource/IMG/object
+//
+//	}*/
+//
+//
+//	//ししししししし 什砺戚走 & UI ししししししし//
+//	/*{
+//
+//	//什砺戚走
+//	//Resource/IMG/stage
+//
+//	//UI
+//	//Resource/IMG/ui
+//	
+//	}*/
+////
+////#pragma endregion IMGPATH
+////
+////#pragma region SFXPATH
+//
+//	//ししししししし 製据 ししししししし//
+//	/*{
+//
+//	//巴傾戚嬢 製据 井稽
+//	//Resource/SFX/Player/
+//
+//	//発井// 什砺戚走 井稽
+//	//Resource/SFX/environment
+//
+//	
+//
+//
+//
+//	//左什 反引製? 井稽
+//	//Resource/SFX/global
+//
+//	//五敢製据
+//	//Resource/SFX/menu/
+//
+//	//巷奄製据
+//	//Resource/SFX/weapons/
+//
+//	//掃澗 波穣製据
+//	//Resource/SFX/pickup/
+//
+//	}*/
+//////#pragma region WEAPONS
+////
+////	//巷奄 展維製
+////
+////	SOUNDMANAGER->addSound("WEAPONS_bassball1_bat",		"Resource/SFX/weapons/weapon_baseball_bat_hit.wav", true, false);			//醤姥号諺戚  逆
+////	SOUNDMANAGER->addSound("WEAPONS_bassball2_bat",		"Resource/SFX/weapons/weapon_baseball_impact.wav", true, false);			//醤姥号諺戚2 店 
+////	
+////	SOUNDMANAGER->addSound("WEAPONS_bench1",			"Resource/SFX/weapons/weapon_bench_break.wav", true, false);				//坤帖 採偲走澗社軒
+////	SOUNDMANAGER->addSound("WEAPONS_bench2",			"Resource/SFX/weapons/weapon_bench_impact.wav", true, false);				//坤帖 績苫闘
+////	
+////	SOUNDMANAGER->addSound("WEAPONS_bicycle",			"Resource/SFX/weapons/weapon_bicycle_impact.wav", true, false);				//切穿暗
+////	SOUNDMANAGER->addSound("WEAPONS_boomerang",			"Resource/SFX/weapons/weapon_boomerang_throw.wav", true, false);			//採五櫛
+////	SOUNDMANAGER->addSound("WEAPONS_chain",				"Resource/SFX/weapons/weapon_chain_swing.wav", true, false);				//端昔
+////	SOUNDMANAGER->addSound("WEAPONS_dodgeball",			"Resource/SFX/weapons/weapon_dodgeball_impact.wav", true, false);			//杷姥因
+////	SOUNDMANAGER->addSound("WEAPONS_fish1",				"Resource/SFX/weapons/weapon_fish_explode.wav", true, false);				//弘壱奄1
+////	SOUNDMANAGER->addSound("WEAPONS_fish2",				"Resource/SFX/weapons/weapon_fish_impact.wav", true, false);				//弘壱奄2
+////	SOUNDMANAGER->addSound("WEAPONS_frying_pan",		"Resource/SFX/weapons/weapon_frying_pan_impact2.wav", true, false);			//覗虞戚謎
+////	
+////	SOUNDMANAGER->addSound("WEAPONS_guitar1",			"Resource/SFX/weapons/weapon_guitar_impact_01.wav", true, false);			//奄展1
+////	SOUNDMANAGER->addSound("WEAPONS_guitar2",			"Resource/SFX/weapons/weapon_guitar_impact_02.wav", true, false);			//奄展2
+////	SOUNDMANAGER->addSound("WEAPONS_guitar3",			"Resource/SFX/weapons/weapon_guitar_impact_03.wav", true, false);			//奄展3
+////	SOUNDMANAGER->addSound("WEAPONS_guitar4",			"Resource/SFX/weapons/weapon_guitar_impact_04.wav", true, false);			//奄展4
+////	
+////	SOUNDMANAGER->addSound("WEAPONS_lightSaber1",		"Resource/SFX/weapons/weapon_light_saber_impact_01.wav", true, false);		//虞戚闘室戚獄1
+////	SOUNDMANAGER->addSound("WEAPONS_lightSaber2",		"Resource/SFX/weapons/weapon_light_saber_impact_02.wav", true, false);		//虞戚闘室戚獄2
+////	SOUNDMANAGER->addSound("WEAPONS_lightSaber3",		"Resource/SFX/weapons/weapon_light_saber_impact_03.wav", true, false);		//虞戚闘室戚獄3
+////	
+////	SOUNDMANAGER->addSound("WEAPONS_lightSaverSwing1",	"Resource/SFX/weapons/weapon_light_saber_swing_01.wav", true, false);		//虞戚闘室戚獄什成1
+////	SOUNDMANAGER->addSound("WEAPONS_lightSaverSwing2",	"Resource/SFX/weapons/weapon_light_saber_swing_02.wav", true, false);		//虞戚闘室戚獄什成2
+////	SOUNDMANAGER->addSound("WEAPONS_lightSaverSwing3",	"Resource/SFX/weapons/weapon_light_saber_swing_03.wav", true, false);		//虞戚闘室戚獄什成3
+////	SOUNDMANAGER->addSound("WEAPONS_lightSaverSwing4",	"Resource/SFX/weapons/weapon_light_saber_swing_04.wav", true, false);		//虞戚闘室戚獄什成4
+////
+////	SOUNDMANAGER->addSound("WEAPONS_chair",				"Resource/SFX/weapons/weapon_metal_chair_impact.wav", true, false);			//榎紗税切
+////	SOUNDMANAGER->addSound("WEAPONS_shovel",			"Resource/SFX/weapons/weapon_shovel_impact.wav", true, false);				//諮
+////	SOUNDMANAGER->addSound("WEAPONS_starBaton",			"Resource/SFX/weapons/weapon_star_baton_impact.wav", true, false);			//紺走椴戚
+////	SOUNDMANAGER->addSound("WEAPONS_woodPlank",			"Resource/SFX/weapons/weapon_wood_plank_impact.wav", true, false);			//蟹巷毒切
+////	SOUNDMANAGER->addSound("WEAPONS_wrench",			"Resource/SFX/weapons/weapon_wrench_impact.wav", true, false);				//兄帖
+////
+////#pragma endregion WEAPONS
+////
+////	//乞窮 杷維 奄沙 壕井
+////	IMAGEMANAGER->addFrameImage("EFFECT_attack", "Resource/IMG/effect/attack.bmp", 612, 196, 3, 1, true, RGB(255, 0, 255));
+////
+////	
+////																																	//乞窮 杷維
+//	//IMAGEMANAGER->addFrameImage("attack", "Resource/IMG/effect/attack.bmp", 612, 196, 3, 1, true, RGB(255, 0, 255));
+////
+////	//蕉格耕 牌差
+////	IMAGEMANAGER->addFrameImage("EFFECT_beg", "Resource/IMG/effect/beg.bmp", 268, 127, 2, 1, true, RGB(255, 0, 255));
+////	//巴傾戚嬢 展維
+////	IMAGEMANAGER->addFrameImage("EFFECT_blueAttack", "Resource/IMG/effect/blueAttack.bmp", 720, 80, 9, 1, true, RGB(255, 0, 255));
+////	//左什 企獣獣拙繊
+////	IMAGEMANAGER->addFrameImage("EFFECT_bossDash", "Resource/IMG/effect/Boss dash.bmp", 12480, 900, 10, 1, true, RGB(255, 0, 255));
+////	//巴傾戚嬢 号嬢
+////	IMAGEMANAGER->addFrameImage("EFFECT_bossHowling", "Resource/IMG/effect/Boss howling.bmp", 1821, 165, 8, 1, true, RGB(255, 0, 255));
+////	//左什 号嬢
+////	IMAGEMANAGER->addFrameImage("EFFECT_bossHowling2", "Resource/IMG/effect/Boss howling2.bmp", 416, 208, 2, 1, true, RGB(255, 0, 255));
+////	//左什 繊覗 因維 frameY(2)
+////	IMAGEMANAGER->addFrameImage("EFFECT_bossMeteor", "Resource/IMG/effect/Boss meteor.bmp", 1620, 640, 4, 2, true, RGB(255, 0, 255));
+////	//左什 繊覗 因維
+////	IMAGEMANAGER->addFrameImage("EFFECT_bossMeteor2", "Resource/IMG/effect/Boss meteor2.bmp", 2424, 320, 6, 1, true, RGB(255, 0, 255));
+////	//左什 虞什闘 凪戚綜
+////	IMAGEMANAGER->addFrameImage("EFFECT_bossPhase1", "Resource/IMG/effect/Boss phase1.bmp", 299, 82, 3, 1, true, RGB(255, 0, 255));
+////	//左什 趣希嬢澱 杷維
+////	IMAGEMANAGER->addFrameImage("EFFECT_bossSmash", "Resource/IMG/effect/Boss smash.bmp", 960, 89, 10, 1, true, RGB(255, 0, 255));
+////	//左什亜 析嬢竺 凶
+////	IMAGEMANAGER->addFrameImage("EFFECT_bossStand", "Resource/IMG/effect/Boss stand.bmp", 607, 55, 8, 1, true, RGB(255, 0, 255));
+////	//郊韓液伸 1腰
+////	IMAGEMANAGER->addFrameImage("EFFECT_bossStand2", "Resource/IMG/effect/Boss stand2.bmp", 3390, 144, 7, 1, true, RGB(255, 0, 255));
+////	//奄逆 督雨(繊覗)
+////	IMAGEMANAGER->addFrameImage("EFFECT_boss_effect5", "Resource/IMG/effect/boss_effect5.bmp", 800, 90, 7, 1, true, RGB(255, 0, 255));
+////	//鉢檎 凹像
+////	IMAGEMANAGER->addFrameImage("EFFECT_crush", "Resource/IMG/effect/crush.bmp", 190, 193, 1, 1, true, RGB(255, 0, 255));
+////	//奄逆 督雨(趣希)
+////	IMAGEMANAGER->addFrameImage("EFFECT_dashAttackEffect", "Resource/IMG/effect/dashAttackEffect.bmp", 400, 45, 7, 1, true, RGB(255, 0, 255));
+////	//煽什闘 亜球
+////	IMAGEMANAGER->addFrameImage("EFFECT_effecBlue", "Resource/IMG/effect/effec_blue.bmp", 720, 80, 9, 1, true, RGB(255, 0, 255));
+////	//号諺戚 展維
+////	IMAGEMANAGER->addFrameImage("EFFECT_effectSpark", "Resource/IMG/effect/effect_spark.bmp", 512, 128, 4, 1, true, RGB(255, 0, 255));
+////	//蕉格耕 展維1
+////	IMAGEMANAGER->addFrameImage("EFFECT_effectStar", "Resource/IMG/effect/effect_star.bmp", 900, 60, 15, 1, true, RGB(255, 0, 255));
+////	//左什 趣希嬢澱 杷維(掻淡)
+////	IMAGEMANAGER->addFrameImage("EFFECT_etBoomBig", "Resource/IMG/effect/et_boom_big.bmp", 960, 89, 10, 1, true, RGB(255, 0, 255));
+////	//左什 展維
+////	IMAGEMANAGER->addFrameImage("EFFECT_explosion", "Resource/IMG/effect/explosion.bmp", 1701, 247, 7, 1, true, RGB(255, 0, 255));
+////	//左什 企獣獣拙繊(掻淡)
+////	IMAGEMANAGER->addFrameImage("EFFECT_explosion1", "Resource/IMG/effect/explosion1.bmp", 12480, 900, 10, 1, true, RGB(255, 0, 255));
+////	//左什 展維(掻淡)
+////	IMAGEMANAGER->addFrameImage("EFFECT_explosion2", "Resource/IMG/effect/explosion2.bmp", 1701, 247, 7, 1, true, RGB(255, 0, 255));
+////	//郊韓液伸 2腰
+////	IMAGEMANAGER->addFrameImage("EFFECT_groundbreak", "Resource/IMG/effect/groundbreak.bmp", 256, 128, 1, 1, true, RGB(255, 0, 255));
+////	//切毒奄 督雨
+////	IMAGEMANAGER->addFrameImage("EFFECT_objBreak", "Resource/IMG/effect/obj break.bmp", 3304, 248, 14, 1, true, RGB(255, 0, 255));
+////	//巴傾戚嬢 昔縦
+////	IMAGEMANAGER->addFrameImage("EFFECT_point", "Resource/IMG/effect/point.bmp", 560, 70, 8, 1, true, RGB(255, 0, 255));
+////	//巴傾戚嬢 霜爽 frameY(2)
+////	IMAGEMANAGER->addFrameImage("EFFECT_run", "Resource/IMG/effect/run.bmp", 2544, 246, 12, 2, true, RGB(255, 0, 255));
+////	//疎著 霜爽
+////	IMAGEMANAGER->addFrameImage("EFFECT_runL", "Resource/IMG/effect/runL.bmp", 2784, 126, 12, 1, true, RGB(255, 0, 255));
+////	//酔著 霜爽
+////	IMAGEMANAGER->addFrameImage("EFFECT_runR", "Resource/IMG/effect/runR.bmp", 2544, 123, 12, 1, true, RGB(255, 0, 255));
+////	//疑戸嘘七
+////	IMAGEMANAGER->addFrameImage("EFFECT_shake", "Resource/IMG/effect/shake.bmp", 268, 127, 2, 1, true, RGB(255, 0, 255));
+////	//号諺戚 展維(掻淡)
+////	IMAGEMANAGER->addFrameImage("EFFECT_spark", "Resource/IMG/effect/spark.bmp", 512, 128, 4, 1, true, RGB(255, 0, 255));
+////	//蕉格耕 展維2
+////	IMAGEMANAGER->addFrameImage("EFFECT_star", "Resource/IMG/effect/star.bmp", 1350, 90, 15, 1, true, RGB(255, 0, 255));
+////	//奄箭
+////	IMAGEMANAGER->addFrameImage("EFFECT_stun", "Resource/IMG/effect/stun.bmp", 420, 54, 6, 1, true, RGB(255, 0, 255));
+////	//}*/
+////
+////
+////
+////	//ししししししし 焼戚奴 & 神崎詮闘 ししししししし//
+//	//*{
+////
+////	//焼戚奴
+//	//Resource/IMG/item
+//	//硝稽拭
+////	IMAGEMANAGER->addImage("ITEM_aloe", "Resource/IMG/item/aloe.bmp", 50, 76, true, RGB(255, 0, 255));
+////	//倍獄暗
+////	IMAGEMANAGER->addImage("ITEM_hamburger", "Resource/IMG/item/hamburger.bmp", 64, 55, true, RGB(255, 0, 255));
+////	//焼戚什滴顕
+////	IMAGEMANAGER->addImage("ITEM_icecream", "Resource/IMG/item/icecream.bmp", 55, 70, true, RGB(255, 0, 255));
+////	//儀猿什
+////	IMAGEMANAGER->addImage("ITEM_meat", "Resource/IMG/item/meat.bmp", 60, 51, true, RGB(255, 0, 255));
+////	//歯酔蕩沿
+////	IMAGEMANAGER->addImage("ITEM_tempura", "Resource/IMG/item/tempura.bmp", 58, 60, true, RGB(255, 0, 255));
+////
+////	//神崎詮闘
+//	//Resource/IMG/object
+//	//紫引
+////	IMAGEMANAGER->addImage("OBJECT_apple", "Resource/IMG/object/apple.bmp", 100, 100, true, RGB(255, 0, 255));
+////	//厩呪
+////	IMAGEMANAGER->addImage("OBJECT_chili", "Resource/IMG/object/chili.bmp", 100, 100, true, RGB(255, 0, 255));
+////	//帖轍
+////	IMAGEMANAGER->addImage("OBJECT_hen", "Resource/IMG/object/hen.bmp", 100, 100, true, RGB(255, 0, 255));
+////	//奪雌
+////	IMAGEMANAGER->addImage("OBJECT_desk", "Resource/IMG/object/desk.bmp", 147, 162, true, RGB(255, 0, 255));
+////	//嘘紫 奪雌
+////	IMAGEMANAGER->addImage("OBJECT_teachers_desk", "Resource/IMG/object/teachers_desk.bmp", 83, 34, true, RGB(255, 0, 255));
+////	//砺戚鷺
+////	IMAGEMANAGER->addImage("OBJECT_table", "Resource/IMG/object/table.bmp", 339, 162, true, RGB(255, 0, 255));
+////	//随展軒
+////	IMAGEMANAGER->addImage("OBJECT_fence", "Resource/IMG/object/fence.bmp", 476, 71, true, RGB(255, 0, 255));
+////	//奄逆 督畷1
+////	IMAGEMANAGER->addImage("OBJECT_particle1", "Resource/IMG/object/pillar_particle_1.bmp", 64, 64, true, RGB(255, 0, 255));
+////	//奄逆 督畷2																					 
+////	IMAGEMANAGER->addImage("OBJECT_particle2", "Resource/IMG/object/pillar_particle_2.bmp", 64, 64, true, RGB(255, 0, 255));
+////	//奄逆 督畷3																					
+////	IMAGEMANAGER->addImage("OBJECT_particle3", "Resource/IMG/object/pillar_particle_3.bmp", 64, 64, true, RGB(255, 0, 255));
+////	//疑穿
+////	IMAGEMANAGER->addFrameImage("OBJECT_gold", "Resource/IMG/object/gold_coin_spin.bmp", 512, 512, 4, 4, true, RGB(255, 0, 255));
+////	//走二
+////	IMAGEMANAGER->addFrameImage("OBJECT_money", "Resource/IMG/object/money_green.bmp", 576, 432, 4, 4, true, RGB(255, 0, 255));
+////	//板号 奄逆
+////	IMAGEMANAGER->addFrameImage("OBJECT_backPillar", "Resource/IMG/object/pillar.bmp", 390, 678, 2, 1, true, RGB(255, 0, 255));
+////	//穿号 奄逆
+////	IMAGEMANAGER->addFrameImage("OBJECT_firstPillar", "Resource/IMG/object/pillar_big.bmp", 390, 957, 2, 1, true, RGB(255, 0, 255));
+////	//社随
+////	IMAGEMANAGER->addFrameImage("OBJECT_pet", "Resource/IMG/object/pet.bmp", 576, 96, 6, 1, true, RGB(255, 0, 255));
+////	//号諺戚
+////	IMAGEMANAGER->addFrameImage("OBJECT_bat", "Resource/IMG/object/bat.bmp", 179, 104, 1, 2, true, RGB(255, 0, 255));
+////	//切毒奄
+////	IMAGEMANAGER->addFrameImage("OBJECT_vendingMachine", "Resource/IMG/object/vendingMachine.bmp", 525, 260, 2, 1, true, RGB(255, 0, 255));
+////	//}*/
+////
+////
+////	//ししししししし 什砺戚走 & UI ししししししし//
+//	//*{
+////
+////	//什砺戚走
+//	//Resource/IMG/stage
+//	//左什 去舌 穿 什砺戚走
+////	IMAGEMANAGER->addImage("STAGE_boss1", "Resource/IMG/stage/boss1.bmp", 3116, 1215, true, RGB(255, 0, 255));
+////	//左什 去舌 板 什砺戚走
+////	IMAGEMANAGER->addImage("STAGE_boss2", "Resource/IMG/stage/boss2.bmp", 3116, 1215, true, RGB(255, 0, 255));
+////	//惟績 獣拙 嘘叔
+////	IMAGEMANAGER->addImage("STAGE_easy", "Resource/IMG/stage/easy.bmp", 2028, 678, true, RGB(255, 0, 255));
+////	//呪慎舌
+////	IMAGEMANAGER->addImage("STAGE_hard", "Resource/IMG/stage/hard.bmp", 2328, 1428, true, RGB(255, 0, 255));
+////	//畷税繊
+////	IMAGEMANAGER->addImage("STAGE_normal", "Resource/IMG/stage/normal.bmp", 2865, 837, true, RGB(255, 0, 255));
+////
+////#pragma endregion SFXPATH
+////
+////	//========================戚耕走 社什======================
+////#pragma region IMAGESOURCES
+//
+////巴傾戚嬢 戚耕走
+////#pragma region PLAYERIMAGE
 //
 //	//紫陥軒
 //	//紫陥軒 点聖凶
@@ -425,6 +707,9 @@ HRESULT storage::init()
 //
 //	//NPC 戚耕走=============================(刃)
 //#pragma region NPCIMAGE
+////
+////	//NPC 戚耕走=============================(刃)
+////#pragma region NPCIMAGE
 //	//害切1
 //	IMAGEMANAGER->addFrameImage("BOY1", "Resource/IMG/character/npc/boy1.bmp", 396, 480, 4, 2, true, RGB(255, 0, 255));
 //	//害切1 鋼誓
@@ -443,6 +728,8 @@ HRESULT storage::init()
 //#pragma endregion NPCIMAGE
 //
 //#pragma region ENEMYIMAGE
+////
+////#pragma region ENEMYIMAGE
 //
 //#pragma region BOSS
 //	// 左什 因維
@@ -652,6 +939,9 @@ HRESULT storage::init()
 //#pragma endregion ENEMYIMAGE
 //
 //#pragma region UI
+//#pragma endregion ENEMYIMAGE
+////
+////#pragma region UI
 //
 //		//battle
 //		//左什 HP 及
@@ -846,6 +1136,18 @@ HRESULT storage::init()
 //#pragma region SFXSOURCE
 ////巴傾戚嬢 紫錘球
 //#pragma region PLAYERSFX
+////
+////
+////#pragma endregion IMAGESOURCES
+//////
+//////
+//////
+//////
+//////
+//////	  /////////////////紫錘球 社什///////////////
+//////#pragma region SFXSOURCE
+//////巴傾戚嬢 紫錘球
+////#pragma region PLAYERSFX
 ////巷賢恢奄
 //	SOUNDMANAGER->addSound("PLAYER_knee", "Resource/SFX/Player/DD2_knee.wav", false, false);
 //
@@ -948,6 +1250,8 @@ HRESULT storage::init()
 //#pragma endregion PLAYERSFX
 //
 //#pragma region MENUSFX
+////
+////#pragma region MENUSFX
 //	SOUNDMANAGER->addSound("MENU_busUse", "Resource/SFX/menu/interface_bus_use.wav", true, false);
 //	SOUNDMANAGER->addSound("MENU_gameover", "Resource/SFX/menu/interface_game_over.wav", true, false);
 //	SOUNDMANAGER->addSound("MENU_mapMarker", "Resource/SFX/menu/interface_map_marker.wav", true, false);
@@ -1019,6 +1323,47 @@ HRESULT storage::init()
 //#pragma endregion GLOBAL & PICKUP
 //
 //#pragma region ENVIRONMENT
+////
+////#pragma region GLOBAL & PICKUP
+////
+////	//左什 適軒嬢
+////	SOUNDMANAGER->addSound("GLOBAL_bossFinal", "Resource/SFX/global/boss_finalhit.wav", true, true);
+////	//左什 獣拙
+////	SOUNDMANAGER->addSound("GLOBAL_bossIntro", "Resource/SFX/global/boss_intro_placard", true, true);
+////	//五敢製据
+////	//Resource/SFX/menu/
+////
+////	//巷奄製据
+////	//Resource/SFX/weapons/
+////
+////	//掃澗 波穣製据
+////	//Resource/SFX/pickup/
+////	//柔究 災亜
+////	SOUNDMANAGER->addSound("PICKUP_cannot", "Resource/SFX/pickup/cannot_pickup.wav", true, true);
+////	//亀穿 壱薦 焼戚奴 降胃
+////	SOUNDMANAGER->addSound("PICKUP_confirm", "Resource/SFX/pickup/interface_item_pickup_confirm.wav", true, true);
+////	//亀穿 引薦 焼戚奴 塙究
+////	SOUNDMANAGER->addSound("PICKUP_intro", "Resource/SFX/pickup/interface_item_pickup_intro.wav", true, true);
+////	//焼戚奴 昔闘稽 魁
+////	SOUNDMANAGER->addSound("PICKUP_outro", "Resource/SFX/pickup/interface_item_pickup_outro.wav", true, true);
+////	//短姥辞 柔究
+////	SOUNDMANAGER->addSound("PICKUP_bill", "Resource/SFX/pickup/pickup_bill.wav", true, true);
+////	//陥原壱帖 楢1
+////	SOUNDMANAGER->addSound("PICKUP_cat1", "Resource/SFX/pickup/pickup_cat_01.wav", true, true);
+////	//陥原壱帖 楢2
+////	SOUNDMANAGER->addSound("PICKUP_cat2", "Resource/SFX/pickup/pickup_cat_02.wav", true, true);
+////	//陥原壱帖 楢3
+////	SOUNDMANAGER->addSound("PICKUP_cat3", "Resource/SFX/pickup/pickup_cat_03.wav", true, true);
+////	//袴艦 柔究
+////	SOUNDMANAGER->addSound("PICKUP_coin", "Resource/SFX/pickup/pickup_coin.wav", true, true);
+////	//製縦 柔究
+////	SOUNDMANAGER->addSound("PICKUP_food", "Resource/SFX/pickup/pickup_food.wav", true, true);
+////	//鉦 柔究
+////	SOUNDMANAGER->addSound("PICKUP_med", "Resource/SFX/pickup/pickup_med_01.wav", true, true);
+////
+////#pragma endregion GLOBAL & PICKUP
+////
+////#pragma region ENVIRONMENT
 //
 //	//坤帖 採偲
 //	SOUNDMANAGER->addSound("ENVIRONMENT_benchBreak", "Resource/SFX/environment/environment_bench_break.wav", true, false);
@@ -1069,6 +1414,8 @@ HRESULT storage::init()
 //#pragma endregion ENVIRONMENT
 //
 //#pragma endregion SFXSOURCE
+////
+////#pragma endregion SFXSOURCE
 
 
 

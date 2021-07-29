@@ -11,10 +11,6 @@ playGround::playGround()
 
 playGround::~playGround()
 {
-	//주석처리를 하자. 어서 빨리 하자. 
-	// adwdvvvsc
-	// git Desktop push
-	// dsfwfdsf
 }
 
 //업데이트 테스트 아아아아!
@@ -24,6 +20,7 @@ playGround::~playGround()
 //초기화는 여기에다 해라!!!
 HRESULT playGround::init()
 {
+
 	gameNode::init(true);
 
 	_ponpoko = new ponpoko;
@@ -34,6 +31,9 @@ HRESULT playGround::init()
 	_en = new enemyManager;
 	_en->init();
 	_en->setMinion();
+
+	SCENEMANAGER->addScene("UI", new ui);
+	SCENEMANAGER->changeScene("UI");
 
 	return S_OK;
 }
@@ -50,9 +50,8 @@ void playGround::update()
 	gameNode::update();
 
 	_en->update();
+	SCENEMANAGER->update();
 
-	//SCENEMANAGER->update();
-	//SOUNDMANAGER->update();
 }
 
 //여기다 그려줘라!!!
@@ -64,6 +63,8 @@ void playGround::render()
 	_ponpoko->render();
 
 	IMAGEMANAGER->findImage("STAGE_backGround")->render(getMemDC(), 0, 0);
+	
+	SCENEMANAGER->render();
 
 	_en->render();
 

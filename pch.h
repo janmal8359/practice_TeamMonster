@@ -31,10 +31,10 @@ using namespace TN_UTILS;
 //========================================
 
 #define WINNAME		(LPTSTR)TEXT("Class29")			//윈도우 이름
-#define WINSTARTX	0							//윈도우 시작좌표(left)
-#define WINSTARTY	0								//윈도우 시작좌표(top)
-#define WINSIZEX	1280								//윈도우 가로크기
-#define WINSIZEY	964							//윈도우 세로크기
+#define WINSTARTX	50								//윈도우 시작좌표(left)
+#define WINSTARTY	50								//윈도우 시작좌표(top)
+#define WINSIZEX	1280							//윈도우 가로크기
+#define WINSIZEY	964								//윈도우 세로크기
 #define WINSTYLE	WS_CAPTION | WS_SYSMENU
 
 #define RND randomFunction::getSingleton()

@@ -156,6 +156,9 @@
     <ClInclude Include="idle.h">
       <Filter>playGround\player</Filter>
     </ClInclude>
+    <ClInclude Include="ui.h">
+      <Filter>playGround</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -244,6 +247,9 @@
     </ClCompile>
     <ClCompile Include="idle.cpp">
       <Filter>playGround\player</Filter>
+    </ClCompile>
+    <ClCompile Include="ui.cpp">
+      <Filter>playGround</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

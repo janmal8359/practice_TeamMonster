@@ -4,6 +4,7 @@
 #include "storage.h"
 #include "ponpoko.h"
 #include "enemyManager.h"
+#include "ui.h"
 
 class playGround : public gameNode
 {
