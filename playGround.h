@@ -3,12 +3,14 @@
 #include "soundTest.h"
 #include "storage.h"
 #include "ponpoko.h"
+#include "pixelCol.h"
 
 class playGround : public gameNode
 {
 private:
 	//storage* _st;
 	ponpoko* _ponpoko;
+	pixelCol *_pc;
 
 
 public:

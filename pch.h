@@ -34,7 +34,7 @@ using namespace TN_UTILS;
 #define WINSTARTX	50							//윈도우 시작좌표(left)
 #define WINSTARTY	50								//윈도우 시작좌표(top)
 #define WINSIZEX	1280								//윈도우 가로크기
-#define WINSIZEY	852								//윈도우 세로크기
+#define WINSIZEY	964								//윈도우 세로크기
 #define WINSTYLE	WS_CAPTION | WS_SYSMENU
 
 #define RND randomFunction::getSingleton()

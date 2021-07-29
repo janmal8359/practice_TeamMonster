@@ -16,6 +16,7 @@ HRESULT jump::init()
 	_aniR->setPlayFrame(2, 3, false, true);
 	_aniR->setFPS(1);
 
+	_ySpeed = 5;
 	_isJump = false;
 
 
@@ -50,14 +51,17 @@ void jump::move()
 		if (_dir == LEFT) _aniL->resume();
 		if (_dir == RIGHT) _aniR->resume();
 
-		_y += 5;
+		_y -= _ySpeed;
+		_ySpeed -= _g;
+		//_y -= 5;
 
 	}
 	else if (!_isJump) {
 		_aniL->stop();
 		_aniR->stop();
+		_ySpeed = 5;
 
-		_p->setIdle();
+		_p->setRun();
 	}
 
 
@@ -66,7 +70,7 @@ void jump::move()
 
 		if (KEYMANAGER->isStayKeyDown(VK_LEFT)) {
 			_dir = LEFT;
-		
+			//_x += 5;
 		}
 
 	}
@@ -74,6 +78,7 @@ void jump::move()
 	if (!KEYMANAGER->isStayKeyDown(VK_LEFT) || _dir == RIGHT) {
 		if (KEYMANAGER->isStayKeyDown(VK_RIGHT)) {
 			_dir = RIGHT;
+		//	_x -= 5;
 		}
 	}
 }
