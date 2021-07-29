@@ -19,7 +19,7 @@ HRESULT run::init()
 	_aniR->setFPS(1);
 
 	_x = 200;
-	_y = 700;
+	//_y = 700;
 	_rc = RectMakeCenter(_x, _y, _img->getWidth(), _img->getHeight());
 
 	return S_OK;
@@ -54,6 +54,7 @@ void run::move()
 		_aniR->stop();
 
 		_isJump = true;
+		_ySpeed = 1.5f;
 		_p->setJump();
 	}
 

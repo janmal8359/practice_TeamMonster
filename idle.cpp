@@ -50,8 +50,9 @@ void idle::move()
 		_dir = LEFT;
 		_aniL->stop();
 
-		if (KEYMANAGER->isOnceKeyDown(VK_UP)&& !_isJump) {
+		if (KEYMANAGER->isOnceKeyDown(VK_UP) && !_isJump) {
 			_isJump = true;
+			_ySpeed = 1.5f;
 			_p->setJump();
 		}
 		else _p->setRun();

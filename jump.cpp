@@ -17,7 +17,7 @@ HRESULT jump::init()
 	_aniR->setFPS(1);
 
 	_xSpeed = 0;
-	_ySpeed = 0.05f;
+	//_ySpeed = 0.05f;
 	_isJump = false;
 
 
@@ -62,7 +62,7 @@ void jump::move()
 		_aniR->stop();
 
 		_xSpeed = 0;
-		_ySpeed = 0.05f;
+		_ySpeed = 3.f;
 
 		_p->setRun();
 	}

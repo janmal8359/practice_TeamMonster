@@ -12,6 +12,7 @@ HRESULT pixelCol::init()
 
 	// 볼의 아래쪽
 	_probeY = _rc.bottom;
+	_probeYY = _rc.top;
 
 	return S_OK;
 }
@@ -29,6 +30,7 @@ void pixelCol::update()
 
 	// 볼의 아래쪽
 	_probeY = _rc.bottom;
+	_probeYY = _rc.top;
 
 	// 점프 상황에서
 	if (!_isJump) {
@@ -43,6 +45,7 @@ void pixelCol::update()
 			if (!(r == 255 && g == 0 && b == 255))
 			{
 				_y = i - (_rc.bottom - _rc.top) / 2;
+				
 				break;
 			}
 			else
@@ -63,7 +66,7 @@ void pixelCol::update()
 
 			if (!(r == 255 && g == 0 && b == 255))
 			{
-				_y = i - (_rc.bottom - _rc.top / 2);
+				_y = i - (_rc.bottom - _rc.top) / 2;
 				_isJump = false;
 				break;
 			}
@@ -103,4 +106,5 @@ void pixelCol::update()
 void pixelCol::render()
 {
 	_ground->render(getMemDC());
+	Rectangle(getMemDC(), _rc);
 }

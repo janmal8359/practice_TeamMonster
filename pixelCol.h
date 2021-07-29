@@ -13,6 +13,7 @@ private:
 	float  _x, _y;		//ÁßÁ¡ÁÂÇ¥
 
 	int _probeY;		//YÃà Å½»ç
+	int _probeYY;
 
 	int r, g, b;
 
