@@ -167,9 +167,74 @@ HRESULT storage::init()
 //	SOUNDMANAGER->addSound("WEAPONS_wrench",			"Resource/SFX/weapons/weapon_wrench_impact.wav", true, false);				//렌치
 //
 //#pragma endregion WEAPONS
-//
+	
+	//모든 피격 기본 배경
+	EFFECTMANAGER->addEffect("EFFECT_attackBackground", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//애너미 항복
+	EFFECTMANAGER->addEffect("EFFECT_beg", "resources/IMG/effect/beg.bmp", 368, 127, 184, 127, 1, 5.0f, 1000);
+	//플레이어 타격
+	EFFECTMANAGER->addEffect("EFFECT_blueAttack", "resources/IMG/effect/blueAttack.bmp", 720, 80, 80, 80, 1, 5.0f, 1000);
+	//보스 대시시작점
+	EFFECTMANAGER->addEffect("EFFECT_bossDash", "resources/IMG/effect/Boss dash.bmp", 12480, 900, 1248, 900, 1, 5.0f, 1000);
+	//플레이어 방어
+	EFFECTMANAGER->addEffect("EFFECT_bossHowling", "resources/IMG/effect/Boss howling.bmp", 1824, 165, 228, 165, 1, 5.0f, 1000);
+	//보스 방어
+	EFFECTMANAGER->addEffect("EFFECT_bossHowling1", "resources/IMG/effect/Boss howling2.bmp", 416, 208, 208, 208, 1, 5.0f, 1000);
+	//보스 점프 공격 frameY(2)
+	EFFECTMANAGER->addEffect("EFFECT_bossMeteor1", "resources/IMG/effect/Boss meteor.bmp", 1620, 640, 405, 320, 1, 5.0f, 1000);
+	//보스 점프 공격
+	EFFECTMANAGER->addEffect("EFFECT_bossMeteor", "resources/IMG/effect/Boss meteor2.bmp", 2424, 320, 404, 196, 1, 5.0f, 1000);
+	//보스 라스트 페이즈
+	EFFECTMANAGER->addEffect("EFFECT_bossPhase", "resources/IMG/effect/Boss phase1.bmp", 300, 82, 100, 82, 1, 5.0f, 1000);
+	//보스 숄더어택 피격
+	EFFECTMANAGER->addEffect("EFFECT_bossSmash", "resources/IMG/effect/Boss smash.bmp", 960, 89, 96, 89, 1, 5.0f, 1000);
+	//보스가 일어설 때
+	EFFECTMANAGER->addEffect("EFFECT_bossStand", "resources/IMG/effect/Boss stand.bmp", 607, 55, 76, 55, 1, 5.0f, 1000);
+	//바닥균열 1번
+	EFFECTMANAGER->addEffect("EFFECT_bossStand1", "resources/IMG/effect/Boss stand2.bmp", 3390, 144, 484, 144, 1, 5.0f, 1000);
+	//기둥 파괴(점프)
+	EFFECTMANAGER->addEffect("EFFECT_bossEffect", "resources/IMG/effect/boss_effect5.bmp", 800, 90, 114, 90, 1, 5.0f, 1000);
+	//화면 깨짐
+	EFFECTMANAGER->addEffect("EFFECT_crush", "resources/IMG/effect/crush.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//기둥 파괴(숄더)
+	EFFECTMANAGER->addEffect("EFFECT_dashAttack", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//저스트 가드
+	EFFECTMANAGER->addEffect("EFFECT_effecBlue", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//방망이 타격
+	EFFECTMANAGER->addEffect("EFFECT_effectSpark", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//애너미 타격1
+	EFFECTMANAGER->addEffect("EFFECT_effectStar", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//보스 숄더어택 피격(중첩)
+	EFFECTMANAGER->addEffect("EFFECT_bossSmash1", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//보스 타격
+	EFFECTMANAGER->addEffect("EFFECT_explosion", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//보스 대시시작점(중첩)
+	EFFECTMANAGER->addEffect("EFFECT_explosion1", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//보스 타격(중첩)
+	EFFECTMANAGER->addEffect("EFFECT_explosion2", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//바닥균열 2번
+	EFFECTMANAGER->addEffect("EFFECT_groundbreak", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//자판기 파괴
+	EFFECTMANAGER->addEffect("EFFECT_objBreak", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//플레이어 인식
+	EFFECTMANAGER->addEffect("EFFECT_point", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//플레이어 질주 frameY(2)
+	EFFECTMANAGER->addEffect("EFFECT_run", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//좌측 질주
+	EFFECTMANAGER->addEffect("EFFECT_runL", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//우측 질주
+	EFFECTMANAGER->addEffect("EFFECT_runR", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//동맹교섭
+	EFFECTMANAGER->addEffect("EFFECT_shake", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//방망이 타격(중첩)
+	EFFECTMANAGER->addEffect("EFFECT_spark", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//애너미 타격2
+	EFFECTMANAGER->addEffect("EFFECT_star", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+	//기절
+	EFFECTMANAGER->addEffect("EFFECT_stun", "resources/IMG/effect/attack.bmp", 612, 196, 204, 196, 1, 5.0f, 1000);
+
 //	//모든 피격 기본 배경
-//	IMAGEMANAGER->addFrameImage("EFFECT_attack", "Resource/IMG/effect/attack.bmp", 612, 196, 3, 1, true, RGB(255, 0, 255));
+//	IMAGEMANAGER->addFrameImage("EFFECT_attack", "resources/IMG/effect/attack.bmp", 612, 196, 3, 1, true, RGB(255, 0, 255));
 //
 //	
 //																																	//모든 피격
