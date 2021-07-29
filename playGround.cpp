@@ -57,6 +57,7 @@ void playGround::render()
 	PatBlt(getMemDC(), 0, 0, WINSIZEX, WINSIZEY, BLACKNESS);
 	//==============위에는 제발 건드리지 마라 ============
 	
+
 	_ponpoko->render();
 
 	//=============== 밑에도 건들지마라 ================

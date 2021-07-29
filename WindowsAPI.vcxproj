@@ -161,6 +161,7 @@
     <ClInclude Include="jump.h" />
     <ClInclude Include="keyManager.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="pixelCol.h" />
     <ClInclude Include="playGround.h" />
     <ClInclude Include="ponpoko.h" />
     <ClInclude Include="progressBar.h" />
@@ -200,6 +201,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="pixelCol.cpp" />
     <ClCompile Include="playGround.cpp" />
     <ClCompile Include="ponpoko.cpp" />
     <ClCompile Include="progressBar.cpp" />
