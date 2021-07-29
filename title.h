@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include "gameNode.h"
 
 class title : public gameNode
@@ -24,9 +24,9 @@ public:
 	void update();
 	void render();
 };
+*/
 
-
-/*#pragma once
+#pragma once
 #include "gameNode.h"
 
 struct titlePlayer
@@ -43,7 +43,7 @@ private:
 	//RECT _player[8];
 
 	float _time;
-	//int _x, _y;
+	int _x, _y;
 
 	bool _isTitle;
 	bool _isFinish;
@@ -59,4 +59,3 @@ public:
 	void render();
 };
 
-*/

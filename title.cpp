@@ -1,4 +1,4 @@
-#include "pch.h"
+/*#include "pch.h"
 #include "title.h"
 
 title::title()
@@ -110,8 +110,9 @@ void title::render()
 		}
 	}
 }
+*/
 
-/*#include "pch.h"
+#include "pch.h"
 #include "title.h"
 
 title::title()
@@ -155,64 +156,64 @@ void title::update()
 
 	if (!_isTitle)
 	{
-		if (_tPlayer[0].rc.left >= 320)
+		if (_tPlayer[7].rc.left <= 930)
 		{
-			_tPlayer[0].rc.left -= 3;
-			_tPlayer[0].rc.right -= 3;
+			_tPlayer[7].isArrive = true;
 
-			for (int i = 1; i < 8; i++)
+			for (int i = 6; i >= 0; i--)
 			{
-				//if (i == 4 && _player[i - 1].left < _player[i].left - 140)
-				//{
-				//	_player[i].left -= 3;
-				//	_player[i].right -= 3;
-				//}
-				if (_tPlayer[i - 1].rc.left < _tPlayer[i].rc.left - 80)
+				if (i == 3 && _tPlayer[i + 1].rc.left > _tPlayer[i].rc.left + 140)
 				{
-					_tPlayer[i].rc.left -= 3;
-					_tPlayer[i].rc.right -= 3;
+					_tPlayer[i].isArrive = true;
 				}
-			}
-
-			for (int i = 7; i >= 0; i--)
-			{
-
-			}
-
-			if (TIMEMANAGER->getWorldTime() >= _time + 0.5f)
-			{
-				_time = TIMEMANAGER->getWorldTime();
-
-				if (_tPlayer[i].currentX == 1 && !_isFinish)
+				else if (i != 3 && _tPlayer[i + 1].rc.left > _tPlayer[i].rc.left + 80)
 				{
-					_x = 0;
+					_tPlayer[i].isArrive = true;
 				}
-
-				else _x++;
 			}
 		}
-		else
+
+		for (int i = 0; i < 8; i++)
 		{
+			if (_tPlayer[i].isArrive == false)
+			{
+				_tPlayer[i].rc.left -= 3;
+				_tPlayer[i].rc.right -= 3;
+			}
+		}
+
+		for (int i = 0; i < 8; i++)
+		{
+
 			if (TIMEMANAGER->getWorldTime() >= _time + 0.5f)
 			{
-				_time = TIMEMANAGER->getWorldTime();
-
-				_isFinish = true;
-
-				if (_y == 1)
+				if (_tPlayer[i].currentX == 1 && !_isFinish)
 				{
-					_x = 2;
-					_y = 0;
+					_tPlayer[i].currentX = 0;
 				}
 
-				else
-				{
-					_x = 0;
-					_y++;
-				}
+				else _tPlayer[i].currentX++;
+
+			}
+		}
+
+		if (TIMEMANAGER->getWorldTime() >= _time + 0.5f)
+		{
+			if (_y == 1)
+			{
+				_x = 2;
+				_y = 0;
+			}
+
+			else
+			{
+				_x = 0;
+				_y++;
 			}
 		}
 	}
+
+	if (TIMEMANAGER->getWorldTime() >= _time + 0.5f && !_isTitle) _time = TIMEMANAGER->getWorldTime();
 }
 
 void title::render()
@@ -227,9 +228,8 @@ void title::render()
 
 		for (int i = 0; i < 8; i++)
 		{
-			IMAGEMANAGER->findImage("titlePlayer")->frameRender(getMemDC(), _player[i].left, _player[i].top, _x, _y);
-			//else IMAGEMANAGER->findImage("titlePlayer")->frameRender(getMemDC(), _player[i].left, _player[i].top, _x, _y);
+			if (!_tPlayer[i].isArrive) IMAGEMANAGER->findImage("titlePlayer")->frameRender(getMemDC(), _tPlayer[i].rc.left, _tPlayer[i].rc.top, _tPlayer[i].currentX, _tPlayer[i].currentY);
+			else IMAGEMANAGER->findImage("titlePlayer")->frameRender(getMemDC(), _tPlayer[i].rc.left, _tPlayer[i].rc.top, _x, _y);
 		}
 	}
 }
-*/
