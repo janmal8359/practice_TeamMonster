@@ -40,7 +40,6 @@ class title : public gameNode
 {
 private:
 	titlePlayer _tPlayer[8];
-	//RECT _player[8];
 
 	float _time;
 	int _x, _y;

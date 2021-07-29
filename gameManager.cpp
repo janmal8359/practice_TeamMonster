@@ -35,6 +35,8 @@ void gameManager::update()
 	{
 		_isPlay = true;
 
+		Sleep(1000);
+
 		// 크레딧이 하나라도 들어오면 플레이씬으로 전환
 		SCENEMANAGER->changeScene("플레이");
 	}
