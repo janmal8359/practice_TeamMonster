@@ -3,12 +3,6 @@
 
 HRESULT ponpoko::init()
 {
-	IMAGEMANAGER->addFrameImage("ponpoko_idle", "IMG/idle.bmp", 70, 70, 1, 1, true, RGB(255, 0, 255));
-	IMAGEMANAGER->addFrameImage("ponpoko_run", "IMG/run.bmp", 490, 140, 7, 2, true, RGB(255, 0, 255));
-	IMAGEMANAGER->addFrameImage("ponpoko_climb", "IMG/climb.bmp", 210, 70, 3, 1, true, RGB(255, 0, 255));
-	IMAGEMANAGER->addFrameImage("ponpoko_jump", "IMG/jump.bmp", 140, 140, 2, 2, true, RGB(255, 0, 255));
-
-	
 	_run = new run;
 	_run->init();
 

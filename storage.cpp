@@ -38,6 +38,13 @@ HRESULT storage::init()
 	IMAGEMANAGER->addImage("ladder", "ladder.bmp", 38, 173, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addImage("randomItem", "randomItem.bmp", 50, 50, true, RGB(255, 0, 255));
 
+	IMAGEMANAGER->addFrameImage("ponpoko_idle", "IMG/idle.bmp", 70, 70, 1, 1, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addFrameImage("ponpoko_run", "IMG/run.bmp", 490, 140, 7, 2, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addFrameImage("ponpoko_climb", "IMG/climb.bmp", 210, 70, 3, 1, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addFrameImage("ponpoko_jump", "IMG/jump.bmp", 140, 140, 2, 2, true, RGB(255, 0, 255));
+
+	IMAGEMANAGER->addImage("¸ÊÅ×½ºÆ®", "IMG/mapT.bmp", 1280, 964, true, RGB(255, 0, 255));
+
 #pragma endregion nuguri
 
 
