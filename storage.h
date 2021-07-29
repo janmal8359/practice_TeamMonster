@@ -7,6 +7,6 @@ public:
 	storage();
 	~storage();
 
-	HRESULT init();
+	virtual HRESULT init();
 };
 

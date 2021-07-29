@@ -11,6 +11,14 @@ storage::~storage()
 
 HRESULT storage::init()
 {
+#pragma region nuguri
+
+	// 타이틀 이미지
+	IMAGEMANAGER->addImage("title0", "resources/ponpoko/Title.bmp", 1280, 964, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("title1", "resources/ponpoko/Title2.bmp", 1280, 964, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addImage("background", "resources/ponpoko/background.bmp", 1280, 964, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addFrameImage("titlePlayer", "resources/ponpoko/titlePlayer.bmp", 162, 108, 3, 2, true, RGB(255, 0, 255));
+
 	//배경
 	IMAGEMANAGER->addImage("STAGE_backGround", "resources/IMG/stage/backGround.bmp", 1280, 964, true, RGB(255, 0, 255));
 	//적(파란색)
@@ -29,6 +37,9 @@ HRESULT storage::init()
 	IMAGEMANAGER->addImage("fruit", "fruit.bmp", 50, 50, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addImage("ladder", "ladder.bmp", 38, 173, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addImage("randomItem", "randomItem.bmp", 50, 50, true, RGB(255, 0, 255));
+
+#pragma endregion nuguri
+
 
 
 //#pragma region IMGPATH
@@ -283,6 +294,42 @@ HRESULT storage::init()
 //	IMAGEMANAGER->addImage("OBJECT_random", "Resource/IMG/object/randomItem.bmp", 72, 72, true, RGB(255, 0, 255));
 //	//가짜 항아리
 //	IMAGEMANAGER->addImage("OBJECT_fake", "Resource/IMG/object/fakeItem.bmp", 72, 72, true, RGB(255, 0, 255));
+//	//오브젝트
+//	//Resource/IMG/object
+//	//사과
+//	IMAGEMANAGER->addImage("OBJECT_apple", "Resource/IMG/object/apple.bmp", 100, 100, true, RGB(255, 0, 255));
+//	//국수
+//	IMAGEMANAGER->addImage("OBJECT_chili", "Resource/IMG/object/chili.bmp", 100, 100, true, RGB(255, 0, 255));
+//	//치킨
+//	IMAGEMANAGER->addImage("OBJECT_hen", "Resource/IMG/object/hen.bmp", 100, 100, true, RGB(255, 0, 255));
+//	//책상
+//	IMAGEMANAGER->addImage("OBJECT_desk", "Resource/IMG/object/desk.bmp", 147, 162, true, RGB(255, 0, 255));
+//	//교사 책상
+//	IMAGEMANAGER->addImage("OBJECT_teachers_desk", "Resource/IMG/object/teachers_desk.bmp", 83, 34, true, RGB(255, 0, 255));
+//	//테이블
+//	IMAGEMANAGER->addImage("OBJECT_table", "Resource/IMG/object/table.bmp", 339, 162, true, RGB(255, 0, 255));
+//	//울타리
+//	IMAGEMANAGER->addImage("OBJECT_fence", "Resource/IMG/object/fence.bmp", 476, 71, true, RGB(255, 0, 255));
+//	//기둥 파편1
+//	IMAGEMANAGER->addImage("OBJECT_particle1", "Resource/IMG/object/pillar_particle_1.bmp", 64, 64, true, RGB(255, 0, 255));
+//	//기둥 파편2																					 
+//	IMAGEMANAGER->addImage("OBJECT_particle2", "Resource/IMG/object/pillar_particle_2.bmp", 64, 64, true, RGB(255, 0, 255));
+//	//기둥 파편3																					
+//	IMAGEMANAGER->addImage("OBJECT_particle3", "Resource/IMG/object/pillar_particle_3.bmp", 64, 64, true, RGB(255, 0, 255));
+//	//동전
+//	IMAGEMANAGER->addFrameImage("OBJECT_gold", "Resource/IMG/object/gold_coin_spin.bmp", 512, 512, 4, 4, true, RGB(255, 0, 255));
+//	//지폐
+//	IMAGEMANAGER->addFrameImage("OBJECT_money", "Resource/IMG/object/money_green.bmp", 576, 432, 4, 4, true, RGB(255, 0, 255));
+//	//후방 기둥
+//	IMAGEMANAGER->addFrameImage("OBJECT_backPillar", "Resource/IMG/object/pillar.bmp", 390, 678, 2, 1, true, RGB(255, 0, 255));
+//	//전방 기둥
+//	IMAGEMANAGER->addFrameImage("OBJECT_firstPillar", "Resource/IMG/object/pillar_big.bmp", 390, 957, 2, 1, true, RGB(255, 0, 255));
+//	//소울
+//	IMAGEMANAGER->addFrameImage("OBJECT_pet", "Resource/IMG/object/pet.bmp", 576, 96, 6, 1, true, RGB(255, 0, 255));
+//	//방망이
+//	IMAGEMANAGER->addFrameImage("OBJECT_bat", "Resource/IMG/object/bat.bmp", 179, 104, 1, 2, true, RGB(255, 0, 255));
+//	//자판기
+//	IMAGEMANAGER->addFrameImage("OBJECT_vendingMachine", "Resource/IMG/object/vendingMachine.bmp", 525, 260, 2, 1, true, RGB(255, 0, 255));
 //	//}*/
 //
 //
@@ -316,7 +363,6 @@ HRESULT storage::init()
 //
 ////플레이어 이미지
 //#pragma region PLAYERIMAGE
-
 ////#pragma region IMGPATH
 //
 //
@@ -942,6 +988,9 @@ HRESULT storage::init()
 //#pragma endregion ENEMYIMAGE
 ////
 ////#pragma region UI
+//#pragma endregion ENEMYIMAGE
+//
+//#pragma region UI
 //
 //		//battle
 //		//보스 HP 뒤
@@ -1416,6 +1465,12 @@ HRESULT storage::init()
 //#pragma endregion SFXSOURCE
 ////
 ////#pragma endregion SFXSOURCE
+
+
+
+
+
+
 
 
 

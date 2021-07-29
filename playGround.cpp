@@ -34,6 +34,8 @@ HRESULT playGround::init()
 
 	SCENEMANAGER->addScene("UI", new ui);
 	SCENEMANAGER->changeScene("UI");
+	_gm = new gameManager;
+	_gm->init();
 
 	return S_OK;
 }
@@ -52,6 +54,8 @@ void playGround::update()
 	_en->update();
 	SCENEMANAGER->update();
 
+	//SCENEMANAGER->update();
+	_gm->update();
 }
 
 //여기다 그려줘라!!!
@@ -65,6 +69,11 @@ void playGround::render()
 	IMAGEMANAGER->findImage("STAGE_backGround")->render(getMemDC(), 0, 0);
 	
 	SCENEMANAGER->render();
+
+	
+	//SCENEMANAGER->render();
+	_gm->render();
+
 
 	_en->render();
 
