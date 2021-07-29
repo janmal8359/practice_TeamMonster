@@ -75,7 +75,7 @@ void ui::update()
 
 void ui::render()
 {
-	IMAGEMANAGER->render("BG", getMemDC(), 0, 0);
+	//IMAGEMANAGER->render("BG", getMemDC(), 0, 0);
 
 	char str[128];
 
@@ -97,10 +97,10 @@ void ui::render()
 	if (KEYMANAGER->isToggleKey(VK_TAB))
 	{
 
-		for (int i = 0; i < 4; i++)
-		{
-			Rectangle(getMemDC(), _thornRc[i]);		// 가시
-		}
+		//for (int i = 0; i < 4; i++)
+		//{
+		//	Rectangle(getMemDC(), _thornRc[i]);		// 가시
+		//}
 
 		for (int i = 0; i < _lifeNum; i++)
 		{
@@ -111,65 +111,65 @@ void ui::render()
 		{
 			Rectangle(getMemDC(), _fruitRc[i]);		// 라이프
 		}
-		for (int i = 0; i < 8; i++)
-		{
-			if (!_isFruit[i])
-			{
-				Rectangle(getMemDC(), _mapFruitRc[i]);		// 맵과일
-			}
-		}
-
-		for (int i = 0; i < 4; i++)
-		{
-			Rectangle(getMemDC(), _ladderRc[i]);			//사다리
-
-		}
-
-		for (int i = 0; i < 2; i++)
-		{
-			if (!_isJar[i])
-			{
-				Rectangle(getMemDC(), _jarRc[i]);			//항아리
-			}
-		}
+		//for (int i = 0; i < 8; i++)
+		//{
+		//	if (!_isFruit[i])
+		//	{
+		//		Rectangle(getMemDC(), _mapFruitRc[i]);		// 맵과일
+		//	}
+		//}
+		//
+		//for (int i = 0; i < 4; i++)
+		//{
+		//	Rectangle(getMemDC(), _ladderRc[i]);			//사다리
+		//
+		//}
+		//
+		//for (int i = 0; i < 2; i++)
+		//{
+		//	if (!_isJar[i])
+		//	{
+		//		Rectangle(getMemDC(), _jarRc[i]);			//항아리
+		//	}
+		//}
 	}
 
-	for (int i = 0; i < 4; i++)
-	{
-		IMAGEMANAGER->render("thorn", getMemDC(), _thornRc[i].left, _thornRc[i].top);		//가시
-	}
+	//for (int i = 0; i < 4; i++)
+	//{
+	//	IMAGEMANAGER->render("thorn", getMemDC(), _thornRc[i].left, _thornRc[i].top);		//가시
+	//}
 
 	for (int i = 0; i < _lifeNum; ++i)
 	{
 		IMAGEMANAGER->render("life", getMemDC(), _lifeRc[i].left, _lifeRc[i].top);			//생명
 	}
 
-	for (int i = 0; i < _fruitNum; ++i)
-	{
-		IMAGEMANAGER->render("fruit", getMemDC(), _fruitRc[i].left, _fruitRc[i].top);			//과일
-	}
+	//for (int i = 0; i < _fruitNum; ++i)
+	//{
+	//	IMAGEMANAGER->render("fruit", getMemDC(), _fruitRc[i].left, _fruitRc[i].top);			//과일
+	//}
 
 	
-	for (int i = 0; i < 8; ++i)
-	{
-		if (!_isFruit[i])
-		{
-			IMAGEMANAGER->render("fruit", getMemDC(), _mapFruitRc[i].left, _mapFruitRc[i].top);			//맵에 뿌려진 과일
-		}
-	}
-	for (int i = 0; i < 4; ++i)
-	{
-		IMAGEMANAGER->render("ladder", getMemDC(), _ladderRc[i].left, _ladderRc[i].top);			//사다리
-	}
-
-	for (int i = 0; i < 2; ++i)
-	{
-		if (!_isJar[i])
-		{
-			IMAGEMANAGER->render("randomItem", getMemDC(), _jarRc[i].left, _jarRc[i].top);			//사다리
-		}
-	}
-	Rectangle(getMemDC(), _rc);		//충돌체크
+	//for (int i = 0; i < 8; ++i)
+	//{
+	//	if (!_isFruit[i])
+	//	{
+	//		IMAGEMANAGER->render("fruit", getMemDC(), _mapFruitRc[i].left, _mapFruitRc[i].top);			//맵에 뿌려진 과일
+	//	}
+	//}
+	//for (int i = 0; i < 4; ++i)
+	//{
+	//	IMAGEMANAGER->render("ladder", getMemDC(), _ladderRc[i].left, _ladderRc[i].top);			//사다리
+	//}
+	//
+	//for (int i = 0; i < 2; ++i)
+	//{
+	//	if (!_isJar[i])
+	//	{
+	//		IMAGEMANAGER->render("randomItem", getMemDC(), _jarRc[i].left, _jarRc[i].top);			//사다리
+	//	}
+	//}
+	//Rectangle(getMemDC(), _rc);		//충돌체크
 
 	HDC hdc;
 	PAINTSTRUCT ps;
@@ -181,9 +181,6 @@ void ui::render()
 	Rectangle(getMemDC(), _timerBar);		//타이머 바
 	SelectObject(getMemDC(), OldBrush);
 	DeleteObject(MyBrush);
-	
-
-
 }
 
 void ui::thorn()

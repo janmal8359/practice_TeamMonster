@@ -20,22 +20,13 @@ playGround::~playGround()
 //초기화는 여기에다 해라!!!
 HRESULT playGround::init()
 {
-
 	gameNode::init(true);
 
-	_ponpoko = new ponpoko;
-	_ponpoko->init();
-	_st = new storage;
-	_st->init();
-
-	_en = new enemyManager;
-	_en->init();
-	_en->setMinion();
-
-	SCENEMANAGER->addScene("UI", new ui);
-	SCENEMANAGER->changeScene("UI");
 	_gm = new gameManager;
 	_gm->init();
+
+	//SCENEMANAGER->addScene("UI", new ui);
+	//SCENEMANAGER->changeScene("UI");
 
 	return S_OK;
 }
@@ -51,10 +42,6 @@ void playGround::update()
 {
 	gameNode::update();
 
-	_en->update();
-	SCENEMANAGER->update();
-
-	//SCENEMANAGER->update();
 	_gm->update();
 }
 
@@ -64,18 +51,9 @@ void playGround::render()
 	PatBlt(getMemDC(), 0, 0, WINSIZEX, WINSIZEY, BLACKNESS);
 	//==============위에는 제발 건드리지 마라 ============
 
-	_ponpoko->render();
-
 	IMAGEMANAGER->findImage("STAGE_backGround")->render(getMemDC(), 0, 0);
 	
-	SCENEMANAGER->render();
-
-	
-	//SCENEMANAGER->render();
 	_gm->render();
-
-
-	_en->render();
 
 	//=============== 밑에도 건들지마라 ================
 	_backBuffer->render(getHDC(), 0, 0);

@@ -168,11 +168,23 @@
     <ClInclude Include="ui.h">
       <Filter>playGround</Filter>
     </ClInclude>
-    <ClInclude Include="title.h">
-      <Filter>playGround\titleScene</Filter>
+    <ClInclude Include="enemy.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="enemyManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="minion.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="snake.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="gameManager.h">
       <Filter>playGround\gameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="title.h">
+      <Filter>playGround\titleScene</Filter>
     </ClInclude>
     <ClInclude Include="playScene.h">
       <Filter>playGround\playScene</Filter>
@@ -269,11 +281,23 @@
     <ClCompile Include="ui.cpp">
       <Filter>playGround</Filter>
     </ClCompile>
-    <ClCompile Include="title.cpp">
-      <Filter>playGround\titleScene</Filter>
+    <ClCompile Include="enemy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="enemyManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="minion.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="snake.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="gameManager.cpp">
       <Filter>playGround\gameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="title.cpp">
+      <Filter>playGround\titleScene</Filter>
     </ClCompile>
     <ClCompile Include="playScene.cpp">
       <Filter>playGround\playScene</Filter>
