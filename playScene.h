@@ -18,8 +18,6 @@ public:
 	void release();
 	void update();
 	void render();
-
-
 };
 
 // 플레이어 생성

@@ -88,6 +88,18 @@ void enemyManager::setSnake()
 
 void enemyManager::enemyCollision()
 {
+	for (int i = 0; i <getVMinion().size(); i++)
+	{
+		RECT temp;
+		RECT PL = _ponpoko->getState()->getRect();
+		RECT EN = getVMinion()[i]->getRect();
+
+		if (IntersectRect(&temp, &EN, &PL))
+		{
+			SCENEMANAGER->changeScene("너구리 타이틀");
+		}
+
+	}
 }
 
 void enemyManager::snakeCollision()

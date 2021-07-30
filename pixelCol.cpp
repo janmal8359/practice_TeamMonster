@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "pixelCol.h"
 
-
 HRESULT pixelCol::init()
 {
 	_ground = IMAGEMANAGER->findImage("¸ÊÅ×½ºÆ®");
@@ -42,7 +41,7 @@ void pixelCol::update()
 
 			if (!(r == 255 && g == 0 && b == 255))
 			{
-				_y = i - (_rc.bottom - _rc.top) / 2;
+				_y = i - ((_rc.bottom - _rc.top) / 2);
 				break;
 			}
 			else
@@ -63,7 +62,7 @@ void pixelCol::update()
 
 			if (!(r == 255 && g == 0 && b == 255))
 			{
-				_y = i - (_rc.bottom - _rc.top / 2);
+				_y = i - ((_rc.bottom - _rc.top) / 2);
 				_isJump = false;
 				break;
 			}

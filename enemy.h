@@ -38,6 +38,6 @@ public:
 	void draw();
 
 	inline RECT getRect() { return _rc; }
-	int getEnemyType() { return _eType; }
+	int getEnemyType() { return (int)_eType; }
 };
 

@@ -2,6 +2,7 @@
 #include "gameNode.h"
 #include "minion.h"
 #include "snake.h"
+#include "playScene.h"
 #include <vector>
 
 class enemyManager : public gameNode
@@ -15,6 +16,7 @@ private:
 	viEnemy		_viMinion;
 
 	snake* _snk;
+	ponpoko* _ponpoko;
 
 public:
 	enemyManager();
