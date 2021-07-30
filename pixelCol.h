@@ -2,6 +2,8 @@
 #include "gameNode.h"
 #include "ponpoko.h"
 
+//class ponpoko;
+
 class pixelCol : public gameNode
 {
 private:

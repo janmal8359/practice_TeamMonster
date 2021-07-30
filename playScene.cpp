@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "playScene.h"
+#include "enemyManager.h"
 
 HRESULT playScene::init()
 {

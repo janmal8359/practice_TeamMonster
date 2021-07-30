@@ -5,6 +5,8 @@
 #include "playScene.h"
 #include <vector>
 
+class ponpoko;
+
 class enemyManager : public gameNode
 {
 private:
@@ -32,6 +34,8 @@ public:
 
 	void enemyCollision();
 	void snakeCollision();
+
+	void setPlayerMemoryAddressLink(ponpoko* ponpoko) { _ponpoko = ponpoko; }
 
 	vector<enemy*> getVMinion() { return _vMinion; }
 	vector<enemy*>::iterator getVIMinion() { return _viMinion; }

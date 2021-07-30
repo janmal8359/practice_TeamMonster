@@ -5,6 +5,8 @@
 #include "pixelCol.h"
 #include "enemyManager.h"
 
+//class enemyManager;
+
 class playScene : public gameNode
 {
 private:

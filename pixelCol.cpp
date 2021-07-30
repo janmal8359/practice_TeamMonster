@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "pixelCol.h"
+//#include "ponpoko.h"
 
 HRESULT pixelCol::init()
 {

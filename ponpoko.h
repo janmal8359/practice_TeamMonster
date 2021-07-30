@@ -33,6 +33,8 @@ public:
 	void setValue(stateManager* stateManager);
 	stateManager* getState() { return _stateManager; }
 
+
+
 	// 상태들마다 하나씩 쓰기
 	void setRun() { setValue(_run); }
 	void setJump() { setValue(_jump); }

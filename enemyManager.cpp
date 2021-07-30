@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "enemyManager.h"
+#include "ponpoko.h"
 
 enemyManager::enemyManager()
 {
@@ -91,7 +92,7 @@ void enemyManager::enemyCollision()
 	for (int i = 0; i <getVMinion().size(); i++)
 	{
 		RECT temp;
-		RECT PL = _ponpoko->getState()->getRect();
+		RECT PL = _ponpoko->getState()->getRect();//ÀÌ³נ!!!!!
 		RECT EN = getVMinion()[i]->getRect();
 
 		if (IntersectRect(&temp, &EN, &PL))

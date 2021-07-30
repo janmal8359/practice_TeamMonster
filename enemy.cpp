@@ -96,15 +96,11 @@ void enemy::move()
 
 		if (_count % 10 == 0)
 		{
-			/*
-			if (_currentFrameX >= _enemy->getMaxFrameX()) _currentFrameX = 0;
-			*/
 			
-			if (_currentFrameX == 0) _currentFrameX = 1;
-			else if (_currentFrameX == 1) _currentFrameX = 0;
-
+			if (_currentFrameX >= _enemy->getMaxFrameX()) _currentFrameX = 0;
+			
 			_enemy->setFrameX(_currentFrameX);
-			//_currentFrameX++;
+			_currentFrameX++;
 
 			_count = 0;
 		}
