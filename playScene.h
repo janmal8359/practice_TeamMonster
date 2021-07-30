@@ -1,17 +1,18 @@
 #pragma once
 #include "gameNode.h"
-#include "ui.h"
 #include "ponpoko.h"
 #include "pixelCol.h"
 #include "enemyManager.h"
+#include "stateManager.h"
 
 class playScene : public gameNode
 {
 private:
+
 	ponpoko* _ponpoko;
 	pixelCol* _pc;
 	enemyManager* _em;
-	ui* _ui;
+	stateManager* _stateManager;
 
 public:
 	HRESULT init();
@@ -19,6 +20,7 @@ public:
 	void update();
 	void render();
 
+	ponpoko* getPonpoko() { return _ponpoko; }
 
 };
 

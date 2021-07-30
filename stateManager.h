@@ -64,5 +64,9 @@ public:
 	//มกวม
 	virtual float getYSpeed() { return _ySpeed; };
 	virtual void setYSpeed(float ySpeed) { _ySpeed = ySpeed; }
+
+	
+
+	
 };
 

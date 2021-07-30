@@ -1,9 +1,13 @@
 #pragma once
 #include "stateManager.h"
 
+class ui;
+
 class idle : public stateManager
 {
 private:
+
+	ui* _ui;
 
 public:
 	virtual HRESULT init();			//초기화 함수

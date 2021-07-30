@@ -114,5 +114,5 @@ void enemy::move()
 
 void enemy::draw()
 {
-	_enemy->frameRender(getMemDC(), _rc.left, _rc.top, _currentFrameX, _currentFrameY);
+	//6_enemy->frameRender(getMemDC(), _rc.left, _rc.top, _currentFrameX, _currentFrameY);
 }

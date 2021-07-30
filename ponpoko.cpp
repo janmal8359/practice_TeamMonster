@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "ponpoko.h"
+#include "ui.h"
 
 HRESULT ponpoko::init()
 {
@@ -37,6 +38,8 @@ void ponpoko::update()
 void ponpoko::render()
 {
 	_stateManager->render();
+
+
 }
 
 void ponpoko::setValue(stateManager* stateManager)

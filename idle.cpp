@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "idle.h"
 #include "ponpoko.h"
+#include "ui.h"
 
 HRESULT idle::init()
 {
@@ -50,7 +51,7 @@ void idle::move()
 		_dir = LEFT;
 		_aniL->stop();
 
-		if (KEYMANAGER->isOnceKeyDown(VK_UP)&& !_isJump) {
+		if (KEYMANAGER->isOnceKeyDown(VK_UP)&& !_isJump && !_ui->getLadder()) {
 			_isJump = true;
 			_p->setJump();
 		}
@@ -60,13 +61,13 @@ void idle::move()
 		_dir = RIGHT;
 		_aniR->stop();
 
-		if (KEYMANAGER->isOnceKeyDown(VK_UP) && !_isJump ) {
+		if (KEYMANAGER->isOnceKeyDown(VK_UP) && !_isJump && !_ui->getLadder()) {
 			_isJump = true;
 			_p->setJump();
 		}
 		else _p->setRun();
 	}
-	else if (KEYMANAGER->isOnceKeyDown(VK_UP) && !_isJump) {
+	else if (KEYMANAGER->isOnceKeyDown(VK_UP) && !_isJump && !_ui->getLadder()) {
 		_aniL->stop();
 		_aniR->stop();
 

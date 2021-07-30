@@ -55,6 +55,7 @@ void run::move()
 
 		_isJump = true;
 		_p->setJump();
+
 	}
 
 	// 키는 한쪽만 눌리게 만들어야지 (다른쪽 안눌렸을 경우 || 눌렸지만 같은 방향인 경우엔 OK
@@ -77,4 +78,5 @@ void run::move()
 			_x += 5;
 		}
 	}
+	
 }

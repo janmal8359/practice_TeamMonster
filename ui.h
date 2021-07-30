@@ -1,11 +1,15 @@
 #pragma once
 #include "gameNode.h"
 
-
+class ponpoko;
 
 class ui : public gameNode
 {
 private:
+
+
+	ponpoko* _ponpoko; //스테이트 매니저 빈클래스
+
 	float _timer;
 
 	image _bg2;			//임시배경
@@ -18,7 +22,8 @@ private:
 	image _fruit[8];	//과일 이미지
 	
 	//image _timerBar;	//타이머
-
+	
+	int _count;
 	int _score;			//점수
 	int _topScore;		//탑점수
 	
@@ -34,6 +39,8 @@ private:
 	float _lifeX, _lifeY;			//수명 위치
 
 	float _jarX[2], _jarY[2];		//항아리 XY축
+
+	int _sceneNum;
 	
 	///////////////////////////////////////////////////////
 	RECT _rc;						//렉트충돌을 위해
@@ -54,6 +61,7 @@ private:
 	bool _isThorn;					//가시 충돌
 	bool _isFruit[8];				//과일 충돌
 	bool _isJar[2];					//항아리충돌
+	bool _isladder;					//사다리 충돌
 
 public:
 
@@ -85,6 +93,14 @@ public:
 
 	float getJarY1() { return _jarY[1]; }
 	void setJarY1(float jarY1) { _jarY[1] = jarY1; }
+
+	void setStateManagerLink(ponpoko* SM) { _ponpoko = SM; } //상태패턴과 연동
+
+	int getSceneNum() { return _sceneNum; }
+	void setSceneNum(int num) { _sceneNum = num; }
+
+	bool getLadder() { return _isladder; }
+	void setLadder(bool isLadder) { _isladder = isLadder; } //사다리 삿다리 사다리
 
 };
 

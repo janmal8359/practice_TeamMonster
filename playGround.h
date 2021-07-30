@@ -2,11 +2,15 @@
 #include "gameNode.h"
 #include "soundTest.h"
 #include "gameManager.h"
+#include "stateManager.h"
 
 class playGround : public gameNode
 {
 private:
 	gameManager* _gm;
+
+
+	stateManager* _stateManager;
 
 public:
 	playGround();

@@ -28,7 +28,6 @@ public:
 
 #pragma once
 #include "gameNode.h"
-#include "ui.h"
 
 struct titlePlayer
 {
@@ -47,8 +46,6 @@ private:
 
 	bool _isTitle;
 	bool _isFinish;
-
-	ui* _ui;
 
 
 public:

@@ -7,6 +7,7 @@
 //#include "climb.h"
 //#include "die.h"
 
+class ui;
 
 //UNSAFE 오류좀 띄우지말라고 선언하는 것임
 #pragma warning(disable:4996)
@@ -14,6 +15,9 @@
 class ponpoko : public gameNode
 {
 private:
+
+	ui* _ui;
+
 	stateManager* _stateManager;
 
 	run* _run;
@@ -21,6 +25,7 @@ private:
 	idle* _idle;
 	//climb* _climb;
 	//die* _die;
+	bool _aa;
 
 public:
 
@@ -39,5 +44,8 @@ public:
 	void setIdle() { setValue(_idle); }
 	//void setClimb() { setValue(_climb); }
 	//void setDie() { setValue(_die); }
+
+	void setui(ui* ui) { _ui = ui; }
+
 };
 

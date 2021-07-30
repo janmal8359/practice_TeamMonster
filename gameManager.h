@@ -3,14 +3,23 @@
 #include "title.h"
 #include "playScene.h"
 #include "storage.h"
-//#include "ui.h"
+#include "stateManager.h"
+#include "ui.h"
+#include "ponpoko.h"
 //#include "ponpoko.h"
 //#include "enemyManager.h"
+
+class ui;
 
 class gameManager : public gameNode
 {
 private:
 	int _credit;
+
+	ui* _ui;
+	playScene* _ps;
+	ponpoko* _pp;		//ÆùÆ÷ÄÚ
+	
 
 	storage* _st;
 	//ui* _ui;

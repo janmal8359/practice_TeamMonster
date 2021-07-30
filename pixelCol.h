@@ -45,5 +45,7 @@ public:
 
 	void setState(ponpoko* state) { _p = state; }
 
+	
+
 };
 

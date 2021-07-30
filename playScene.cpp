@@ -14,8 +14,12 @@ HRESULT playScene::init()
 	_em->init();
 	_em->setMinion();
 
-	_ui = new ui;
-	_ui->init();
+	//_ui = new ui;
+	//_ui->init();
+	//
+	//_stateManager = new stateManager;
+	//_stateManager->init();
+	//_ui->setStateManagerLink(_stateManager);
 
 	return S_OK;
 }
@@ -49,7 +53,7 @@ void playScene::update()
 	_ponpoko->update();
 
 	_em->update();
-	_ui->update();
+	//_ui->update();
 }
 
 void playScene::render()
@@ -60,5 +64,5 @@ void playScene::render()
 	_pc->render();
 	_ponpoko->render();
 	_em->render();
-	_ui->render();
+	//_ui->render();
 }

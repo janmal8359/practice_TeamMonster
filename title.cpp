@@ -139,9 +139,6 @@ HRESULT title::init()
 		_tPlayer[i].isArrive = false;
 	}
 
-	_ui = new ui;
-	_ui->init();
-
 	return S_OK;
 }
 
@@ -218,7 +215,7 @@ void title::update()
 
 	if (TIMEMANAGER->getWorldTime() >= _time + 0.5f && !_isTitle) _time = TIMEMANAGER->getWorldTime();
 
-	_ui->update();
+	
 }
 
 void title::render()
@@ -238,5 +235,5 @@ void title::render()
 		}
 	}
 
-	_ui->render();
+	
 }

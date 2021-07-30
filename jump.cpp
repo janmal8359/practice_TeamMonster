@@ -50,12 +50,20 @@ void jump::move()
 	//점프 구현
 	if (_isJump) {
 		if (_dir == LEFT) _aniL->resume();
-	
+
 		if (_dir == RIGHT) _aniR->resume();
-		
+
 		_y -= _ySpeed;
 		_ySpeed -= _g;
-		//_y -= 5;
+		_y -= 3;
+		if (_dir == LEFT)
+		{
+			_x -= 1;
+		}
+		else if (_dir == RIGHT)
+		{
+			_x += 1;
+		}
 	}
 	else if (!_isJump) {
 		_aniL->stop();

@@ -1,5 +1,8 @@
 #include "pch.h"
 #include "ui.h"
+#include "stateManager.h"
+#include "ponpoko.h"
+
 
 
 HRESULT ui::init()
@@ -26,9 +29,9 @@ HRESULT ui::init()
 	{
 		_isJar[i] = false;			//항아리 박았을때
 	}
-
+	
 	_isThorn = false;		//가시 박았을때? 이걸 내가하나?
-
+	_isladder = false;				//사다리 
 
 	//항아리 xy축 넘겨줄거
 	_jarX[0] = 900;					
@@ -36,7 +39,7 @@ HRESULT ui::init()
 	_jarX[1] = 920;
 	_jarY[1] = 700;
 
-	
+	_sceneNum = 0;
 
 	_x = WINSIZEX / 2;
 	_y = WINSIZEY / 2;
@@ -53,20 +56,16 @@ void ui::update()
 {
 	
 
-	if (KEYMANAGER->isStayKeyDown(VK_RIGHT)) _x += 2;
-	if (KEYMANAGER->isStayKeyDown(VK_LEFT)) _x -= 2;
-	if (KEYMANAGER->isStayKeyDown(VK_DOWN)) _y += 2;
-	if (KEYMANAGER->isStayKeyDown(VK_UP)) _y -= 2;
 
 
-	_rc = RectMakeCenter(_x, _y, 50, 50);
+	//_rc = RectMakeCenter(_x, _y, 50, 50);
 
 	score();		//점수
 	time();
 	thorn();		//가시
 	life();			//라이프
 	ladder();		//사다리
-	collision();
+	if(_sceneNum == 1) collision();
 	jar();			//항아리
 	fruit();		//과일
 
@@ -92,95 +91,110 @@ void ui::render()
 	sprintf_s(str, "worldTime : %f", TIMEMANAGER->getWorldTime());
 	TextOut(getMemDC(), 10, 50, str, strlen(str));
 
+	sprintf_s(str, "충돌확인 : %d", _isThorn);
+	TextOut(getMemDC(), 300, 50, str, strlen(str));
 
+	sprintf_s(str, "카운트 : %d", _count);
+	TextOut(getMemDC(), 500, 50, str, strlen(str));
 
-	if (KEYMANAGER->isToggleKey(VK_TAB))
-	{
+	sprintf_s(str, "사다리충돌 : %d", _isladder);
+	TextOut(getMemDC(), 700, 50, str, strlen(str));
 
-		//for (int i = 0; i < 4; i++)
-		//{
-		//	Rectangle(getMemDC(), _thornRc[i]);		// 가시
-		//}
-
-		for (int i = 0; i < _lifeNum; i++)
-		{
-			Rectangle(getMemDC(), _lifeRc[i]);		// 라이프
-		}
-
-		for (int i = 0; i < _fruitNum; i++)
-		{
-			Rectangle(getMemDC(), _fruitRc[i]);		// 라이프
-		}
-		//for (int i = 0; i < 8; i++)
-		//{
-		//	if (!_isFruit[i])
-		//	{
-		//		Rectangle(getMemDC(), _mapFruitRc[i]);		// 맵과일
-		//	}
-		//}
-		//
-		//for (int i = 0; i < 4; i++)
-		//{
-		//	Rectangle(getMemDC(), _ladderRc[i]);			//사다리
-		//
-		//}
-		//
-		//for (int i = 0; i < 2; i++)
-		//{
-		//	if (!_isJar[i])
-		//	{
-		//		Rectangle(getMemDC(), _jarRc[i]);			//항아리
-		//	}
-		//}
-	}
-
-	//for (int i = 0; i < 4; i++)
-	//{
-	//	IMAGEMANAGER->render("thorn", getMemDC(), _thornRc[i].left, _thornRc[i].top);		//가시
-	//}
-
-	for (int i = 0; i < _lifeNum; ++i)
-	{
-		IMAGEMANAGER->render("life", getMemDC(), _lifeRc[i].left, _lifeRc[i].top);			//생명
-	}
-
-	//for (int i = 0; i < _fruitNum; ++i)
-	//{
-	//	IMAGEMANAGER->render("fruit", getMemDC(), _fruitRc[i].left, _fruitRc[i].top);			//과일
-	//}
 
 	
-	//for (int i = 0; i < 8; ++i)
-	//{
-	//	if (!_isFruit[i])
-	//	{
-	//		IMAGEMANAGER->render("fruit", getMemDC(), _mapFruitRc[i].left, _mapFruitRc[i].top);			//맵에 뿌려진 과일
-	//	}
-	//}
-	//for (int i = 0; i < 4; ++i)
-	//{
-	//	IMAGEMANAGER->render("ladder", getMemDC(), _ladderRc[i].left, _ladderRc[i].top);			//사다리
-	//}
-	//
-	//for (int i = 0; i < 2; ++i)
-	//{
-	//	if (!_isJar[i])
-	//	{
-	//		IMAGEMANAGER->render("randomItem", getMemDC(), _jarRc[i].left, _jarRc[i].top);			//사다리
-	//	}
-	//}
-	//Rectangle(getMemDC(), _rc);		//충돌체크
+	if (_sceneNum != 0)
+	{
+		if (KEYMANAGER->isToggleKey(VK_TAB))
+		{
 
-	HDC hdc;
-	PAINTSTRUCT ps;
-	HBRUSH MyBrush, OldBrush;
+			for (int i = 0; i < 4; i++)
+			{
+				Rectangle(getMemDC(), _thornRc[i]);		// 가시
+			}
 
-	MyBrush = CreateSolidBrush(RGB(051, 051, 204));
-	OldBrush = (HBRUSH)SelectObject(getMemDC(), MyBrush);
+			for (int i = 0; i < _lifeNum; i++)
+			{
+				Rectangle(getMemDC(), _lifeRc[i]);		// 라이프
+			}
 
-	Rectangle(getMemDC(), _timerBar);		//타이머 바
-	SelectObject(getMemDC(), OldBrush);
-	DeleteObject(MyBrush);
+			for (int i = 0; i < _fruitNum; i++)
+			{
+				Rectangle(getMemDC(), _fruitRc[i]);		// 과일
+			}
+
+			for (int i = 0; i < 8; i++)
+			{
+				if (!_isFruit[i])
+				{
+					Rectangle(getMemDC(), _mapFruitRc[i]);		// 맵과일
+				}
+			}
+
+			for (int i = 0; i < 4; i++)
+			{
+				Rectangle(getMemDC(), _ladderRc[i]);			//사다리
+
+			}
+
+			for (int i = 0; i < 2; i++)
+			{
+				if (!_isJar[i])
+				{
+					Rectangle(getMemDC(), _jarRc[i]);			//항아리
+				}
+			}
+		}
+
+		for (int i = 0; i < 4; i++)
+		{
+			IMAGEMANAGER->render("thorn", getMemDC(), _thornRc[i].left, _thornRc[i].top);		//가시
+		}
+
+		for (int i = 0; i < _lifeNum; ++i)
+		{
+			IMAGEMANAGER->render("life", getMemDC(), _lifeRc[i].left, _lifeRc[i].top);			//생명
+		}
+
+		for (int i = 0; i < _fruitNum; ++i)
+		{
+			IMAGEMANAGER->render("fruit", getMemDC(), _fruitRc[i].left, _fruitRc[i].top);			//과일
+		}
+
+
+		for (int i = 0; i < 8; ++i)
+		{
+			if (!_isFruit[i])
+			{
+				IMAGEMANAGER->render("fruit", getMemDC(), _mapFruitRc[i].left, _mapFruitRc[i].top);			//맵에 뿌려진 과일
+			}
+		}
+		for (int i = 0; i < 4; ++i)
+		{
+			IMAGEMANAGER->render("ladder", getMemDC(), _ladderRc[i].left, _ladderRc[i].top);			//사다리
+		}
+
+		for (int i = 0; i < 2; ++i)
+		{
+			if (!_isJar[i])
+			{
+				IMAGEMANAGER->render("randomItem", getMemDC(), _jarRc[i].left, _jarRc[i].top);			//사다리
+			}
+		}
+		//Rectangle(getMemDC(), _rc);		//충돌체크
+
+		HDC hdc;
+		PAINTSTRUCT ps;
+		HBRUSH MyBrush, OldBrush;
+
+		MyBrush = CreateSolidBrush(RGB(051, 051, 204));
+		OldBrush = (HBRUSH)SelectObject(getMemDC(), MyBrush);
+
+		Rectangle(getMemDC(), _timerBar);		//타이머 바
+		SelectObject(getMemDC(), OldBrush);
+		DeleteObject(MyBrush);
+
+
+	}
 }
 
 void ui::thorn()
@@ -255,7 +269,9 @@ void ui::collision()
 
 	for (int i = 0; i < 8; ++i)			//맵의 과일
 	{
-		if (IntersectRect(&_temp, &_rc, &_mapFruitRc[i]) && !_isFruit[i])
+		RECT rc = _ponpoko->getState()->getRect();
+
+		if (IntersectRect(&_temp, &rc, &_mapFruitRc[i]) && !_isFruit[i])
 		{
 			_isFruit[i] = true;
 			_score += 200;
@@ -274,7 +290,48 @@ void ui::collision()
 		}
 	}
 	
+	RECT rc = _ponpoko->getState()->getRect();
+
+	for (int i = 0; i < 4; ++i)
+	{
+		if (IntersectRect(&_temp, &rc, &_ladderRc[i]))
+		{
+			_isladder = true;
+		}
+		if (!IntersectRect(&_temp, &rc, &_ladderRc[0]) && !IntersectRect(&_temp, &rc, &_ladderRc[1]) && !IntersectRect(&_temp, &rc, &_ladderRc[2]) && !IntersectRect(&_temp, &rc, &_ladderRc[3]))
+		{
+			_isladder = false;
+		}
+	} 
+	for (int i = 0; i < 4; ++i)
+	{
+		RECT rc = _ponpoko->getState()->getRect();
+
+		if (IntersectRect(&_temp, &rc, &_thornRc[i]) && !_isThorn)
+		{
+			_isThorn = true;
+		}	
+	}
 	
+	if (_isThorn)
+	{
+		_count++;
+	}
+	if (_count == 1)
+	{
+		_lifeNum -= 1;
+	}
+	if (_count == 100)
+	{
+		_isThorn = false;
+		_count = 0;
+	}
+	
+	if (KEYMANAGER->isStayKeyDown(VK_DOWN))
+	{
+		_ponpoko->getState()->setY(2);
+	}
+
 }
 
 void ui::jar()
@@ -295,7 +352,7 @@ void ui::time()
 {
 	_timerBar = RectMake(1000, 100, _timeXWidth, 30);
 
-	if (_timer + 8 < TIMEMANAGER->getWorldTime() && _timeXWidth < 0)
+	if (_timer + 8 < TIMEMANAGER->getWorldTime() && _timeXWidth < 0 && _sceneNum != 0)
 	{
 		_timer = TIMEMANAGER->getWorldTime();
 
